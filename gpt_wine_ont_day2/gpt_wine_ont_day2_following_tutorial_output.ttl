@@ -1,0 +1,105 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wine: <http://example.com/wine#> .
+
+# Classes
+wine:Wine a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:RedWine a owl:Class ;
+    rdfs:subClassOf wine:Wine .
+
+wine:WhiteWine a owl:Class ;
+    rdfs:subClassOf wine:Wine .
+
+wine:RoséWine a owl:Class ;
+    rdfs:subClassOf wine:Wine .
+
+wine:Food a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:FoodType a owl:Class ;
+    rdfs:subClassOf wine:Food .
+
+wine:WineAndFoodPairing a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Slots (Properties)
+wine:hasColor a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string .
+
+wine:hasBody a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string .
+
+wine:hasFlavor a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string .
+
+wine:hasSugar a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string .
+
+wine:hasVintageYear a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:integer .
+
+wine:hasQualityAssessment a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string .
+
+wine:hasBouquet a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string .
+
+wine:hasTanninLevel a owl:ObjectProperty ;
+    rdfs:domain wine:RedWine ;
+    rdfs:range xsd:string .
+
+wine:hasGrape a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range wine:Grape .
+
+wine:hasMaker a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range wine:Winery .
+
+wine:hasRegion a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range wine:WineRegion .
+
+# Individuals (Instances)
+wine:Wine_A a wine:Wine ;
+    wine:hasColor "Red" ;
+    wine:hasBody "Full" ;
+    wine:hasFlavor "Rich" ;
+    wine:hasSugar "Dry" ;
+    wine:hasVintageYear 2015 ;
+    wine:hasQualityAssessment "Good" ;
+    wine:hasBouquet "Complex" .
+
+wine:RedWine_X a wine:RedWine ;
+    wine:hasTanninLevel "High" ;
+    wine:hasColor "Red" ;
+    wine:hasBody "Full" ;
+    wine:hasFlavor "Bold" ;
+    wine:hasSugar "Dry" ;
+    wine:hasVintageYear 2010 ;
+    wine:hasQualityAssessment "Good" ;
+    wine:hasBouquet "Intense" .
+
+# Define more individuals as needed for other classes
+
+# Grape class
+wine:Grape a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Winery class
+wine:Winery a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# WineRegion class
+wine:WineRegion a owl:Class ;
+    rdfs:subClassOf owl:Thing .
