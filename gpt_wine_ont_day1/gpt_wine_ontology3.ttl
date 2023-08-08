@@ -1,0 +1,431 @@
+# Prefixes
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wine: <http://example.com/wine#>.
+
+# Classes
+wine:Wine rdf:type owl:Class.
+wine:RedWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:WhiteWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:RoseWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:SparklingWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:GrapeVariety rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:WineRegion rdf:type owl:Class; rdfs:subClassOf wine:Location.
+wine:Climate rdf:type owl:Class.
+wine:Soil rdf:type owl:Class.
+wine:WineProductionProcess rdf:type owl:Class; rdfs:subClassOf wine:Process.
+wine:ProductionStage rdf:type owl:Class.
+wine:Input rdf:type owl:Class.
+wine:SensoryAttribute rdf:type owl:Class.
+wine:SweetnessLevel rdf:type owl:Class.
+wine:Tannin rdf:type owl:Class.
+wine:Acidity rdf:type owl:Class.
+wine:Food rdf:type owl:Class.
+wine:Cuisine rdf:type owl:Class.
+wine:Dish rdf:type owl:Class.
+wine:WineMarket rdf:type owl:Class.
+wine:MarketTrend rdf:type owl:Class.
+wine:Award rdf:type owl:Class.
+wine:Brand rdf:type owl:Class.
+wine:Vintage rdf:type owl:Class.
+wine:HealthBenefit rdf:type owl:Class.
+wine:NutritionalInformation rdf:type owl:Class.
+wine:Rating rdf:type owl:Class.
+wine:PriceRange rdf:type owl:Class.
+wine:Occasion rdf:type owl:Class.
+wine:EducationalResource rdf:type owl:Class.
+wine:WineTasting rdf:type owl:Class.
+wine:WineIndustry rdf:type owl:Class.
+wine:Course rdf:type owl:Class.
+wine:Certification rdf:type owl:Class.
+wine:SustainablePractice rdf:type owl:Class.
+wine:EnvironmentalImpact rdf:type owl:Class.
+wine:EffortToReduceImpact rdf:type owl:Class.
+
+# Object Properties
+wine:usedToProduce rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:GrapeVariety; owl:inverseOf wine:producesWine.
+wine:producesWine rdf:type owl:ObjectProperty; rdfs:domain wine:GrapeVariety; rdfs:range wine:Wine; owl:inverseOf wine:usedToProduce.
+wine:hasClimate rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:Climate; owl:inverseOf wine:belongsToRegion.
+wine:belongsToRegion rdf:type owl:ObjectProperty; rdfs:domain wine:Climate; rdfs:range wine:WineRegion; owl:inverseOf wine:hasClimate.
+wine:hasSoil rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:Soil; owl:inverseOf wine:isSoilOfRegion.
+wine:isSoilOfRegion rdf:type owl:ObjectProperty; rdfs:domain wine:Soil; rdfs:range wine:WineRegion; owl:inverseOf wine:hasSoil.
+wine:hasProductionStage rdf:type owl:ObjectProperty; rdfs:domain wine:WineProductionProcess; rdfs:range wine:ProductionStage; owl:inverseOf wine:isStageOfProcess.
+wine:isStageOfProcess rdf:type owl:ObjectProperty; rdfs:domain wine:ProductionStage; rdfs:range wine:WineProductionProcess; owl:inverseOf wine:hasProductionStage.
+wine:requiresInput rdf:type owl:ObjectProperty; rdfs:domain wine:ProductionStage; rdfs:range wine:Input; owl:inverseOf wine:isRequiredForStage.
+wine:isRequiredForStage rdf:type owl:ObjectProperty; rdfs:domain wine:Input; rdfs:range wine:ProductionStage; owl:inverseOf wine:requiresInput.
+wine:hasSensoryAttribute rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:SensoryAttribute; owl:inverseOf wine:isSensoryAttributeOf.
+wine:isSensoryAttributeOf rdf:type owl:ObjectProperty; rdfs:domain wine:SensoryAttribute; rdfs:range wine:Wine; owl:inverseOf wine:hasSensoryAttribute.
+wine:hasSweetnessLevel rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:SweetnessLevel; owl:inverseOf wine:hasWineWithSweetness.
+wine:hasWineWithSweetness rdf:type owl:ObjectProperty; rdfs:domain wine:SweetnessLevel; rdfs:range wine:Wine; owl:inverseOf wine:hasSweetnessLevel.
+wine:hasTanninContent rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Tannin; owl:inverseOf wine:hasWineWithTannin.
+wine:hasWineWithTannin rdf:type owl:ObjectProperty; rdfs:domain wine:Tannin; rdfs:range wine:Wine; owl:inverseOf wine:hasTanninContent.
+wine:hasAcidity rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Acidity; owl:inverseOf wine:hasWineWithAcidity.
+wine:hasWineWithAcidity rdf:type owl:ObjectProperty; rdfs:domain wine:Acidity; rdfs:range wine:Wine; owl:inverseOf wine:hasAcidity.
+wine:recommendedFoodPairing rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Food; owl:inverseOf wine:isFoodPairingFor.
+wine:isFoodPairingFor rdf:type owl:ObjectProperty; rdfs:domain wine:Food; rdfs:range wine:Wine; owl:inverseOf wine:recommendedFoodPairing.
+wine:complementsCuisine rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Cuisine; owl:inverseOf wine:isComplementedByCuisine.
+wine:isComplementedByCuisine rdf:type owl:ObjectProperty; rdfs:domain wine:Cuisine; rdfs:range wine:Wine; owl:inverseOf wine:complementsCuisine.
+wine:complementsDish rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Dish; owl:inverseOf wine:isComplementedByDish.
+wine:isComplementedByDish rdf:type owl:ObjectProperty; rdfs:domain wine:Dish; rdfs:range wine:Wine; owl:inverseOf wine:complementsDish.
+wine:hasTraditionalFoodPairing rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:Food; owl:inverseOf wine:isTraditionalFoodPairingOfRegion.
+wine:isTraditionalFoodPairingOfRegion rdf:type owl:ObjectProperty; rdfs:domain wine:Food; rdfs:range wine:WineRegion; owl:inverseOf wine:hasTraditionalFoodPairing.
+wine:hasMarketTrend rdf:type owl:ObjectProperty; rdfs:domain wine:WineMarket; rdfs:range wine:MarketTrend; owl:inverseOf wine:isMarketTrendOf.
+wine:isMarketTrendOf rdf:type owl:ObjectProperty; rdfs:domain wine:MarketTrend; rdfs:range wine:WineMarket; owl:inverseOf wine:hasMarketTrend.
+wine:hasAward rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Award; owl:inverseOf wine:isAwardFor.
+wine:isAwardFor rdf:type owl:ObjectProperty; rdfs:domain wine:Award; rdfs:range wine:Wine; owl:inverseOf wine:hasAward.
+wine:hasBrand rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Brand; owl:inverseOf wine:isBrandOfWine.
+wine:isBrandOfWine rdf:type owl:ObjectProperty; rdfs:domain wine:Brand; rdfs:range wine:Wine; owl:inverseOf wine:hasBrand.
+wine:hasVintage rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Vintage; owl:inverseOf wine:isVintageOfWine.
+wine:isVintageOfWine rdf:type owl:ObjectProperty; rdfs:domain wine:Vintage; rdfs:range wine:Wine; owl:inverseOf wine:hasVintage.
+wine:hasHealthBenefit rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:HealthBenefit; owl:inverseOf wine:isHealthBenefitOfWine.
+wine:isHealthBenefitOfWine rdf:type owl:ObjectProperty; rdfs:domain wine:HealthBenefit; rdfs:range wine:Wine; owl:inverseOf wine:hasHealthBenefit.
+wine:hasNutritionalInformation rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:NutritionalInformation; owl:inverseOf wine:isNutritionalInformationOfWine.
+wine:isNutritionalInformationOfWine rdf:type owl:ObjectProperty; rdfs:domain wine:NutritionalInformation; rdfs:range wine:Wine; owl:inverseOf wine:hasNutritionalInformation.
+wine:hasRating rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Rating; owl:inverseOf wine:isRatedWine.
+wine:isRatedWine rdf:type owl:ObjectProperty; rdfs:domain wine:Rating; rdfs:range wine:Wine; owl:inverseOf wine:hasRating.
+wine:hasPriceRange rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:PriceRange; owl:inverseOf wine:isPriceRangeOfWine.
+wine:isPriceRangeOfWine rdf:type owl:ObjectProperty; rdfs:domain wine:PriceRange; rdfs:range wine:Wine; owl:inverseOf wine:hasPriceRange.
+wine:recommendedForOccasion rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Occasion; owl:inverseOf wine:hasWineRecommendedFor.
+wine:hasWineRecommendedFor rdf:type owl:ObjectProperty; rdfs:domain wine:Occasion; rdfs:range wine:Wine; owl:inverseOf wine:recommendedForOccasion.
+wine:hasEducationalResource rdf:type owl:ObjectProperty; rdfs:domain wine:EducationalResource; rdfs:range wine:WineTasting; owl:inverseOf wine:isEducationalResourceFor.
+wine:isEducationalResourceFor rdf:type owl:ObjectProperty; rdfs:domain wine:WineTasting; rdfs:range wine:EducationalResource; owl:inverseOf wine:hasEducationalResource.
+wine:offersCourse rdf:type owl:ObjectProperty; rdfs:domain wine:WineIndustry; rdfs:range wine:Course; owl:inverseOf wine:isCourseOfferedByIndustry.
+wine:isCourseOfferedByIndustry rdf:type owl:ObjectProperty; rdfs:domain wine:Course; rdfs:range wine:WineIndustry; owl:inverseOf wine:offersCourse.
+wine:offersCertification rdf:type owl:ObjectProperty; rdfs:domain wine:WineIndustry; rdfs:range wine:Certification; owl:inverseOf wine:isCertificationOfferedByIndustry.
+wine:isCertificationOfferedByIndustry rdf:type owl:ObjectProperty; rdfs:domain wine:Certification; rdfs:range wine:WineIndustry; owl:inverseOf wine:offersCertification.
+wine:followsSustainablePractice rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:SustainablePractice; owl:inverseOf wine:isRegionFollowingSustainablePractice.
+wine:isRegionFollowingSustainablePractice rdf:type owl:ObjectProperty; rdfs:domain wine:SustainablePractice; rdfs:range wine:WineRegion; owl:inverseOf wine:followsSustainablePractice.
+wine:hasEnvironmentalImpact rdf:type owl:ObjectProperty; rdfs:domain wine:WineProduction; rdfs:range wine:EnvironmentalImpact; owl:inverseOf wine:isEnvironmentalImpactOf.
+wine:isEnvironmentalImpactOf rdf:type owl:ObjectProperty; rdfs:domain wine:EnvironmentalImpact; rdfs:range wine:WineProduction; owl:inverseOf wine:hasEnvironmentalImpact.
+wine:hasEffortToReduceImpact rdf:type owl:ObjectProperty;
+    rdfs:domain wine:WineProduction;
+    rdfs:range wine:EffortToReduceImpact;
+    owl:inverseOf wine:isEffortToReduceImpactOf.
+
+wine:isEffortToReduceImpactOf rdf:type owl:ObjectProperty;
+    rdfs:domain wine:EffortToReduceImpact;
+    rdfs:range wine:WineProduction;
+    owl:inverseOf wine:hasEffortToReduceImpact.
+
+
+# Data Properties
+wine:hasPriceValue rdf:type owl:DatatypeProperty;
+    rdfs:domain wine:Wine;
+    rdfs:range xsd:positiveInteger.
+
+wine:hasVintageYear rdf:type owl:DatatypeProperty;
+    rdfs:domain wine:Wine;
+    rdfs:range xsd:gYear.
+
+wine:hasAlcoholContent rdf:type owl:DatatypeProperty;
+    rdfs:domain wine:Wine;
+    rdfs:range xsd:decimal.
+
+wine:hasSugarContent rdf:type owl:DatatypeProperty;
+    rdfs:domain wine:Wine;
+    rdfs:range xsd:decimal.
+
+wine:hasAcidityValue rdf:type owl:DatatypeProperty;
+    rdfs:domain wine:Wine;
+    rdfs:range xsd:decimal.
+
+wine:hasRatingValue rdf:type owl:DatatypeProperty;
+    rdfs:domain wine:Wine;
+    rdfs:range xsd:decimal.
+
+
+
+# Axiomatizations
+wine:GrapeVariety owl:equivalentClass [ rdf:type owl:Restriction; owl:onProperty wine:usedToProduce; owl:someValuesFrom wine:Wine ].
+
+wine:Wine owl:equivalentClass [ rdf:type owl:Restriction; owl:onProperty wine:hasVintage; owl:someValuesFrom wine:Vintage ].
+
+wine:Wine rdfs:subClassOf [ rdf:type owl:Restriction; owl:onProperty wine:hasRating; owl:someValuesFrom wine:Rating ].
+
+wine:WineRegion owl:equivalentClass [ rdf:type owl:Restriction; owl:onProperty wine:producesGrapeVariety; owl:someValuesFrom wine:GrapeVariety;
+                                    owl:onProperty wine:hasClimate; owl:someValuesFrom wine:Climate;
+                                    owl:onProperty wine:hasSoil; owl:someValuesFrom wine:Soil;
+                                    owl:onProperty wine:followsSustainablePractice; owl:someValuesFrom wine:SustainablePractice ].
+
+wine:ProductionStage owl:equivalentClass [ rdf:type owl:Restriction; owl:onProperty wine:requiresInput; owl:someValuesFrom wine:Input ].
+
+wine:WineTasting owl:equivalentClass [ rdf:type owl:Restriction; owl:onProperty wine:hasEducationalResource; owl:someValuesFrom wine:EducationalResource ].
+
+wine:WineIndustry owl:equivalentClass [ rdf:type owl:Restriction; owl:onProperty wine:offersCourse; owl:someValuesFrom wine:Course;
+                                        owl:onProperty wine:offersCertification; owl:someValuesFrom wine:Certification ].
+
+
+# Annotation Triples
+wine:Wine rdfs:comment "A type of wine, which can be further specialized into red, white, rose, or sparkling wines.".
+wine:RedWine rdfs:comment "A type of wine with a red color, typically made from dark-colored grape varieties.".
+wine:WhiteWine rdfs:comment "A type of wine with a yellow or golden color, typically made from white grape varieties.".
+wine:RoseWine rdfs:comment "A type of wine with a pink or rosé color, typically made from red grape varieties with limited skin contact.".
+wine:SparklingWine rdfs:comment "A type of wine with effervescence, commonly known as 'bubbles', which can be red, white, or rosé.".
+wine:GrapeVariety rdfs:comment "A specific type of grape used in winemaking to produce wine.".
+wine:WineRegion rdfs:comment "A geographical region known for its wine production and specific climate and soil characteristics.".
+wine:Climate rdfs:comment "The characteristic weather conditions of a wine region that influence grape growth and wine production.".
+wine:Soil rdfs:comment "The type of soil found in a wine region, which plays a vital role in grapevine growth and wine characteristics.".
+wine:WineProductionProcess rdfs:comment "The sequence of stages involved in producing wine, including harvesting, fermentation, aging, and bottling.".
+wine:ProductionStage rdfs:comment "A specific step or stage in the wine production process, such as fermentation or aging.".
+wine:Input rdfs:comment "The materials, resources, and ingredients required at various stages of the wine production process.".
+wine:SensoryAttribute rdfs:comment "The characteristics of wine perceived by the senses, such as taste, aroma, color, and mouthfeel.".
+wine:SweetnessLevel rdfs:comment "The level of sweetness in a wine, which can range from dry to sweet.".
+wine:Tannin rdfs:comment "A natural compound found in grape skins, seeds, and stems that contributes to the structure and bitterness of wine.".
+wine:Acidity rdfs:comment "The presence of acids in wine that contributes to its freshness, tartness, and balance.".
+wine:Food rdfs:comment "Edible items or dishes that can be paired with specific types of wine to enhance the dining experience.".
+wine:Cuisine rdfs:comment "A style of cooking or culinary tradition that may influence wine and food pairing choices.".
+wine:Dish rdfs:comment "A specific prepared food item that can be paired with wine based on its flavors and characteristics.".
+wine:WineMarket rdfs:comment "The market or industry related to the production, distribution, and sale of wines.".
+wine:MarketTrend rdfs:comment "The current direction or tendency in the wine market, such as consumer preferences or sales patterns.".
+wine:Award rdfs:comment "Recognition or accolades given to a specific wine for its quality, taste, or other outstanding features.".
+wine:Brand rdfs:comment "A particular wine label or product name associated with a specific winery or producer.".
+wine:Vintage rdfs:comment "The year in which the grapes used to produce a wine were harvested.".
+wine:HealthBenefit rdfs:comment "Positive effects or potential advantages related to the consumption of wine in moderation.".
+wine:NutritionalInformation rdfs:comment "Information about the nutritional content of a specific wine, such as calorie count or sugar content.".
+wine:Rating rdfs:comment "An evaluation or score given to a wine by critics, experts, or consumers, indicating its quality or value.".
+wine:PriceRange rdfs:comment "The range of prices at which a specific wine or wines are typically sold.".
+wine:Occasion rdfs:comment "Specific events, celebrations, or occasions for which certain wines are recommended or popular.".
+wine:EducationalResource rdfs:comment "Materials, courses, or resources aimed at educating individuals about wine and wine-related topics.".
+wine:WineTasting rdfs:comment "An organized sensory evaluation of wine to assess its flavors, aromas, and overall quality.".
+wine:WineIndustry rdfs:comment "The wine production and distribution sector, encompassing various stages of winemaking and sales.".
+wine:Course rdfs:comment "A structured educational program or course related to wine, often covering tasting, production, or wine business.".
+wine:Certification rdfs:comment "A formal recognition or credential awarded to individuals in the wine industry, signifying expertise and knowledge.".
+wine:SustainablePractice rdfs:comment "Wine production methods that prioritize environmental, social, and economic sustainability.".
+wine:EnvironmentalImpact rdfs:comment "The effect of wine production and consumption on the environment and natural resources.".
+wine:EffortToReduceImpact rdfs:comment "Initiatives, practices, or actions taken to minimize the environmental impact of wine production.".
+
+wine:usedToProduce rdfs:comment "Relates a specific grape variety to the wines it is used to produce.".
+wine:producesGrapeVariety rdfs:comment "Relates a wine region to the grape varieties it produces.".
+wine:hasClimate rdfs:comment "Relates a wine region to its characteristic climate.".
+wine:hasSoil rdfs:comment "Relates a wine region to its characteristic soil types.".
+wine:hasProductionStage rdfs:comment "Relates a wine production process to its individual stages.".
+wine:requiresInput rdfs:comment "Relates a production stage to the inputs or resources it requires.".
+wine:hasSensoryAttribute rdfs:comment "Relates a wine to its sensory attributes, such as taste and aroma.".
+wine:hasSweetnessLevel rdfs:comment "Relates a wine to its sweetness level, from dry to sweet.".
+wine:hasTanninContent rdfs:comment "Relates a wine to its tannin content.".
+wine:hasAcidity rdfs:comment "Relates a wine to its acidity level.".
+wine:recommendedFoodPairing rdfs:comment "Relates a wine to foods that pair well with it.".
+wine:complementsCuisine rdfs:comment "Relates a wine to the cuisines it complements.".
+wine:complementsDish rdfs:comment "Relates a wine to the dishes it complements.".
+wine:hasTraditionalFoodPairing rdfs:comment "Relates a wine region to traditional food pairings associated with it.".
+wine:hasMarketTrend rdfs:comment "Relates a wine market to the current trends or tendencies in the industry.".
+wine:hasAward rdfs:comment "Relates a wine to the awards or recognition it has received.".
+wine:hasBrand rdfs:comment "Relates a wine to the brand or label associated with it.".
+wine:hasVintage rdfs:comment "Relates a wine to the year in which its grapes were harvested.".
+wine:hasHealthBenefit rdfs:comment "Relates a wine to its potential health benefits when consumed in moderation.".
+wine:hasNutritionalInformation rdfs:comment "Relates a wine to its nutritional content information.".
+wine:hasRating rdfs:comment "Relates a wine to its rating or evaluation score.".
+wine:hasPriceRange rdfs:comment "Relates a wine to its typical price range.".
+wine:recommendedForOccasion rdfs:comment "Relates a wine to the occasions or events for which it is recommended.".
+wine:hasEducationalResource rdfs:comment "Relates a wine tasting event to the educational resources provided.".
+wine:offersCourse rdfs:comment "Relates the wine industry to the courses it offers for education and training.".
+wine:offersCertification rdfs:comment "Relates the wine industry to the certifications it offers for professional recognition.".
+wine:followsSustainablePractice rdfs:comment "Relates a wine region to its adoption of sustainable wine production practices.".
+wine:hasEnvironmentalImpact rdfs:comment "Relates wine production to its impact on the environment.".
+wine:hasEffortToReduceImpact rdfs:comment "Relates wine production to efforts taken to reduce its environmental impact.".
+
+
+# Individuals
+wine:RieslingGrape rdf:type wine:GrapeVariety.
+wine:SancerreRegion rdf:type wine:WineRegion.
+wine:Selaks rdf:type wine:Wine.
+wine:SevreEtMaine rdf:type wine:Wine.
+wine:MerlotGrape rdf:type wine:GrapeVariety.
+wine:BordeauxRegion rdf:type wine:WineRegion.
+wine:ChateauMargaux rdf:type wine:Wine.
+wine:ChampagneRegion rdf:type wine:WineRegion.
+wine:MoetChandon rdf:type wine:Wine.
+wine:ChardonnayGrape rdf:type wine:GrapeVariety.
+wine:BurgundyRegion rdf:type wine:WineRegion.
+wine:DomaineRomaneeConti rdf:type wine:Wine.
+wine:BaroloGrape rdf:type wine:GrapeVariety.
+wine:PiedmontRegion rdf:type wine:WineRegion.
+wine:GajaBarbaresco rdf:type wine:Wine.
+wine:SyrahGrape rdf:type wine:GrapeVariety.
+wine:RhoneValleyRegion rdf:type wine:WineRegion.
+wine:CoteRotie rdf:type wine:Wine.
+wine:CabernetSauvignonGrape rdf:type wine:GrapeVariety.
+wine:NapaValleyRegion rdf:type wine:WineRegion.
+wine:CaymusVineyards rdf:type wine:Wine.
+wine:MalbecGrape rdf:type wine:GrapeVariety.
+wine:MendozaRegion rdf:type wine:WineRegion.
+wine:ClosDeLosSiete rdf:type wine:Wine.
+wine:PinotNoirGrape rdf:type wine:GrapeVariety.
+wine:OregonRegion rdf:type wine:WineRegion.
+wine:DomaineSerene rdf:type wine:Wine.
+wine:SauvignonBlancGrape rdf:type wine:GrapeVariety.
+wine:NewZealandRegion rdf:type wine:WineRegion.
+wine:CloudyBay rdf:type wine:Wine.
+
+wine:DecanterAward rdf:type wine:Award.
+wine:DecanterWorldWineAward rdf:type wine:Award.
+wine:InternationalWineChallenge rdf:type wine:Award.
+
+wine:Selaks wine:hasGrapeVariety wine:RieslingGrape.
+wine:Selaks wine:hasVintageYear "2019"^^xsd:gYear.
+wine:Selaks wine:hasAlcoholContent "12.5"^^xsd:decimal.
+wine:Selaks wine:hasSensoryAttribute wine:Dry.
+wine:Selaks wine:hasSweetnessLevel wine:Dry.
+wine:Selaks wine:hasTanninContent "0.1"^^xsd:decimal.
+wine:Selaks wine:hasAcidityValue "0.6"^^xsd:decimal.
+wine:Selaks wine:hasRatingValue "89.0"^^xsd:decimal.
+wine:Selaks wine:hasPriceValue "20"^^xsd:positiveInteger.
+wine:Selaks wine:recommendedFoodPairing wine:Seafood.
+wine:Selaks wine:recommendedFoodPairing wine:SpicyFood.
+wine:Selaks wine:complementsDish wine:SalmonDish.
+wine:Selaks wine:complementsCuisine wine:AsianCuisine.
+wine:Selaks wine:hasAward wine:DecanterAward.
+
+wine:SevreEtMaine wine:hasGrapeVariety wine:ChardonnayGrape.
+wine:SevreEtMaine wine:hasVintageYear "2020"^^xsd:gYear.
+wine:SevreEtMaine wine:hasAlcoholContent "13.0"^^xsd:decimal.
+wine:SevreEtMaine wine:hasSensoryAttribute wine:Fresh.
+wine:SevreEtMaine wine:hasSweetnessLevel wine:Dry.
+wine:SevreEtMaine wine:hasTanninContent "0.0"^^xsd:decimal.
+wine:SevreEtMaine wine:hasAcidityValue "0.7"^^xsd:decimal.
+wine:SevreEtMaine wine:hasRatingValue "86.5"^^xsd:decimal.
+wine:SevreEtMaine wine:hasPriceValue "25"^^xsd:positiveInteger.
+wine:SevreEtMaine wine:recommendedFoodPairing wine:ChickenDish.
+wine:SevreEtMaine wine:recommendedFoodPairing wine:Salad.
+wine:SevreEtMaine wine:complementsDish wine:GoatCheeseDish.
+wine:SevreEtMaine wine:complementsCuisine wine:FrenchCuisine.
+wine:SevreEtMaine wine:hasAward wine:DecanterWorldWineAward.
+
+wine:ChateauMargaux wine:hasGrapeVariety wine:CabernetSauvignonGrape.
+wine:ChateauMargaux wine:hasGrapeVariety wine:MerlotGrape.
+wine:ChateauMargaux wine:hasVintageYear "2015"^^xsd:gYear.
+wine:ChateauMargaux wine:hasAlcoholContent "14.0"^^xsd:decimal.
+wine:ChateauMargaux wine:hasSensoryAttribute wine:FullBodied.
+wine:ChateauMargaux wine:hasSweetnessLevel wine:Dry.
+wine:ChateauMargaux wine:hasTanninContent "0.4"^^xsd:decimal.
+wine:ChateauMargaux wine:hasAcidityValue "0.6"^^xsd:decimal.
+wine:ChateauMargaux wine:hasRatingValue "95.2"^^xsd:decimal.
+wine:ChateauMargaux wine:hasPriceValue "450"^^xsd:positiveInteger.
+wine:ChateauMargaux wine:recommendedFoodPairing wine:BeefSteak.
+wine:ChateauMargaux wine:recommendedFoodPairing wine:LambDish.
+wine:ChateauMargaux wine:complementsDish wine:TruffleDish.
+wine:ChateauMargaux wine:complementsCuisine wine:FrenchCuisine.
+wine:ChateauMargaux wine:hasAward wine:InternationalWineChallenge.
+
+wine:MoetChandon wine:hasGrapeVariety wine:ChardonnayGrape.
+wine:MoetChandon wine:hasGrapeVariety wine:PinotNoirGrape.
+wine:MoetChandon wine:hasVintageYear "NV"^^xsd:gYear.
+wine:MoetChandon wine:hasAlcoholContent "12.0"^^xsd:decimal.
+wine:MoetChandon wine:hasSensoryAttribute wine:Delicate.
+wine:MoetChandon wine:hasSweetnessLevel wine:Brut.
+wine:MoetChandon wine:hasTanninContent "0.0"^^xsd:decimal.
+wine:MoetChandon wine:hasAcidityValue "0.5"^^xsd:decimal.
+wine:MoetChandon wine:hasRatingValue "91.8"^^xsd:decimal.
+wine:MoetChandon wine:hasPriceValue "55"^^xsd:positiveInteger.
+wine:MoetChandon wine:recommendedFoodPairing wine:Caviar.
+wine:MoetChandon wine:recommendedFoodPairing wine:Oysters.
+wine:MoetChandon wine:complementsDish wine:FoieGrasDish.
+wine:MoetChandon wine:complementsCuisine wine:FrenchCuisine.
+wine:MoetChandon wine:hasAward wine:DecanterWorldWineAward.
+
+wine:DomaineRomaneeConti wine:hasGrapeVariety wine:PinotNoirGrape.
+wine:DomaineRomaneeConti wine:hasVintageYear "2018"^^xsd:gYear.
+wine:DomaineRomaneeConti wine:hasAlcoholContent "14.5"^^xsd:decimal.
+wine:DomaineRomaneeConti wine:hasSensoryAttribute wine:Complex.
+wine:DomaineRomaneeConti wine:hasSweetnessLevel wine:Dry.
+wine:DomaineRomaneeConti wine:hasTanninContent "0.3"^^xsd:decimal.
+wine:DomaineRomaneeConti wine:hasAcidityValue "0.8"^^xsd:decimal.
+wine:DomaineRomaneeConti wine:hasRatingValue "97.5"^^xsd:decimal.
+wine:DomaineRomaneeConti wine:hasPriceValue "2000"^^xsd:positiveInteger.
+wine:DomaineRomaneeConti wine:recommendedFoodPairing wine:WildGame.
+wine:DomaineRomaneeConti wine:recommendedFoodPairing wine:TruffleDish.
+wine:DomaineRomaneeConti wine:complementsDish wine:LambDish.
+wine:DomaineRomaneeConti wine:complementsCuisine wine:FrenchCuisine.
+wine:DomaineRomaneeConti wine:hasAward wine:DecanterAward.
+
+wine:GajaBarbaresco wine:hasGrapeVariety wine:BaroloGrape.
+wine:GajaBarbaresco wine:hasVintageYear "2017"^^xsd:gYear.
+wine:GajaBarbaresco wine:hasAlcoholContent "14.8"^^xsd:decimal.
+wine:GajaBarbaresco wine:hasSensoryAttribute wine:Rich.
+wine:GajaBarbaresco wine:hasSweetnessLevel wine:Dry.
+wine:GajaBarbaresco wine:hasTanninContent "0.5"^^xsd:decimal.
+wine:GajaBarbaresco wine:hasAcidityValue "0.7"^^xsd:decimal.
+wine:GajaBarbaresco wine:hasRatingValue "94.3"^^xsd:decimal.
+wine:GajaBarbaresco wine:hasPriceValue "180"^^xsd:positiveInteger.
+wine:GajaBarbaresco wine:recommendedFoodPairing wine:PastaWithRagu.
+wine:GajaBarbaresco wine:recommendedFoodPairing wine:GrilledMeat.
+wine:GajaBarbaresco wine:complementsDish wine:TruffleDish.
+wine:GajaBarbaresco wine:complementsCuisine wine:ItalianCuisine.
+wine:GajaBarbaresco wine:hasAward wine:InternationalWineChallenge.
+
+wine:CoteRotie wine:hasGrapeVariety wine:SyrahGrape.
+wine:CoteRotie wine:hasVintageYear "2016"^^xsd:gYear.
+wine:CoteRotie wine:hasAlcoholContent "13.5"^^xsd:decimal.
+wine:CoteRotie wine:hasSensoryAttribute wine:Velvety.
+wine:CoteRotie wine:hasSweetnessLevel wine:Dry.
+wine:CoteRotie wine:hasTanninContent "0.4"^^xsd:decimal.
+wine:CoteRotie wine:hasAcidityValue "0.6"^^xsd:decimal.
+wine:CoteRotie wine:hasRatingValue "93.7"^^xsd:decimal.
+wine:CoteRotie wine:hasPriceValue "70"^^xsd:positiveInteger.
+wine:CoteRotie wine:recommendedFoodPairing wine:LambDish.
+wine:CoteRotie wine:recommendedFoodPairing wine:GameMeat.
+wine:CoteRotie wine:complementsDish wine:BlueCheeseDish.
+wine:CoteRotie wine:complementsCuisine wine:FrenchCuisine.
+wine:CoteRotie wine:hasAward wine:InternationalWineChallenge.
+
+wine:CaymusVineyards wine:hasGrapeVariety wine:CabernetSauvignonGrape.
+wine:CaymusVineyards wine:hasVintageYear "2018"^^xsd:gYear.
+wine:CaymusVineyards wine:hasAlcoholContent "15.0"^^xsd:decimal.
+wine:CaymusVineyards wine:hasSensoryAttribute wine:Opulent.
+wine:CaymusVineyards wine:hasSweetnessLevel wine:Dry.
+wine:CaymusVineyards wine:hasTanninContent "0.6"^^xsd:decimal.
+wine:CaymusVineyards wine:hasAcidityValue "0.5"^^xsd:decimal.
+wine:CaymusVineyards wine:hasRatingValue "92.9"^^xsd:decimal.
+wine:CaymusVineyards wine:hasPriceValue "85"^^xsd:positiveInteger.
+wine:CaymusVineyards wine:recommendedFoodPairing wine:Steak.
+wine:CaymusVineyards wine:recommendedFoodPairing wine:Burger.
+wine:CaymusVineyards wine:complementsDish wine:ChocolateDessert.
+wine:CaymusVineyards wine:complementsCuisine wine:AmericanCuisine.
+wine:CaymusVineyards wine:hasAward wine:DecanterAward.
+
+wine:ClosDeLosSiete wine:hasGrapeVariety wine:MalbecGrape.
+wine:ClosDeLosSiete wine:hasVintageYear "2017"^^xsd:gYear.
+wine:ClosDeLosSiete wine:hasAlcoholContent "14.5"^^xsd:decimal.
+wine:ClosDeLosSiete wine:hasSensoryAttribute wine:Rich.
+wine:ClosDeLosSiete wine:hasSweetnessLevel wine:Dry.
+wine:ClosDeLosSiete wine:hasTanninContent "0.3"^^xsd:decimal.
+wine:ClosDeLosSiete wine:hasAcidityValue "0.6"^^xsd:decimal.
+wine:ClosDeLosSiete wine:hasRatingValue "89.4"^^xsd:decimal.
+wine:ClosDeLosSiete wine:hasPriceValue "30"^^xsd:positiveInteger.
+wine:ClosDeLosSiete wine:recommendedFoodPairing wine:Empanadas.
+wine:ClosDeLosSiete wine:recommendedFoodPairing wine:GrilledMeat.
+wine:ClosDeLosSiete wine:complementsDish wine:BeefDish.
+wine:ClosDeLosSiete wine:complementsCuisine wine:ArgentinianCuisine.
+wine:ClosDeLosSiete wine:hasAward wine:DecanterAward.
+
+wine:DomaineSerene wine:hasGrapeVariety wine:PinotNoirGrape.
+wine:DomaineSerene wine:hasVintageYear "2016"^^xsd:gYear.
+wine:DomaineSerene wine:hasAlcoholContent "14.2"^^xsd:decimal.
+wine:DomaineSerene wine:hasSensoryAttribute wine:Balanced.
+wine:DomaineSerene wine:hasSweetnessLevel wine:Dry.
+wine:DomaineSerene wine:hasTanninContent "0.2"^^xsd:decimal.
+wine:DomaineSerene wine:hasAcidityValue "0.7"^^xsd:decimal.
+wine:DomaineSerene wine:hasRatingValue "92.0"^^xsd:decimal.
+wine:DomaineSerene wine:hasPriceValue "60"^^xsd:positiveInteger.
+wine:DomaineSerene wine:recommendedFoodPairing wine:SalmonDish.
+wine:DomaineSerene wine:recommendedFoodPairing wine:MushroomDish.
+wine:DomaineSerene wine:complementsDish wine:DuckDish.
+wine:DomaineSerene wine:complementsCuisine wine:AmericanCuisine.
+wine:DomaineSerene wine:hasAward wine:DecanterWorldWineAward.
+
+wine:CloudyBay wine:hasGrapeVariety wine:SauvignonBlancGrape.
+wine:CloudyBay wine:hasVintageYear "2020"^^xsd:gYear.
+wine:CloudyBay wine:hasAlcoholContent "13.0"^^xsd:decimal.
+wine:CloudyBay wine:hasSensoryAttribute wine:Crisp.
+wine:CloudyBay wine:hasSweetnessLevel wine:Dry.
+wine:CloudyBay wine:hasTanninContent "0.0"^^xsd:decimal.
+wine:CloudyBay wine:hasAcidityValue "0.7"^^xsd:decimal.
+wine:CloudyBay wine:hasRatingValue "90.5"^^xsd:decimal.
+wine:CloudyBay wine:hasPriceValue "30"^^xsd:positiveInteger.
+wine:CloudyBay wine:recommendedFoodPairing wine:Seafood.
+wine:CloudyBay wine:recommendedFoodPairing wine:Salad.
+wine:CloudyBay wine:complementsDish wine:GoatCheeseDish.
+wine:CloudyBay wine:complementsCuisine wine:NewZealandCuisine.
+wine:CloudyBay wine:hasAward wine:InternationalWineChallenge.

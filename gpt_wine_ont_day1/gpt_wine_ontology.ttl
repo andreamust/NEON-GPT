@@ -1,0 +1,76 @@
+# Prefixes
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wine: <http://example.com/wine#>.
+
+# Classes
+wine:Wine rdf:type owl:Class.
+wine:RedWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:WhiteWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:RoseWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:SparklingWine rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:GrapeVariety rdf:type owl:Class; rdfs:subClassOf wine:Wine.
+wine:WineRegion rdf:type owl:Class; rdfs:subClassOf wine:Location.
+wine:Climate rdf:type owl:Class.
+wine:Soil rdf:type owl:Class.
+wine:WineProductionProcess rdf:type owl:Class; rdfs:subClassOf wine:Process.
+wine:ProductionStage rdf:type owl:Class.
+wine:Input rdf:type owl:Class.
+wine:SensoryAttribute rdf:type owl:Class.
+wine:SweetnessLevel rdf:type owl:Class.
+wine:Tannin rdf:type owl:Class.
+wine:Acidity rdf:type owl:Class.
+wine:Food rdf:type owl:Class.
+wine:Cuisine rdf:type owl:Class.
+wine:Dish rdf:type owl:Class.
+wine:WineMarket rdf:type owl:Class.
+wine:MarketTrend rdf:type owl:Class.
+wine:Award rdf:type owl:Class.
+wine:Brand rdf:type owl:Class.
+wine:Vintage rdf:type owl:Class.
+wine:HealthBenefit rdf:type owl:Class.
+wine:NutritionalInformation rdf:type owl:Class.
+wine:Rating rdf:type owl:Class.
+wine:PriceRange rdf:type owl:Class.
+wine:Occasion rdf:type owl:Class.
+wine:EducationalResource rdf:type owl:Class.
+wine:WineTasting rdf:type owl:Class.
+wine:WineIndustry rdf:type owl:Class.
+wine:Course rdf:type owl:Class.
+wine:Certification rdf:type owl:Class.
+wine:SustainablePractice rdf:type owl:Class.
+wine:EnvironmentalImpact rdf:type owl:Class.
+wine:EffortToReduceImpact rdf:type owl:Class.
+
+# Properties
+wine:usedToProduce rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:GrapeVariety.
+wine:producesGrapeVariety rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:GrapeVariety.
+wine:hasClimate rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:Climate.
+wine:hasSoil rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:Soil.
+wine:hasProductionStage rdf:type owl:ObjectProperty; rdfs:domain wine:WineProductionProcess; rdfs:range wine:ProductionStage.
+wine:requiresInput rdf:type owl:ObjectProperty; rdfs:domain wine:ProductionStage; rdfs:range wine:Input.
+wine:hasSensoryAttribute rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:SensoryAttribute.
+wine:hasSweetnessLevel rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:SweetnessLevel.
+wine:hasTanninContent rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Tannin.
+wine:hasAcidity rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Acidity.
+wine:recommendedFoodPairing rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Food.
+wine:complementsCuisine rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Cuisine.
+wine:complementsDish rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Dish.
+wine:hasTraditionalFoodPairing rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:Food.
+wine:hasMarketTrend rdf:type owl:ObjectProperty; rdfs:domain wine:WineMarket; rdfs:range wine:MarketTrend.
+wine:hasAward rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Award.
+wine:hasBrand rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Brand.
+wine:hasVintage rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Vintage.
+wine:hasHealthBenefit rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:HealthBenefit.
+wine:hasNutritionalInformation rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:NutritionalInformation.
+wine:hasRating rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Rating.
+wine:hasPriceRange rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:PriceRange.
+wine:recommendedForOccasion rdf:type owl:ObjectProperty; rdfs:domain wine:Wine; rdfs:range wine:Occasion.
+wine:hasEducationalResource rdf:type owl:ObjectProperty; rdfs:domain wine:EducationalResource; rdfs:range wine:WineTasting.
+wine:offersCourse rdf:type owl:ObjectProperty; rdfs:domain wine:WineIndustry; rdfs:range wine:Course.
+wine:offersCertification rdf:type owl:ObjectProperty; rdfs:domain wine:WineIndustry; rdfs:range wine:Certification.
+wine:followsSustainablePractice rdf:type owl:ObjectProperty; rdfs:domain wine:WineRegion; rdfs:range wine:SustainablePractice.
+wine:hasEnvironmentalImpact rdf:type owl:ObjectProperty; rdfs:domain wine:WineProduction; rdfs:range wine:EnvironmentalImpact.
+wine:hasEffortToReduceImpact rdf:type owl:ObjectProperty; rdfs:domain wine:WineProduction; rdfs:range wine:EffortToReduceImpact.
