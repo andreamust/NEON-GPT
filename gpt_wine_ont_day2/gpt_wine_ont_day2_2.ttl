@@ -187,7 +187,6 @@ wine:optimalAgingConditionsOf rdf:type owl:ObjectProperty ,
 
 ###  http://example.com/wine#pairsWellWith
 wine:pairsWellWith rdf:type owl:ObjectProperty ;
-                   owl:inverseOf wine:pairsWellWith ;
                    rdf:type owl:InverseFunctionalProperty ,
                             owl:SymmetricProperty ;
                    rdfs:domain wine:FoodPairing ,
