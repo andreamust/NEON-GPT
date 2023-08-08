@@ -1,0 +1,3377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/wine-ontology#"
+     xml:base="http://example.com/wine-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.com/wine-ontology">
+        <rdfs:comment>An ontology describing concepts related to the domain of wine.</rdfs:comment>
+        <rdfs:label>Wine Ontology</rdfs:label>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/wine-ontology#affectedByClimate -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#affectedByClimate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectedByWeather -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#affectedByWeather">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectsAging -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#affectsAging">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectsTastingExperience -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#affectsTastingExperience">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#agingProcessImpact -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#agingProcessImpact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#appliesToPerception -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#appliesToPerception">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#appliesToRegions -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#appliesToRegions"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#appliesWinemakingTechniques -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#appliesWinemakingTechniques">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#aromaTasteDifferences -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#aromaTasteDifferences">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#bestForAging -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#bestForAging">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#contributesToFlavor -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#contributesToFlavor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#contributesToStructure -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#contributesToStructure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#differentiatesBetween -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#differentiatesBetween">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasAcidity -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasAcidity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasAgingPotential -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasAgingPotential">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasAroma -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasAroma">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasBody -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasBody">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasBouquet -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasBouquet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasCharacteristics -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasCharacteristics">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasFaults -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasFaults">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasFlavorProfile -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasFlavorProfile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasFlaws -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasFlaws">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasIdealTemperature -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasIdealTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasLegsTears -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasLegsTears">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasOrigin -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasProductionProcess -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasProductionProcess">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasRole -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasSignificance -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasSignificance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasTannins -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasTannins">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasVintage -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#hasVintage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#impactsFlavor -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#impactsFlavor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#impactsTexture -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#impactsTexture">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#includesStep -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#includesStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#influencesCharacteristics -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#influencesCharacteristics">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#influencesQuality -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#influencesQuality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#interactsWithAcidicFoods -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#interactsWithAcidicFoods">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#interactsWithFattyFoods -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#interactsWithFattyFoods">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#interactsWithSaltyFoods -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#interactsWithSaltyFoods">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#isOfType -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#isOfType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#isWellBalanced -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#isWellBalanced">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#madeFromGrapeVarieties -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#madeFromGrapeVarieties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#originDifference -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#originDifference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#originatesFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#originatesFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#playsRoleIn -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#playsRoleIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#preservesQuality -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#preservesQuality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#priceInfluencingFactors -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#priceInfluencingFactors">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#relatesToOrigin -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#relatesToOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#requiresStorageConditions -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#requiresStorageConditions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#shapedByHistoricalFactors -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#shapedByHistoricalFactors"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#significanceOfLegsTears -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#significanceOfLegsTears">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#suitableForAging -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#suitableForAging">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#suitableForFoodPairing -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#suitableForFoodPairing">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#undergoesOakAging -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#undergoesOakAging">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#vintageImpactOnTaste -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#vintageImpactOnTaste">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#vintageImpactOnValue -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/wine-ontology#vintageImpactOnValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#inverseFunctionalProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#inverseFunctionalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/wine-ontology#affectedByClimate -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#affectedByClimate">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#affectedByClimate"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Climate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectedByWeather -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#affectedByWeather">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#affectedByWeather"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Weather"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectsAging -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#affectsAging">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#affectsAging"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#ClosureType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectsTaste -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#affectsTaste">
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Terroir"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Taste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#affectsTastingExperience -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#affectsTastingExperience">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#affectsTastingExperience"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#WineGlass"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#agingProcessImpact -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#agingProcessImpact">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#agingProcessImpact"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#FlavorProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#appliesToPerception -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#appliesToPerception">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#appliesToPerception"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Body"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Perception"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#appliesWinemakingTechniques -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#appliesWinemakingTechniques">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#appliesWinemakingTechniques"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#WinemakingTechniques"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#aromaTasteDifferences -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#aromaTasteDifferences">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#aromaTasteDifferences"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#PalateDifferences"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#bestForAging -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#bestForAging">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#suitableForAging"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#AgingWine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#contributesToFlavor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#contributesToFlavor">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#contributesToFlavor"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Tannins"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#FlavorProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#contributesToStructure -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#contributesToStructure">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#contributesToStructure"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Tannins"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#differentiatesBetween -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#differentiatesBetween">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#differentiatesBetween"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Blend"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#VarietalWine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasAcidity -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasAcidity">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasAcidity"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Acidity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasAgingPotential -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasAgingPotential">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasAgingPotential"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#AgingPotential"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasAroma -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasAroma">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasAroma"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Aroma"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasBody -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasBody">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasBody"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Body"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasBouquet -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasBouquet">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasBouquet"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Bouquet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasCharacteristics">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasCharacteristics"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Taste"/>
+        <owl:propertyDisjointWith rdf:resource="http://example.com/wine-ontology#usedToProduce"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasFaults -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasFaults">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasFaults"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#WineFault"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasFlavorProfile -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasFlavorProfile">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasFlavorProfile"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#FlavorProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasFlaws -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasFlaws">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasFlaws"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#WineFlaw"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasIdealTemperature -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasIdealTemperature">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasIdealTemperature"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#WineType"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#ServingTemperature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasLegsTears -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasLegsTears">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasLegsTears"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#LegsTears"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasOrigin">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasOrigin"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasProductionProcess -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasProductionProcess">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasProductionProcess"/>
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#includesStep"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#ProductionProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasRole">
+        <owl:equivalentProperty rdf:resource="http://example.com/wine-ontology#isOfType"/>
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasRole"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Sommelier"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasSignificance -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasSignificance">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasSignificance"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#FirstSip"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Significance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasTannins -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasTannins">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasTannins"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Tannins"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#hasVintage -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#hasVintage">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#hasVintage"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Vintage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#impactsFlavor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#impactsFlavor">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#impactsFlavor"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#OakAging"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#FlavorProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#impactsTexture -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#impactsTexture">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#impactsTexture"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#OakAging"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#includesStep -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#includesStep">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#includesStep"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#ProductionProcess"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Step"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+            <rdf:Description rdf:about="http://example.com/wine-ontology#includesStep"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#influencedByTerroir -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#influencedByTerroir">
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Terroir"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#influencesCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#influencesCharacteristics">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#influencesCharacteristics"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#WinemakingTechniques"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#CharacteristicsInfluence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#influencesQuality -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#influencesQuality">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#influencesQuality"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Climate"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Grapevine"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Weather"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#influencesTaste -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#influencesTaste">
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Acidity"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Taste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#interactsWithAcidicFoods -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#interactsWithAcidicFoods">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#interactsWithAcidicFoods"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#FoodInteraction"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#interactsWithFattyFoods -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#interactsWithFattyFoods">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#interactsWithFattyFoods"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#FoodInteraction"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#interactsWithSaltyFoods -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#interactsWithSaltyFoods">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#interactsWithSaltyFoods"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#FoodInteraction"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#isOfType -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#isOfType">
+        <owl:equivalentProperty rdf:resource="http://example.com/wine-ontology#isWellBalanced"/>
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#isOfType"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Blend"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#VarietalWine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#isWellBalanced -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#isWellBalanced">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#isWellBalanced"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#WellBalanced"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Taste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#madeFromGrapeVarieties -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#madeFromGrapeVarieties">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#madeFromGrapeVarieties"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#BordeauxBlend"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#GrapeVariety"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/wine-ontology#madeFromGrapeVarieties"/>
+            <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#inverseOf"/>
+            <rdf:Description rdf:about="http://example.com/wine-ontology#usedToProduce"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#originDifference -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#originDifference">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#originDifference"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#NewWorldWine"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#OldWorldWine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://example.com/wine-ontology#vintageImpactOnValue"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/wine-ontology#originDifference"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#originatesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#originatesFrom">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#originatesFrom"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#playsRoleIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#playsRoleIn">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#playsRoleIn"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Sommelier"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#RestaurantSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#preservesQuality -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#preservesQuality">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#preservesQuality"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#StorageConditions"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#QualityPreservation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#priceInfluencingFactors -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#priceInfluencingFactors">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#priceInfluencingFactors"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#relatesToOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#relatesToOrigin">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#relatesToOrigin"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Typicity"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#OriginRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#requiresStorageConditions -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#requiresStorageConditions">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#requiresStorageConditions"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#StorageConditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#significanceOfLegsTears -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#significanceOfLegsTears">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#significanceOfLegsTears"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#LegsTears"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Significance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#suitableForAging -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#suitableForAging">
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#AgingWine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#suitableForFoodPairing -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#suitableForFoodPairing">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#suitableForFoodPairing"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#FoodInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#tasteDifference -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#tasteDifference">
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Taste"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Taste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#undergoesOakAging -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#undergoesOakAging">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#undergoesOakAging"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#OakAging"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#usedToProduce -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#usedToProduce">
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#GrapeVariety"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/wine-ontology#usedToProduce"/>
+            <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#inverseOf"/>
+            <rdf:Description rdf:about="http://example.com/wine-ontology#madeFromGrapeVarieties"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        </owl:propertyChainAxiom>
+        <owl:inverseFunctionalProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:inverseFunctionalProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#vintageImpactOnTaste -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#vintageImpactOnTaste">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#vintageImpactOnTaste"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Vintage"/>
+        <rdfs:range rdf:resource="http://example.com/wine-ontology#Taste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/wine-ontology#vintageImpactOnValue -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/wine-ontology#vintageImpactOnValue">
+        <owl:inverseOf rdf:resource="http://example.com/wine-ontology#vintageImpactOnValue"/>
+        <rdfs:domain rdf:resource="http://example.com/wine-ontology#Vintage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#inverseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#inverseOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/wine-ontology#Acidity -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Acidity"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#AgingPotential -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#AgingPotential"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#AgingWine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#AgingWine"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Appearance -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Appearance"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Aroma -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Aroma">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#FlavorProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Blend -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Blend">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <owl:disjointWith rdf:resource="http://example.com/wine-ontology#VarietalWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Body -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Body">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Perception"/>
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Structure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#BordeauxBlend -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#BordeauxBlend">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Blend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Bouquet -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Bouquet">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#FlavorProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#CharacteristicsInfluence -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#CharacteristicsInfluence">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Influence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Climate -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Climate">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#WeatherConditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#ClimateInfluence -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#ClimateInfluence"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#ClosureType -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#ClosureType"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#FirstSip -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#FirstSip">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#SipEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#FlavorProfile -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#FlavorProfile">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Influence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Food -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Food"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#FoodInteraction -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#FoodInteraction">
+        <owl:equivalentClass rdf:resource="http://example.com/wine-ontology#WinePairing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#GrapeVariety -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#GrapeVariety">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Aroma"/>
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Bouquet"/>
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Taste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Grapevine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Grapevine">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#ClimateInfluence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#HistoricalFactors -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#HistoricalFactors"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Influence -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Influence"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#LegsTears -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#LegsTears">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Appearance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#NewWorldWine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#NewWorldWine">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#OakAging -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#OakAging">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#OldWorldWine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#OldWorldWine">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#OriginRelation -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#OriginRelation"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#PalateDifferences -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#PalateDifferences"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Perception -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Perception"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Person -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Person"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Price -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Price">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#ProductionProcess -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#ProductionProcess">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#CharacteristicsInfluence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#QualityPreservation -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#QualityPreservation"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#RedWine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#RedWine">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Region -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Region"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#RestaurantSetting -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#RestaurantSetting"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Role -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Role"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#ServingTemperature -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#ServingTemperature"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#ServingVessel -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#ServingVessel"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Significance -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Significance"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#SipEvent -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#SipEvent"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Sommelier -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Sommelier">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Step -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Step"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#StorageConditions -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#StorageConditions">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#WineStorage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Structure -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Structure"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Tannins -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Tannins"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Taste -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Taste">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Perception"/>
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Structure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Terroir -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Terroir">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Influence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Typicity -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Typicity">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#OriginRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#VarietalWine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#VarietalWine">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Vintage -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Vintage">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Weather -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Weather">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#WeatherConditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#WeatherConditions -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WeatherConditions"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WellBalanced -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WellBalanced">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#WhiteWine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WhiteWine">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#Wine -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#Wine"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineAging -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineAging">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineFault -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineFault">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineFlaw -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineFlaw">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineGlass -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineGlass">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#ServingVessel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/wine-ontology#WinePairing -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WinePairing"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineProduction -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineProduction"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineStorage -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineStorage"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineType -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WineType"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WinemakingTechniques -->
+
+    <owl:Class rdf:about="http://example.com/wine-ontology#WinemakingTechniques">
+        <rdfs:subClassOf rdf:resource="http://example.com/wine-ontology#WineProduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/wine-ontology#AcidityA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#AcidityA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Acidity"/>
+        <influencesTaste rdf:resource="http://example.com/wine-ontology#TasteB"/>
+        <rdfs:comment>An individual representing the acidity of a wine.</rdfs:comment>
+        <rdfs:comment>High acidity.</rdfs:comment>
+        <rdfs:label>Acidity</rdfs:label>
+        <rdfs:label>High</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#AgingPotentialA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#AgingPotentialA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#AgingPotential"/>
+        <rdfs:comment>An individual representing the aging potential of a wine.</rdfs:comment>
+        <rdfs:label>Aging Potential</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#AgingWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#AgingWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#AgingWine"/>
+        <rdfs:comment>An individual representing a specific wine that undergoes aging.</rdfs:comment>
+        <rdfs:label>Aging Wine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#AgingWineB -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#AgingWineB">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#AgingWine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Blend -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Blend">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#BlendWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#BlendWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Blend"/>
+        <isOfType rdf:resource="http://example.com/wine-ontology#WhiteWineA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#BodyA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#BodyA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Body"/>
+        <appliesToPerception rdf:resource="http://example.com/wine-ontology#PerceptionA"/>
+        <hasCharacteristics rdf:resource="http://example.com/wine-ontology#TasteA"/>
+        <rdfs:comment>An individual representing the body of a wine.</rdfs:comment>
+        <rdfs:label>Body</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#BoldFlavor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#BoldFlavor"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#BordeauxBlendA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#BordeauxBlendA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#BordeauxBlend"/>
+        <madeFromGrapeVarieties rdf:resource="http://example.com/wine-ontology#CabernetSauvignon"/>
+        <madeFromGrapeVarieties rdf:resource="http://example.com/wine-ontology#Merlot"/>
+        <relatesToOrigin rdf:resource="http://example.com/wine-ontology#OriginRelationA"/>
+        <rdfs:comment>An individual representing a Bordeaux Blend wine.</rdfs:comment>
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#ButteryFlavor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#ButteryFlavor"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#CabernetSauvignon -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#CabernetSauvignon"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#CharacteristicsInfluenceA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#CharacteristicsInfluence"/>
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>An individual representing the influence of characteristics on a wine.</rdfs:comment>
+        <rdfs:comment>Fermentation techniques influence characteristics.</rdfs:comment>
+        <rdfs:label>Characteristics Influence</rdfs:label>
+        <rdfs:label>Fermentation</rdfs:label>
+        <xsd:string>Fermentation techniques influence characteristics.</xsd:string>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Chardonnay -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Chardonnay">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#GrapeVariety"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Climate -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Climate">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#QualityPreservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#ClimateA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#ClimateA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Climate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <influencesQuality rdf:resource="http://example.com/wine-ontology#AgingWineA"/>
+        <rdfs:comment>An individual representing the climate conditions.</rdfs:comment>
+        <rdfs:comment>Mediterranean climate.</rdfs:comment>
+        <rdfs:label>Climate</rdfs:label>
+        <rdfs:label>Mediterranean</rdfs:label>
+        <xsd:string>Mediterranean climate.</xsd:string>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#ClosureTypeA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#ClosureTypeA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#ClosureType"/>
+        <affectsAging rdf:resource="http://example.com/wine-ontology#WineA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#CrispFlavor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#CrispFlavor"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#FirstSipA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#FirstSipA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#FirstSip"/>
+        <hasSignificance rdf:resource="http://example.com/wine-ontology#SignificanceA"/>
+        <rdfs:comment>An individual representing the first sip of a wine tasting.</rdfs:comment>
+        <rdfs:label>First Sip</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#FoodA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#FoodA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Food"/>
+        <rdfs:comment>An individual representing a specific type of food.</rdfs:comment>
+        <rdfs:label>Food</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#FoodInteraction -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#FoodInteraction">
+        <owl:sameAs rdf:resource="http://example.com/wine-ontology#WinePairing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#FoodInteractionA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#FoodInteractionA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#FoodInteraction"/>
+        <interactsWithFattyFoods rdf:resource="http://example.com/wine-ontology#FoodA"/>
+        <rdfs:comment>An individual representing the interaction between a wine and a specific food.</rdfs:comment>
+        <rdfs:label>Food Interaction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#FruityFlavor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#FruityFlavor"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#Grapevine -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Grapevine">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#QualityPreservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#GrapevineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#GrapevineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Grapevine"/>
+        <influencesQuality rdf:resource="http://example.com/wine-ontology#AgingWineA"/>
+        <rdfs:comment>An individual representing a grapevine.</rdfs:comment>
+        <rdfs:comment>Common grapevine.</rdfs:comment>
+        <rdfs:label>Grapevine</rdfs:label>
+        <rdfs:label>Vitis vinifera</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#HistoricalFactorsA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#HistoricalFactorsA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#HistoricalFactors"/>
+        <appliesToRegions rdf:resource="http://example.com/wine-ontology#RegionA"/>
+        <shapedByHistoricalFactors rdf:resource="http://example.com/wine-ontology#ClimateA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#LegsTearsA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#LegsTearsA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#LegsTears"/>
+        <significanceOfLegsTears rdf:resource="http://example.com/wine-ontology#SignificanceA"/>
+        <rdfs:comment>An individual representing the legs and tears of a wine.</rdfs:comment>
+        <rdfs:label>Legs and Tears</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Merlot -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Merlot">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#GrapeVariety"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#NewWorldWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#NewWorldWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#NewWorldWine"/>
+        <hasOrigin rdf:resource="http://example.com/wine-ontology#RegionA"/>
+        <rdfs:comment>An individual representing a specific New World wine.</rdfs:comment>
+        <rdfs:label>New World Wine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#OakAging -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#OakAging">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#AgingWine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#OakAgingA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#OakAgingA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#OakAging"/>
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+        <rdfs:label>Oak Aging</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#OldWorldWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#OldWorldWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#OldWorldWine"/>
+        <rdfs:comment>An individual representing a specific Old World wine.</rdfs:comment>
+        <rdfs:label>Old World Wine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#OriginRelation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#OriginRelation">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Typicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#OriginRelationA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#OriginRelationA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#OriginRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+        <rdfs:comment>Old World origin relation.</rdfs:comment>
+        <rdfs:label>Old World</rdfs:label>
+        <rdfs:label>Origin Relation</rdfs:label>
+        <xsd:string>Old World origin relation.</xsd:string>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#PalateDifferencesA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#PalateDifferencesA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#PalateDifferences"/>
+        <aromaTasteDifferences>Aroma and taste differences.</aromaTasteDifferences>
+        <rdfs:comment>An individual representing the differences in palate perception.</rdfs:comment>
+        <rdfs:label>Palate Differences</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#PerceptionA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#PerceptionA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Perception"/>
+        <rdfs:comment>An individual representing the perception of a wine.</rdfs:comment>
+        <rdfs:comment>Smooth perception on the palate.</rdfs:comment>
+        <rdfs:label>Perception</rdfs:label>
+        <rdfs:label>Smooth</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#PriceA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#PriceA">
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <xsd:string>Price influenced by vintage and quality.</xsd:string>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#ProductionProcessA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#ProductionProcessA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#ProductionProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#QualityPreservationA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#QualityPreservationA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#QualityPreservation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Ideal quality preservation conditions.</rdfs:comment>
+        <rdfs:label>Ideal</rdfs:label>
+        <xsd:string>Ideal quality preservation conditions.</xsd:string>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#RedWine -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#RedWine">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#RedWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#RedWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#RedWine"/>
+        <hasFlavorProfile rdf:resource="http://example.com/wine-ontology#BoldFlavor"/>
+        <rdfs:comment>An individual representing a specific red wine.</rdfs:comment>
+        <rdfs:label>Red Wine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Region -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Region">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#NewWorldWine"/>
+        <rdf:type rdf:resource="http://example.com/wine-ontology#OldWorldWine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#RegionA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#RegionA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Region"/>
+        <rdfs:comment>An individual representing a specific region.</rdfs:comment>
+        <rdfs:comment>Bordeaux wine region.</rdfs:comment>
+        <rdfs:label>Bordeaux</rdfs:label>
+        <rdfs:label>Region</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#RegionB -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#RegionB">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Region"/>
+        <rdfs:comment>An individual representing a specific region.</rdfs:comment>
+        <rdfs:comment>Napa Valley wine region.</rdfs:comment>
+        <rdfs:label>Napa Valley</rdfs:label>
+        <rdfs:label>Region</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#ServingTempA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#ServingTempA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#ServingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#SignificanceA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#SignificanceA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Significance"/>
+        <rdfs:comment>An individual representing the significance of a wine attribute.</rdfs:comment>
+        <rdfs:comment>High significance of legs and tears.</rdfs:comment>
+        <rdfs:label>High</rdfs:label>
+        <rdfs:label>Significance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#SommelierA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#SommelierA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Sommelier"/>
+        <hasRole rdf:resource="http://example.com/wine-ontology#SommelierRoleA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#SommelierRoleA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#SommelierRoleA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Role"/>
+        <rdfs:comment>An individual representing the role of a sommelier.</rdfs:comment>
+        <rdfs:comment>Head Sommelier role.</rdfs:comment>
+        <rdfs:label>Head Sommelier</rdfs:label>
+        <rdfs:label>Sommelier Role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#StepA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#StepA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Step"/>
+        <includesStep rdf:resource="http://example.com/wine-ontology#StepB"/>
+        <rdfs:comment>An individual representing a step in a process.</rdfs:comment>
+        <rdfs:label>Step</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#StepB -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#StepB">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Step"/>
+        <rdfs:comment>An individual representing a step in a process.</rdfs:comment>
+        <rdfs:label>Step</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#StorageConditionsA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#StorageConditionsA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#StorageConditions"/>
+        <preservesQuality rdf:resource="http://example.com/wine-ontology#QualityPreservationA"/>
+        <requiresStorageConditions rdf:resource="http://example.com/wine-ontology#ClimateA"/>
+        <rdfs:comment>An individual representing the storage conditions of a wine.</rdfs:comment>
+        <rdfs:label>Storage Conditions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#TanninsA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#TanninsA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Tannins"/>
+        <rdfs:comment>An individual representing the tannin content of a wine.</rdfs:comment>
+        <rdfs:label>Tannins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#TasteA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#TasteA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Taste"/>
+        <rdfs:comment>An individual representing the taste of a wine.</rdfs:comment>
+        <rdfs:comment>Fruity taste profile.</rdfs:comment>
+        <rdfs:label>Fruity</rdfs:label>
+        <rdfs:label>Taste</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#TasteB -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#TasteB">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Taste"/>
+        <rdfs:comment>An individual representing the taste of a wine.</rdfs:comment>
+        <rdfs:comment>Crisp taste profile.</rdfs:comment>
+        <rdfs:label>Crisp</rdfs:label>
+        <rdfs:label>Taste</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#TerroirA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#TerroirA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Terroir"/>
+        <affectsTaste rdf:resource="http://example.com/wine-ontology#TasteA"/>
+        <rdfs:comment>Loam soil terroir.</rdfs:comment>
+        <rdfs:label>Loam soil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#TypicityA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#TypicityA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Typicity"/>
+        <hasCharacteristics rdf:resource="http://example.com/wine-ontology#TasteA"/>
+        <relatesToOrigin rdf:resource="http://example.com/wine-ontology#OriginRelationA"/>
+        <rdfs:comment>An individual representing the typicity of a wine.</rdfs:comment>
+        <rdfs:label>Typicity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#VarietalWine -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#VarietalWine">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#VarietalWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#VarietalWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#VarietalWine"/>
+        <isOfType rdf:resource="http://example.com/wine-ontology#RedWineA"/>
+        <rdfs:label>Varietal Wine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Vintage -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Vintage">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#VintageA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#VintageA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Vintage"/>
+        <hasCharacteristics rdf:resource="http://example.com/wine-ontology#TasteA"/>
+        <vintageImpactOnTaste rdf:resource="http://example.com/wine-ontology#TasteB"/>
+        <vintageImpactOnValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</vintageImpactOnValue>
+        <rdfs:comment>An individual representing a specific vintage of a wine.</rdfs:comment>
+        <rdfs:label>Vintage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#Weather -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#Weather">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#QualityPreservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WeatherA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WeatherA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Weather"/>
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <influencesQuality rdf:resource="http://example.com/wine-ontology#AgingWineB"/>
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+        <rdfs:comment>Sunny weather conditions.</rdfs:comment>
+        <rdfs:label>Sunny</rdfs:label>
+        <rdfs:label>Weather</rdfs:label>
+        <xsd:string>Sunny weather conditions.</xsd:string>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WellBalancedWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WellBalancedWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WellBalanced"/>
+        <hasCharacteristics rdf:resource="http://example.com/wine-ontology#TasteA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WhiteWine -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WhiteWine">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WhiteWineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WhiteWineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WhiteWine"/>
+        <hasFlavorProfile rdf:resource="http://example.com/wine-ontology#CrispFlavor"/>
+        <rdfs:comment>An individual representing a specific white wine.</rdfs:comment>
+        <rdfs:label>White Wine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WineA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Wine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineB -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WineB">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <hasFlavorProfile rdf:resource="http://example.com/wine-ontology#FruityFlavor"/>
+        <usedToProduce rdf:resource="http://example.com/wine-ontology#Merlot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineC -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WineC">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#Wine"/>
+        <hasFlavorProfile rdf:resource="http://example.com/wine-ontology#ButteryFlavor"/>
+        <usedToProduce rdf:resource="http://example.com/wine-ontology#Chardonnay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineFaultA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WineFaultA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineFault"/>
+        <rdfs:comment>An individual representing a fault in wine.</rdfs:comment>
+        <rdfs:label>Wine Fault</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineFlawA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WineFlawA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineFlaw"/>
+        <rdfs:comment>An individual representing a flaw in wine.</rdfs:comment>
+        <rdfs:label>Wine Flaw</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WineGlassA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WineGlassA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WineGlass"/>
+        <affectsTastingExperience rdf:resource="http://example.com/wine-ontology#WineA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#WinePairing -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WinePairing"/>
+    
+
+
+    <!-- http://example.com/wine-ontology#WinemakingTechniquesA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#WinemakingTechniquesA">
+        <rdf:type rdf:resource="http://example.com/wine-ontology#WinemakingTechniques"/>
+        <appliesWinemakingTechniques rdf:resource="http://example.com/wine-ontology#ProductionProcessA"/>
+        <influencesCharacteristics rdf:resource="http://example.com/wine-ontology#CharacteristicsInfluenceA"/>
+        <rdfs:comment>An individual representing winemaking techniques.</rdfs:comment>
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#differentiatesBetween -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#differentiatesBetween">
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/wine-ontology#vintageImpactOnValue -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/wine-ontology#vintageImpactOnValue">
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AcidityB">
+        <rdfs:label>Acidity</rdfs:label>
+        <rdfs:comment>An individual representing the acidity of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AgingPotentialB">
+        <rdfs:comment>An individual representing the aging potential of a wine.</rdfs:comment>
+        <rdfs:label>Aging Potential</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AgingPotentialC">
+        <rdfs:comment>An individual representing the aging potential of a wine.</rdfs:comment>
+        <rdfs:label>Aging Potential</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AgingPotentialD">
+        <rdfs:comment>An individual representing the aging potential of a wine.</rdfs:comment>
+        <rdfs:label>Aging Potential</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AgingPotentialE">
+        <rdfs:comment>An individual representing the aging potential of a wine.</rdfs:comment>
+        <rdfs:label>Aging Potential</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AgingPotentialF">
+        <rdfs:label>Aging Potential</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AgingPotentialG">
+        <rdfs:comment>An individual representing the aging potential of a wine.</rdfs:comment>
+        <rdfs:label>Aging Potential</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceA">
+        <rdfs:comment>An individual representing the appearance of a wine.</rdfs:comment>
+        <rdfs:label>Appearance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceB">
+        <rdfs:comment>An individual representing the appearance of a wine.</rdfs:comment>
+        <rdfs:label>Appearance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceC">
+        <rdfs:comment>An individual representing the appearance of a wine.</rdfs:comment>
+        <rdfs:label>Appearance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceD">
+        <rdfs:comment>An individual representing the appearance of a wine.</rdfs:comment>
+        <rdfs:label>Appearance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceE">
+        <rdfs:label>Appearance</rdfs:label>
+        <rdfs:comment>An individual representing the appearance of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceF">
+        <rdfs:label>Appearance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AppearanceG">
+        <rdfs:comment>An individual representing the appearance of a wine.</rdfs:comment>
+        <rdfs:label>Appearance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaA">
+        <rdfs:label>Aroma</rdfs:label>
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaB">
+        <rdfs:label>Aroma</rdfs:label>
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaC">
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+        <rdfs:label>Aroma</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaD">
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+        <rdfs:label>Aroma</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaE">
+        <rdfs:label>Aroma</rdfs:label>
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaF">
+        <rdfs:label>Aroma</rdfs:label>
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaG">
+        <rdfs:label>Aroma</rdfs:label>
+        <rdfs:comment>An individual representing the aroma of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#AromaH">
+        <rdfs:label>Aroma</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BlendA">
+        <rdfs:comment>An individual representing a specific blend of wines.</rdfs:comment>
+        <rdfs:label>Blend</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BlendTypeA">
+        <rdfs:label>Blend Type</rdfs:label>
+        <rdfs:comment>An individual representing a specific blend type.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BodyB">
+        <rdfs:label>Body</rdfs:label>
+        <rdfs:comment>An individual representing the body of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BodyC">
+        <rdfs:comment>An individual representing the body of a wine.</rdfs:comment>
+        <rdfs:label>Body</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BodyD">
+        <rdfs:comment>An individual representing the body of a wine.</rdfs:comment>
+        <rdfs:label>Body</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BodyE">
+        <rdfs:comment>An individual representing the body of a wine.</rdfs:comment>
+        <rdfs:label>Body</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BodyF">
+        <rdfs:label>Body</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BodyG">
+        <rdfs:comment>An individual representing the body of a wine.</rdfs:comment>
+        <rdfs:label>Body</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BordeauxBlendB">
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+        <rdfs:comment>An individual representing a Bordeaux Blend wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BordeauxBlendC">
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+        <rdfs:comment>An individual representing a Bordeaux Blend wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BordeauxBlendD">
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+        <rdfs:comment>An individual representing a Bordeaux Blend wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BordeauxBlendE">
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+        <rdfs:comment>An individual representing a Bordeaux Blend wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BordeauxBlendF">
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BordeauxBlendG">
+        <rdfs:comment>An individual representing a Bordeaux Blend wine.</rdfs:comment>
+        <rdfs:label>Bordeaux Blend</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetA">
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetB">
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetC">
+        <rdfs:label>Bouquet</rdfs:label>
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetD">
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetE">
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetF">
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetG">
+        <rdfs:comment>An individual representing the bouquet of a wine.</rdfs:comment>
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#BouquetH">
+        <rdfs:label>Bouquet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceB">
+        <rdfs:label>Characteristics Influence</rdfs:label>
+        <rdfs:comment>An individual representing the influence of characteristics on a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceC">
+        <rdfs:comment>An individual representing the influence of characteristics on a wine.</rdfs:comment>
+        <rdfs:label>Characteristics Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceD">
+        <rdfs:comment>An individual representing the influence of characteristics on a wine.</rdfs:comment>
+        <rdfs:label>Characteristics Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceE">
+        <rdfs:comment>An individual representing the influence of characteristics on a wine.</rdfs:comment>
+        <rdfs:label>Characteristics Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceF">
+        <rdfs:comment>An individual representing the influence of characteristics on a wine.</rdfs:comment>
+        <rdfs:label>Characteristics Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#CharacteristicsInfluenceG">
+        <rdfs:label>Characteristics Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceA">
+        <rdfs:comment>An individual representing the influence of climate on a wine.</rdfs:comment>
+        <rdfs:label>Climate Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceB">
+        <rdfs:label>Climate Influence</rdfs:label>
+        <rdfs:comment>An individual representing the influence of climate on a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceC">
+        <rdfs:comment>An individual representing the influence of climate on a wine.</rdfs:comment>
+        <rdfs:label>Climate Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceD">
+        <rdfs:label>Climate Influence</rdfs:label>
+        <rdfs:comment>An individual representing the influence of climate on a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceE">
+        <rdfs:comment>An individual representing the influence of climate on a wine.</rdfs:comment>
+        <rdfs:label>Climate Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceF">
+        <rdfs:label>Climate Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimateInfluenceG">
+        <rdfs:comment>An individual representing the influence of climate on a wine.</rdfs:comment>
+        <rdfs:label>Climate Influence</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimatePreservationA">
+        <rdfs:comment>An individual representing climate preservation.</rdfs:comment>
+        <rdfs:label>Climate Preservation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ClimatePreservationB">
+        <rdfs:comment>An individual representing climate preservation.</rdfs:comment>
+        <rdfs:label>Climate Preservation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FirstSipB">
+        <rdfs:label>First Sip</rdfs:label>
+        <rdfs:comment>An individual representing the first sip of a wine tasting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FirstSipC">
+        <rdfs:label>First Sip</rdfs:label>
+        <rdfs:comment>An individual representing the first sip of a wine tasting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FirstSipD">
+        <rdfs:label>First Sip</rdfs:label>
+        <rdfs:comment>An individual representing the first sip of a wine tasting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FirstSipE">
+        <rdfs:label>First Sip</rdfs:label>
+        <rdfs:comment>An individual representing the first sip of a wine tasting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FirstSipF">
+        <rdfs:label>First Sip</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FirstSipG">
+        <rdfs:comment>An individual representing the first sip of a wine tasting.</rdfs:comment>
+        <rdfs:label>First Sip</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorA">
+        <rdfs:comment>An individual representing the flavor of a wine.</rdfs:comment>
+        <rdfs:label>Flavor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorB">
+        <rdfs:comment>An individual representing the flavor of a wine.</rdfs:comment>
+        <rdfs:label>Flavor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorC">
+        <rdfs:label>Flavor</rdfs:label>
+        <rdfs:comment>An individual representing the flavor of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorD">
+        <rdfs:label>Flavor</rdfs:label>
+        <rdfs:comment>An individual representing the flavor of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorE">
+        <rdfs:label>Flavor</rdfs:label>
+        <rdfs:comment>An individual representing the flavor of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorF">
+        <rdfs:label>Flavor</rdfs:label>
+        <rdfs:comment>An individual representing the flavor of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorG">
+        <rdfs:label>Flavor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FlavorProfileA">
+        <rdfs:comment>An individual representing a specific flavor profile of a wine.</rdfs:comment>
+        <rdfs:label>Flavor Profile</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodB">
+        <rdfs:label>Food</rdfs:label>
+        <rdfs:comment>An individual representing a specific type of food.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodC">
+        <rdfs:comment>An individual representing a specific type of food.</rdfs:comment>
+        <rdfs:label>Food</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodD">
+        <rdfs:comment>An individual representing a specific type of food.</rdfs:comment>
+        <rdfs:label>Food</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodE">
+        <rdfs:comment>An individual representing a specific type of food.</rdfs:comment>
+        <rdfs:label>Food</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodF">
+        <rdfs:label>Food</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodG">
+        <rdfs:label>Food</rdfs:label>
+        <rdfs:comment>An individual representing a specific type of food.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodInteractionB">
+        <rdfs:comment>An individual representing the interaction between a wine and a specific food.</rdfs:comment>
+        <rdfs:label>Food Interaction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodInteractionC">
+        <rdfs:label>Food Interaction</rdfs:label>
+        <rdfs:comment>An individual representing the interaction between a wine and a specific food.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodInteractionD">
+        <rdfs:comment>An individual representing the interaction between a wine and a specific food.</rdfs:comment>
+        <rdfs:label>Food Interaction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodInteractionE">
+        <rdfs:comment>An individual representing the interaction between a wine and a specific food.</rdfs:comment>
+        <rdfs:label>Food Interaction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodInteractionF">
+        <rdfs:comment>An individual representing the interaction between a wine and a specific food.</rdfs:comment>
+        <rdfs:label>Food Interaction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#FoodInteractionG">
+        <rdfs:label>Food Interaction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#GrapeVarietyA">
+        <rdfs:comment>An individual representing a specific grape variety.</rdfs:comment>
+        <rdfs:label>Grape Variety</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#GrapeVarietyB">
+        <rdfs:comment>An individual representing a specific grape variety.</rdfs:comment>
+        <rdfs:label>Grape Variety</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#GrapevinePreservationA">
+        <rdfs:comment>An individual representing grapevine preservation.</rdfs:comment>
+        <rdfs:label>Grapevine Preservation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#GrapevinePreservationB">
+        <rdfs:comment>An individual representing grapevine preservation.</rdfs:comment>
+        <rdfs:label>Grapevine Preservation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#LegsTearsB">
+        <rdfs:comment>An individual representing the legs and tears of a wine.</rdfs:comment>
+        <rdfs:label>Legs and Tears</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#LegsTearsC">
+        <rdfs:comment>An individual representing the legs and tears of a wine.</rdfs:comment>
+        <rdfs:label>Legs and Tears</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#LegsTearsD">
+        <rdfs:comment>An individual representing the legs and tears of a wine.</rdfs:comment>
+        <rdfs:label>Legs and Tears</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#LegsTearsE">
+        <rdfs:label>Legs and Tears</rdfs:label>
+        <rdfs:comment>An individual representing the legs and tears of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#LegsTearsF">
+        <rdfs:label>Legs and Tears</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#LegsTearsG">
+        <rdfs:comment>An individual representing the legs and tears of a wine.</rdfs:comment>
+        <rdfs:label>Legs and Tears</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#NewWorldWineTypeA">
+        <rdfs:comment>An individual representing a specific New World wine type.</rdfs:comment>
+        <rdfs:label>New World Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#NewWorldWineTypeB">
+        <rdfs:comment>An individual representing a specific New World wine type.</rdfs:comment>
+        <rdfs:label>New World Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingB">
+        <rdfs:label>Oak Aging</rdfs:label>
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingC">
+        <rdfs:label>Oak Aging</rdfs:label>
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingD">
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+        <rdfs:label>Oak Aging</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingE">
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+        <rdfs:label>Oak Aging</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingF">
+        <rdfs:label>Oak Aging</rdfs:label>
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingG">
+        <rdfs:label>Oak Aging</rdfs:label>
+        <rdfs:comment>An individual representing the process of oak aging.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OakAgingH">
+        <rdfs:label>Oak Aging</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OldWorldWineTypeA">
+        <rdfs:label>Old World Wine Type</rdfs:label>
+        <rdfs:comment>An individual representing a specific Old World wine type.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OldWorldWineTypeB">
+        <rdfs:label>Old World Wine Type</rdfs:label>
+        <rdfs:comment>An individual representing a specific Old World wine type.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationB">
+        <rdfs:label>Origin Relation</rdfs:label>
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationC">
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+        <rdfs:label>Origin Relation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationD">
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+        <rdfs:label>Origin Relation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationE">
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+        <rdfs:label>Origin Relation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationF">
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+        <rdfs:label>Origin Relation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationG">
+        <rdfs:comment>An individual representing the relationship between a wine and its origin.</rdfs:comment>
+        <rdfs:label>Origin Relation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#OriginRelationH">
+        <rdfs:label>Origin Relation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PalateDifferencesB">
+        <rdfs:label>Palate Differences</rdfs:label>
+        <rdfs:comment>An individual representing the differences in palate perception.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PalateDifferencesC">
+        <rdfs:label>Palate Differences</rdfs:label>
+        <rdfs:comment>An individual representing the differences in palate perception.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PalateDifferencesD">
+        <rdfs:comment>An individual representing the differences in palate perception.</rdfs:comment>
+        <rdfs:label>Palate Differences</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PalateDifferencesE">
+        <rdfs:comment>An individual representing the differences in palate perception.</rdfs:comment>
+        <rdfs:label>Palate Differences</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PalateDifferencesF">
+        <rdfs:label>Palate Differences</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PalateDifferencesG">
+        <rdfs:comment>An individual representing the differences in palate perception.</rdfs:comment>
+        <rdfs:label>Palate Differences</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PerceptionB">
+        <rdfs:comment>An individual representing the perception of a wine.</rdfs:comment>
+        <rdfs:label>Perception</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PerceptionC">
+        <rdfs:comment>An individual representing the perception of a wine.</rdfs:comment>
+        <rdfs:label>Perception</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PerceptionD">
+        <rdfs:label>Perception</rdfs:label>
+        <rdfs:comment>An individual representing the perception of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PerceptionE">
+        <rdfs:label>Perception</rdfs:label>
+        <rdfs:comment>An individual representing the perception of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PerceptionF">
+        <rdfs:label>Perception</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PerceptionG">
+        <rdfs:label>Perception</rdfs:label>
+        <rdfs:comment>An individual representing the perception of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonA">
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:comment>An individual representing a person.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonB">
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:comment>An individual representing a person.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonC">
+        <rdfs:comment>An individual representing a person.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonD">
+        <rdfs:comment>An individual representing a person.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonE">
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:comment>An individual representing a person.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonF">
+        <rdfs:label>Person</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#PersonG">
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:comment>An individual representing a person.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RedWineTypeA">
+        <rdfs:comment>An individual representing a specific red wine type.</rdfs:comment>
+        <rdfs:label>Red Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingA">
+        <rdfs:label>Restaurant Setting</rdfs:label>
+        <rdfs:comment>An individual representing a restaurant setting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingB">
+        <rdfs:label>Restaurant Setting</rdfs:label>
+        <rdfs:comment>An individual representing a restaurant setting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingC">
+        <rdfs:comment>An individual representing a restaurant setting.</rdfs:comment>
+        <rdfs:label>Restaurant Setting</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingD">
+        <rdfs:comment>An individual representing a restaurant setting.</rdfs:comment>
+        <rdfs:label>Restaurant Setting</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingE">
+        <rdfs:label>Restaurant Setting</rdfs:label>
+        <rdfs:comment>An individual representing a restaurant setting.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingF">
+        <rdfs:label>Restaurant Setting</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RestaurantSettingG">
+        <rdfs:comment>An individual representing a restaurant setting.</rdfs:comment>
+        <rdfs:label>Restaurant Setting</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleA">
+        <rdfs:label>Role</rdfs:label>
+        <rdfs:comment>An individual representing a role related to wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleB">
+        <rdfs:label>Role</rdfs:label>
+        <rdfs:comment>An individual representing a role related to wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleC">
+        <rdfs:label>Role</rdfs:label>
+        <rdfs:comment>An individual representing a role related to wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleD">
+        <rdfs:comment>An individual representing a role related to wine.</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleE">
+        <rdfs:comment>An individual representing a role related to wine.</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleF">
+        <rdfs:label>Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#RoleG">
+        <rdfs:comment>An individual representing a role related to wine.</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureA">
+        <rdfs:label>Serving Temperature</rdfs:label>
+        <rdfs:comment>An individual representing the ideal serving temperature of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureB">
+        <rdfs:label>Serving Temperature</rdfs:label>
+        <rdfs:comment>An individual representing the ideal serving temperature of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureC">
+        <rdfs:label>Serving Temperature</rdfs:label>
+        <rdfs:comment>An individual representing the ideal serving temperature of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureD">
+        <rdfs:label>Serving Temperature</rdfs:label>
+        <rdfs:comment>An individual representing the ideal serving temperature of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureE">
+        <rdfs:label>Serving Temperature</rdfs:label>
+        <rdfs:comment>An individual representing the ideal serving temperature of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureF">
+        <rdfs:comment>An individual representing the ideal serving temperature of a wine.</rdfs:comment>
+        <rdfs:label>Serving Temperature</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingTemperatureG">
+        <rdfs:label>Serving Temperature</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselA">
+        <rdfs:label>Serving Vessel</rdfs:label>
+        <rdfs:comment>An individual representing a vessel used for serving wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselB">
+        <rdfs:label>Serving Vessel</rdfs:label>
+        <rdfs:comment>An individual representing a vessel used for serving wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselC">
+        <rdfs:label>Serving Vessel</rdfs:label>
+        <rdfs:comment>An individual representing a vessel used for serving wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselD">
+        <rdfs:comment>An individual representing a vessel used for serving wine.</rdfs:comment>
+        <rdfs:label>Serving Vessel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselE">
+        <rdfs:comment>An individual representing a vessel used for serving wine.</rdfs:comment>
+        <rdfs:label>Serving Vessel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselF">
+        <rdfs:label>Serving Vessel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#ServingVesselG">
+        <rdfs:comment>An individual representing a vessel used for serving wine.</rdfs:comment>
+        <rdfs:label>Serving Vessel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SignificanceB">
+        <rdfs:label>Significance</rdfs:label>
+        <rdfs:comment>An individual representing the significance of a wine attribute.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SignificanceC">
+        <rdfs:label>Significance</rdfs:label>
+        <rdfs:comment>An individual representing the significance of a wine attribute.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SignificanceD">
+        <rdfs:comment>An individual representing the significance of a wine attribute.</rdfs:comment>
+        <rdfs:label>Significance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SignificanceE">
+        <rdfs:comment>An individual representing the significance of a wine attribute.</rdfs:comment>
+        <rdfs:label>Significance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SignificanceF">
+        <rdfs:label>Significance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SignificanceG">
+        <rdfs:label>Significance</rdfs:label>
+        <rdfs:comment>An individual representing the significance of a wine attribute.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SommelierRoleB">
+        <rdfs:label>Sommelier Role</rdfs:label>
+        <rdfs:comment>An individual representing the role of a sommelier.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SommelierRoleC">
+        <rdfs:label>Sommelier Role</rdfs:label>
+        <rdfs:comment>An individual representing the role of a sommelier.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SommelierRoleD">
+        <rdfs:label>Sommelier Role</rdfs:label>
+        <rdfs:comment>An individual representing the role of a sommelier.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SommelierRoleE">
+        <rdfs:label>Sommelier Role</rdfs:label>
+        <rdfs:comment>An individual representing the role of a sommelier.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SommelierRoleF">
+        <rdfs:label>Sommelier Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#SommelierRoleG">
+        <rdfs:comment>An individual representing the role of a sommelier.</rdfs:comment>
+        <rdfs:label>Sommelier Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StepC">
+        <rdfs:label>Step</rdfs:label>
+        <rdfs:comment>An individual representing a step in a process.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StepD">
+        <rdfs:label>Step</rdfs:label>
+        <rdfs:comment>An individual representing a step in a process.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StepE">
+        <rdfs:label>Step</rdfs:label>
+        <rdfs:comment>An individual representing a step in a process.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StepF">
+        <rdfs:label>Step</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StepG">
+        <rdfs:label>Step</rdfs:label>
+        <rdfs:comment>An individual representing a step in a process.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StorageConditionsB">
+        <rdfs:label>Storage Conditions</rdfs:label>
+        <rdfs:comment>An individual representing the storage conditions of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StorageConditionsC">
+        <rdfs:label>Storage Conditions</rdfs:label>
+        <rdfs:comment>An individual representing the storage conditions of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StorageConditionsD">
+        <rdfs:comment>An individual representing the storage conditions of a wine.</rdfs:comment>
+        <rdfs:label>Storage Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StorageConditionsE">
+        <rdfs:comment>An individual representing the storage conditions of a wine.</rdfs:comment>
+        <rdfs:label>Storage Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StorageConditionsF">
+        <rdfs:label>Storage Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StorageConditionsG">
+        <rdfs:comment>An individual representing the storage conditions of a wine.</rdfs:comment>
+        <rdfs:label>Storage Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureA">
+        <rdfs:label>Structure</rdfs:label>
+        <rdfs:comment>An individual representing the structure of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureB">
+        <rdfs:label>Structure</rdfs:label>
+        <rdfs:comment>An individual representing the structure of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureC">
+        <rdfs:label>Structure</rdfs:label>
+        <rdfs:comment>An individual representing the structure of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureD">
+        <rdfs:label>Structure</rdfs:label>
+        <rdfs:comment>An individual representing the structure of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureE">
+        <rdfs:label>Structure</rdfs:label>
+        <rdfs:comment>An individual representing the structure of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureF">
+        <rdfs:label>Structure</rdfs:label>
+        <rdfs:comment>An individual representing the structure of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#StructureG">
+        <rdfs:label>Structure</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TanninsB">
+        <rdfs:comment>An individual representing the tannin content of a wine.</rdfs:comment>
+        <rdfs:label>Tannins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TanninsC">
+        <rdfs:comment>An individual representing the tannin content of a wine.</rdfs:comment>
+        <rdfs:label>Tannins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TanninsD">
+        <rdfs:comment>An individual representing the tannin content of a wine.</rdfs:comment>
+        <rdfs:label>Tannins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TanninsE">
+        <rdfs:comment>An individual representing the tannin content of a wine.</rdfs:comment>
+        <rdfs:label>Tannins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TanninsF">
+        <rdfs:label>Tannins</rdfs:label>
+        <rdfs:comment>An individual representing the tannin content of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TanninsG">
+        <rdfs:label>Tannins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TypicityB">
+        <rdfs:label>Typicity</rdfs:label>
+        <rdfs:comment>An individual representing the typicity of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TypicityC">
+        <rdfs:label>Typicity</rdfs:label>
+        <rdfs:comment>An individual representing the typicity of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TypicityD">
+        <rdfs:label>Typicity</rdfs:label>
+        <rdfs:comment>An individual representing the typicity of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TypicityE">
+        <rdfs:label>Typicity</rdfs:label>
+        <rdfs:comment>An individual representing the typicity of a wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TypicityF">
+        <rdfs:label>Typicity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#TypicityG">
+        <rdfs:comment>An individual representing the typicity of a wine.</rdfs:comment>
+        <rdfs:label>Typicity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#VarietalWineTypeA">
+        <rdfs:comment>An individual representing a specific varietal wine type.</rdfs:comment>
+        <rdfs:label>Varietal Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsA">
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+        <rdfs:label>Weather Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsB">
+        <rdfs:label>Weather Conditions</rdfs:label>
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsC">
+        <rdfs:label>Weather Conditions</rdfs:label>
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsD">
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+        <rdfs:label>Weather Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsE">
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+        <rdfs:label>Weather Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsF">
+        <rdfs:label>Weather Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherConditionsG">
+        <rdfs:comment>An individual representing the weather conditions.</rdfs:comment>
+        <rdfs:label>Weather Conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherPreservationA">
+        <rdfs:label>Weather Preservation</rdfs:label>
+        <rdfs:comment>An individual representing weather preservation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WeatherPreservationB">
+        <rdfs:label>Weather Preservation</rdfs:label>
+        <rdfs:comment>An individual representing weather preservation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WellBalancedA">
+        <rdfs:label>Well-Balanced</rdfs:label>
+        <rdfs:comment>An individual representing a well-balanced wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WhiteWineTypeA">
+        <rdfs:comment>An individual representing a specific white wine type.</rdfs:comment>
+        <rdfs:label>White Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFaultB">
+        <rdfs:comment>An individual representing a fault in wine.</rdfs:comment>
+        <rdfs:label>Wine Fault</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFaultC">
+        <rdfs:comment>An individual representing a fault in wine.</rdfs:comment>
+        <rdfs:label>Wine Fault</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFaultD">
+        <rdfs:comment>An individual representing a fault in wine.</rdfs:comment>
+        <rdfs:label>Wine Fault</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFaultE">
+        <rdfs:label>Wine Fault</rdfs:label>
+        <rdfs:comment>An individual representing a fault in wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFaultF">
+        <rdfs:label>Wine Fault</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFaultG">
+        <rdfs:comment>An individual representing a fault in wine.</rdfs:comment>
+        <rdfs:label>Wine Fault</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFlawB">
+        <rdfs:label>Wine Flaw</rdfs:label>
+        <rdfs:comment>An individual representing a flaw in wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFlawC">
+        <rdfs:label>Wine Flaw</rdfs:label>
+        <rdfs:comment>An individual representing a flaw in wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFlawD">
+        <rdfs:label>Wine Flaw</rdfs:label>
+        <rdfs:comment>An individual representing a flaw in wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFlawE">
+        <rdfs:label>Wine Flaw</rdfs:label>
+        <rdfs:comment>An individual representing a flaw in wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFlawF">
+        <rdfs:label>Wine Flaw</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineFlawG">
+        <rdfs:comment>An individual representing a flaw in wine.</rdfs:comment>
+        <rdfs:label>Wine Flaw</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingA">
+        <rdfs:comment>An individual representing a specific wine and food pairing.</rdfs:comment>
+        <rdfs:label>Wine Pairing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingB">
+        <rdfs:comment>An individual representing a specific wine and food pairing.</rdfs:comment>
+        <rdfs:label>Wine Pairing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingC">
+        <rdfs:label>Wine Pairing</rdfs:label>
+        <rdfs:comment>An individual representing a specific wine and food pairing.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingD">
+        <rdfs:comment>An individual representing a specific wine and food pairing.</rdfs:comment>
+        <rdfs:label>Wine Pairing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingE">
+        <rdfs:label>Wine Pairing</rdfs:label>
+        <rdfs:comment>An individual representing a specific wine and food pairing.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingF">
+        <rdfs:label>Wine Pairing</rdfs:label>
+        <rdfs:comment>An individual representing a specific wine and food pairing.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinePairingG">
+        <rdfs:label>Wine Pairing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionA">
+        <rdfs:label>Wine Production</rdfs:label>
+        <rdfs:comment>An individual representing the production of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionB">
+        <rdfs:label>Wine Production</rdfs:label>
+        <rdfs:comment>An individual representing the production of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionC">
+        <rdfs:comment>An individual representing the production of wine.</rdfs:comment>
+        <rdfs:label>Wine Production</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionD">
+        <rdfs:comment>An individual representing the production of wine.</rdfs:comment>
+        <rdfs:label>Wine Production</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionE">
+        <rdfs:label>Wine Production</rdfs:label>
+        <rdfs:comment>An individual representing the production of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionF">
+        <rdfs:label>Wine Production</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineProductionG">
+        <rdfs:comment>An individual representing the production of wine.</rdfs:comment>
+        <rdfs:label>Wine Production</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageA">
+        <rdfs:label>Wine Storage</rdfs:label>
+        <rdfs:comment>An individual representing the storage of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageB">
+        <rdfs:label>Wine Storage</rdfs:label>
+        <rdfs:comment>An individual representing the storage of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageC">
+        <rdfs:label>Wine Storage</rdfs:label>
+        <rdfs:comment>An individual representing the storage of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageD">
+        <rdfs:label>Wine Storage</rdfs:label>
+        <rdfs:comment>An individual representing the storage of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageE">
+        <rdfs:label>Wine Storage</rdfs:label>
+        <rdfs:comment>An individual representing the storage of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageF">
+        <rdfs:label>Wine Storage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineStorageG">
+        <rdfs:label>Wine Storage</rdfs:label>
+        <rdfs:comment>An individual representing the storage of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeA">
+        <rdfs:comment>An individual representing a specific type of wine.</rdfs:comment>
+        <rdfs:label>Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeB">
+        <rdfs:comment>An individual representing a specific type of wine.</rdfs:comment>
+        <rdfs:label>Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeC">
+        <rdfs:comment>An individual representing a specific type of wine.</rdfs:comment>
+        <rdfs:label>Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeD">
+        <rdfs:label>Wine Type</rdfs:label>
+        <rdfs:comment>An individual representing a specific type of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeE">
+        <rdfs:comment>An individual representing a specific type of wine.</rdfs:comment>
+        <rdfs:label>Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeF">
+        <rdfs:label>Wine Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WineTypeG">
+        <rdfs:label>Wine Type</rdfs:label>
+        <rdfs:comment>An individual representing a specific type of wine.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinemakingTechniquesB">
+        <rdfs:comment>An individual representing winemaking techniques.</rdfs:comment>
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinemakingTechniquesC">
+        <rdfs:comment>An individual representing winemaking techniques.</rdfs:comment>
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinemakingTechniquesD">
+        <rdfs:comment>An individual representing winemaking techniques.</rdfs:comment>
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinemakingTechniquesE">
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+        <rdfs:comment>An individual representing winemaking techniques.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinemakingTechniquesF">
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#WinemakingTechniquesG">
+        <rdfs:label>Winemaking Techniques</rdfs:label>
+        <rdfs:comment>An individual representing winemaking techniques.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#differentiatesBetween">
+        <xsd:string>Differentiation between varietal wines and blends.</xsd:string>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/wine-ontology#vintageImpactOnValue">
+        <xsd:decimal>100.0</xsd:decimal>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/wine-ontology#Blend"/>
+            <rdf:Description rdf:about="http://example.com/wine-ontology#VarietalWine"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
