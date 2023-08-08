@@ -1,0 +1,76 @@
+
+*** Day 1 prompt list (OLD)
+
+
+Prompt 1:
+You are an experience knowledge engineer, and you are going to model the wine domain. Following the NeOn methodology, specify: 
+- the Purpose of the ontology 
+- the Scope of the ontology 
+- the Target Group of the ontology 
+- the implementation language 
+- the intended uses 
+- the Functional Requirements 
+- the Non-functional Requirements
+
+
+Prompt 2:
+Based on the generated Specifications of Ontology Requirements write a list of Competency Questions that the wine ontology should be able to answer to. 
+Make it as complete as possible.
+
+
+Prompt 3:
+For each Competency Question extract entities and properties that have to be introduced in the ontology. Provide an output like this:
+{ 
+{"cq1" : "What are the different types of wines (e.g., red, white, rose, sparkling) available in the ontology?", "Entity" : [ "Wine", "RedWine", "RoseWine", "SparklingWine" ] , "Property" : ["subClassOf" ]}, {"cq2" : "What grape varieties are used to produce a specific type of wine?", "Entity": ["GrapeVariety, "Wine"] "Property": ["usedToProduce", "subClassOf"] } 
+}
+
+
+Prompt 4:
+Considering entities and properties, generate a conceptual model expressing in form of triples the entities and properties and their relations.
+
+
+Prompt 5:
+Considering the conceptual model you generated, generate a full ontology serialized in Turtle syntax.
+
+
+Prompt 6:
+For all object properties, if lacking, generate also the inverse property, keeping the ontology consistent restricting domain and range where meaningful.
+Print only the new triples.
+
+
+Prompt 7:
+Considering the classes that you have in the ontology, introduce some Data Property when meaningful, such as: 
+
+wine:hasPriceValue rdf:type owl:DatatypeProperty ; rdfs:range xsd:positiveInteger . 
+
+Modify the domain and range according to the type of value requested by the Data Property.
+Print only the new triples.
+
+
+Prompt 8:
+For all the classes introduce some axiomatisation in the ontology when meaningful and relevant, like these: 
+
+:GrapeVariety EquivalentTo usedToProduce some Wine 
+:Wine EquivalentTo hasVintage some Vintage 
+:Wine SubClassOf hasRating some Rating 
+
+Make sure that the ontology is consistent.
+Do it for all the classes for which it makes sense having an axiomatisation.
+Print only the new triples.
+
+
+Prompt 9:
+Now for all the classes and properties add a triple that describes in natural language its meaning, using the annotation property rdfs:comment.
+Print only the new triples.
+
+
+Prompt 10:
+Now populate the ontology with meaningful individuals, such as these: 
+
+:RieslingGrape rdf:type :GrapeVariety 
+:SancerreRegion rdf:type :WineRegion 
+:Selaks rdf:type :Wine 
+:SevreEtMaine rdf:type :Wine 
+
+Make it as complete as possible, introducing all the types of wine that you can as individuals, as well as wine regions, awards, and wine producers. 
+Print only the new triples.
