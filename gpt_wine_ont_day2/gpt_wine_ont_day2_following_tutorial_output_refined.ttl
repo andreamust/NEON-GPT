@@ -1,0 +1,126 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wine: <http://example.com/wine#> .
+
+# Classes
+wine:Wine a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:RedWine a owl:Class ;
+    rdfs:subClassOf wine:Wine .
+
+wine:WhiteWine a owl:Class ;
+    rdfs:subClassOf wine:Wine .
+
+wine:RoséWine a owl:Class ;
+    rdfs:subClassOf wine:Wine .
+
+wine:Food a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:FoodType a owl:Class ;
+    rdfs:subClassOf wine:Food .
+
+wine:WineAndFoodPairing a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:Grape a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:Winery a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+wine:WineRegion a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object Properties
+wine:hasColor a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the color of a wine."@en .
+
+wine:hasBody a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the body of a wine."@en .
+
+wine:hasFlavor a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the flavor of a wine."@en .
+
+wine:hasSugar a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the sugar content of a wine."@en .
+
+wine:hasVintageYear a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Indicates the vintage year of a wine."@en .
+
+wine:hasQualityAssessment a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the quality assessment of a wine."@en .
+
+wine:hasBouquet a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the bouquet of a wine."@en .
+
+wine:hasTanninLevel a owl:ObjectProperty ;
+    rdfs:domain wine:RedWine ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indicates the tannin level of a red wine."@en .
+
+wine:hasGrape a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range wine:Grape ;
+    rdfs:comment "Indicates the grape variety used for a wine."@en .
+
+wine:hasMaker a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range wine:Winery ;
+    rdfs:comment "Indicates the winery that makes a wine."@en .
+
+wine:hasRegion a owl:ObjectProperty ;
+    rdfs:domain wine:Wine ;
+    rdfs:range wine:WineRegion ;
+    rdfs:comment "Indicates the wine-producing region of a wine."@en .
+
+# Data Property
+wine:hasPriceValue rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:domain wine:Wine ;
+    rdfs:comment "Indicates the price value of a wine."@en .
+
+# Individuals
+wine:RieslingGrape rdf:type wine:Grape ;
+    rdfs:label "Riesling" ;
+    rdfs:comment "Represents the Riesling grape variety used in winemaking."@en .
+
+wine:SancerreRegion rdf:type wine:WineRegion ;
+    rdfs:label "Sancerre" ;
+    rdfs:comment "Represents the Sancerre wine-producing region."@en .
+
+wine:Bordeaux rdf:type wine:Wine ;
+    rdfs:label "Bordeaux" ;
+    wine:hasColor "Red" ;
+    wine:hasBody "Full" ;
+    wine:hasFlavor "Bold" ;
+    wine:hasSugar "Dry" ;
+    wine:hasVintageYear 2010 ;
+    wine:hasQualityAssessment "Excellent" ;
+    wine:hasBouquet "Complex" ;
+    wine:hasTanninLevel "High" ;
+    wine:hasGrape wine:RieslingGrape ;
+    wine:hasMaker wine:ChateauMargaux ;
+    wine:hasRegion wine:BordeauxRegion ;
+    wine:hasPriceValue 100 ;
+    rdfs:comment "Represents a Bordeaux red wine with specific characteristics."@en .
+
+wine:CabernetSauvignon rdf:type wine:Wine ;
+    rdfs:label "Cabernet Sauvignon"
