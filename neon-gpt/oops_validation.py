@@ -5,8 +5,8 @@ Scripts to validate the produced ontology using the OOPS! APIs.
 from pathlib import Path
 
 import requests
-from rdflib import Graph
 from bs4 import BeautifulSoup
+from rdflib import Graph
 
 OOPS_API = "https://oops.linkeddata.es/rest"
 REQUEST_TEMPLATE = "./templates/oops_request_template.xml"
