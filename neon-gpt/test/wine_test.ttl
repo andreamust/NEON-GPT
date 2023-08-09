@@ -1,0 +1,923 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wine: <http://example.com/wine#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://example.com/wine#aroma
+wine:aroma rdf:type owl:AnnotationProperty .
+
+
+###  http://example.com/wine#hasHistoricalEventDescription
+wine:hasHistoricalEventDescription rdf:type owl:AnnotationProperty .
+
+
+###  http://example.com/wine#hasTastingNoteDescription
+wine:hasTastingNoteDescription rdf:type owl:AnnotationProperty .
+
+
+###  http://example.com/wine#hasTrendsDescription
+wine:hasTrendsDescription rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.com/wine#associatedWith
+wine:associatedWith rdf:type owl:ObjectProperty ;
+                    owl:inverseOf wine:associationOf ;
+                    rdfs:domain wine:Wine ;
+                    rdfs:range wine:WineRegion ;
+                    rdfs:comment "Relates a wine with the wine region it's associated with." .
+
+
+###  http://example.com/wine#associationOf
+wine:associationOf rdf:type owl:ObjectProperty ,
+                            owl:InverseFunctionalProperty ;
+                   rdfs:domain wine:WineRegion ;
+                   rdfs:range wine:Wine .
+
+
+###  http://example.com/wine#characteristicsOf
+wine:characteristicsOf rdf:type owl:ObjectProperty ;
+                       owl:inverseOf wine:hasCharacteristics ;
+                       rdf:type owl:InverseFunctionalProperty ;
+                       rdfs:domain wine:Characteristics ;
+                       rdfs:range wine:GrapeVariety .
+
+
+###  http://example.com/wine#contributesToValue
+wine:contributesToValue rdf:type owl:ObjectProperty ;
+                        owl:inverseOf wine:valueContributionOf ;
+                        rdfs:domain wine:Wine ;
+                        rdfs:range wine:CollectibleValueFactors ;
+                        rdfs:comment "Factors contributing to the collectible value of wines." .
+
+
+###  http://example.com/wine#differenceOf
+wine:differenceOf rdf:type owl:ObjectProperty ,
+                           owl:InverseFunctionalProperty ;
+                  rdfs:domain wine:Differences ;
+                  rdfs:range wine:WineProductionTechnique .
+
+
+###  http://example.com/wine#hasCharacteristics
+wine:hasCharacteristics rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain wine:GrapeVariety ;
+                        rdfs:range wine:Characteristics ;
+                        rdfs:comment "Associates a grape variety with its characteristics." .
+
+
+###  http://example.com/wine#hasDifference
+wine:hasDifference rdf:type owl:ObjectProperty ;
+                   rdfs:domain [ owl:intersectionOf ( wine:Wine
+                                                      wine:WineProductionTechnique
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                   rdfs:comment "Indicates a difference between wine production techniques." .
+
+
+###  http://example.com/wine#hasHealthBenefits
+wine:hasHealthBenefits rdf:type owl:ObjectProperty ;
+                       owl:inverseOf wine:healthBenefitsOf ;
+                       rdfs:domain wine:Wine ;
+                       rdfs:range wine:HealthBenefits .
+
+
+###  http://example.com/wine#hasHistoricalEvent
+wine:hasHistoricalEvent rdf:type owl:ObjectProperty ;
+                        owl:inverseOf wine:historicalEventOf ;
+                        rdfs:domain wine:Wine ;
+                        rdfs:range wine:HistoricalEvent ;
+                        rdfs:comment "Relates a wine with a historical event." .
+
+
+###  http://example.com/wine#hasLegalRequirements
+wine:hasLegalRequirements rdf:type owl:ObjectProperty ;
+                          rdfs:domain wine:Wine ;
+                          rdfs:range [ owl:intersectionOf ( wine:LegalRequirements
+                                                            wine:OrganicLabeling
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                          rdfs:comment "Relates wines with their legal requirements." .
+
+
+###  http://example.com/wine#hasTastingNotes
+wine:hasTastingNotes rdf:type owl:ObjectProperty ;
+                     owl:inverseOf wine:tastingNotesOf ;
+                     rdfs:domain wine:Wine ;
+                     rdfs:range wine:TastingNote ;
+                     rdfs:comment "Associates wines with their tasting notes." .
+
+
+###  http://example.com/wine#hasTrends
+wine:hasTrends rdf:type owl:ObjectProperty ;
+               owl:inverseOf wine:trendsOf ;
+               rdfs:domain wine:WineProduction ;
+               rdfs:range wine:SustainabilityTrends ;
+               rdfs:comment "Associates wines with sustainability trends." .
+
+
+###  http://example.com/wine#healthBenefitsOf
+wine:healthBenefitsOf rdf:type owl:ObjectProperty ,
+                               owl:InverseFunctionalProperty ;
+                      rdfs:domain wine:HealthBenefits ;
+                      rdfs:range wine:Wine .
+
+
+###  http://example.com/wine#historicalEventOf
+wine:historicalEventOf rdf:type owl:ObjectProperty ,
+                                owl:InverseFunctionalProperty ;
+                       rdfs:domain wine:HistoricalEvent ;
+                       rdfs:range wine:Wine .
+
+
+###  http://example.com/wine#includesInformation
+wine:includesInformation rdf:type owl:ObjectProperty ;
+                         owl:inverseOf wine:informationIncludedIn ;
+                         rdfs:domain wine:WineLabel ;
+                         rdfs:range wine:LabelInformation .
+
+
+###  http://example.com/wine#informationIncludedIn
+wine:informationIncludedIn rdf:type owl:ObjectProperty ,
+                                    owl:InverseFunctionalProperty ;
+                           rdfs:domain wine:LabelInformation ;
+                           rdfs:range wine:WineLabel .
+
+
+###  http://example.com/wine#legalRequirementsOf
+wine:legalRequirementsOf rdf:type owl:ObjectProperty ,
+                                  owl:InverseFunctionalProperty ;
+                         rdfs:domain [ owl:intersectionOf ( wine:LegalRequirements
+                                                            wine:OrganicLabeling
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                         rdfs:range wine:Wine .
+
+
+###  http://example.com/wine#optimalAgingConditions
+wine:optimalAgingConditions rdf:type owl:ObjectProperty ;
+                            owl:inverseOf wine:optimalAgingConditionsOf ;
+                            rdfs:domain wine:RedWine ;
+                            rdfs:range wine:AgingConditions ;
+                            rdfs:comment "Describes the optimal conditions for aging wines." .
+
+
+###  http://example.com/wine#optimalAgingConditionsOf
+wine:optimalAgingConditionsOf rdf:type owl:ObjectProperty ,
+                                       owl:InverseFunctionalProperty ;
+                              rdfs:domain wine:AgingConditions ;
+                              rdfs:range wine:RedWine .
+
+
+###  http://example.com/wine#pairsWellWith
+wine:pairsWellWith rdf:type owl:ObjectProperty ;
+                   rdfs:domain [ owl:intersectionOf ( wine:FoodPairing
+                                                      wine:Wine
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                   rdfs:range wine:Wine ;
+                   rdfs:comment "Describes wine and food pairing relationships." .
+
+
+###  http://example.com/wine#playsRoleIn
+wine:playsRoleIn rdf:type owl:ObjectProperty ;
+                 owl:inverseOf wine:roleInEvent ;
+                 rdfs:domain wine:Wine ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( wine:CulturalEvent
+                                            wine:SocialEvent
+                                          )
+                            ] ;
+                 rdfs:comment "Describes the role of wines in cultural and social events." .
+
+
+###  http://example.com/wine#producedFrom
+wine:producedFrom rdf:type owl:ObjectProperty ;
+                  owl:inverseOf wine:usedToProduce ;
+                  rdf:type owl:InverseFunctionalProperty ;
+                  rdfs:domain wine:Wine ;
+                  rdfs:range wine:GrapeVariety .
+
+
+###  http://example.com/wine#roleInEvent
+wine:roleInEvent rdf:type owl:ObjectProperty ,
+                          owl:InverseFunctionalProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( wine:CulturalEvent
+                                             wine:SocialEvent
+                                           )
+                             ] ;
+                 rdfs:range wine:Wine .
+
+
+###  http://example.com/wine#tastingNotesOf
+wine:tastingNotesOf rdf:type owl:ObjectProperty ,
+                             owl:InverseFunctionalProperty ;
+                    rdfs:domain wine:TastingNote ;
+                    rdfs:range wine:Wine .
+
+
+###  http://example.com/wine#topProducerByVolume
+wine:topProducerByVolume rdf:type owl:ObjectProperty ;
+                         owl:inverseOf wine:topProducerFor ;
+                         rdfs:domain wine:WineProduction ;
+                         rdfs:range wine:Country ;
+                         rdfs:comment "Indicates the top wine producer by volume." .
+
+
+###  http://example.com/wine#topProducerFor
+wine:topProducerFor rdf:type owl:ObjectProperty ,
+                             owl:InverseFunctionalProperty ;
+                    rdfs:domain wine:Country ;
+                    rdfs:range wine:WineProduction .
+
+
+###  http://example.com/wine#trendsOf
+wine:trendsOf rdf:type owl:ObjectProperty ,
+                       owl:InverseFunctionalProperty ;
+              rdfs:domain wine:SustainabilityTrends ;
+              rdfs:range wine:WineProduction .
+
+
+###  http://example.com/wine#usedToProduce
+wine:usedToProduce rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain wine:GrapeVariety ;
+                   rdfs:range wine:Wine ;
+                   rdfs:comment "Indicates the grape variety used to produce a wine." .
+
+
+###  http://example.com/wine#valueContributionOf
+wine:valueContributionOf rdf:type owl:ObjectProperty ,
+                                  owl:InverseFunctionalProperty ;
+                         rdfs:domain wine:CollectibleValueFactors ;
+                         rdfs:range wine:Wine .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.com/wine#hasPriceValue
+wine:hasPriceValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain wine:Wine ;
+                   rdfs:range xsd:positiveInteger ;
+                   rdfs:comment "Specifies the price value of a wine." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.com/wine#AgingConditions
+wine:AgingConditions rdf:type owl:Class ;
+                     rdfs:comment "The conditions required for proper wine aging." .
+
+
+###  http://example.com/wine#BordeauxWineRegion
+wine:BordeauxWineRegion rdf:type owl:Class ;
+                        rdfs:subClassOf wine:WineRegion .
+
+
+###  http://example.com/wine#Champagne
+wine:Champagne rdf:type owl:Class ;
+               rdfs:subClassOf wine:Wine .
+
+
+###  http://example.com/wine#Characteristics
+wine:Characteristics rdf:type owl:Class .
+
+
+###  http://example.com/wine#Chardonnay
+wine:Chardonnay rdf:type owl:Class ;
+                rdfs:subClassOf wine:Wine .
+
+
+###  http://example.com/wine#CollectibleValueFactors
+wine:CollectibleValueFactors rdf:type owl:Class .
+
+
+###  http://example.com/wine#Country
+wine:Country rdf:type owl:Class .
+
+
+###  http://example.com/wine#CulturalEvent
+wine:CulturalEvent rdf:type owl:Class .
+
+
+###  http://example.com/wine#Differences
+wine:Differences rdf:type owl:Class .
+
+
+###  http://example.com/wine#FoodPairing
+wine:FoodPairing rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( wine:SeafoodDish
+                                                            wine:Wine
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] .
+
+
+###  http://example.com/wine#GrapeVariety
+wine:GrapeVariety rdf:type owl:Class .
+
+
+###  http://example.com/wine#HealthBenefits
+wine:HealthBenefits rdf:type owl:Class .
+
+
+###  http://example.com/wine#HistoricalEvent
+wine:HistoricalEvent rdf:type owl:Class .
+
+
+###  http://example.com/wine#LabelInformation
+wine:LabelInformation rdf:type owl:Class .
+
+
+###  http://example.com/wine#LegalRequirements
+wine:LegalRequirements rdf:type owl:Class .
+
+
+###  http://example.com/wine#OrganicLabeling
+wine:OrganicLabeling rdf:type owl:Class ;
+                     rdfs:comment "Labeling of wines as organic products." .
+
+
+###  http://example.com/wine#RedWine
+wine:RedWine rdf:type owl:Class ;
+             rdfs:subClassOf wine:Wine .
+
+
+###  http://example.com/wine#RedWineProduction
+wine:RedWineProduction rdf:type owl:Class ;
+                       rdfs:subClassOf wine:WineProductionTechnique .
+
+
+###  http://example.com/wine#RoseWine
+wine:RoseWine rdf:type owl:Class ;
+              rdfs:subClassOf wine:Wine ;
+              rdfs:comment "A type of wine with a pink or rosé color." .
+
+
+###  http://example.com/wine#SeafoodDish
+wine:SeafoodDish rdf:type owl:Class ;
+                 rdfs:comment "A dish containing seafood." .
+
+
+###  http://example.com/wine#SocialEvent
+wine:SocialEvent rdf:type owl:Class ;
+                 rdfs:comment "Social occasions where wine is enjoyed." .
+
+
+###  http://example.com/wine#SparklingWine
+wine:SparklingWine rdf:type owl:Class ;
+                   rdfs:subClassOf wine:Wine ;
+                   rdfs:comment "A wine with carbon dioxide bubbles, such as Champagne." .
+
+
+###  http://example.com/wine#SustainabilityTrends
+wine:SustainabilityTrends rdf:type owl:Class .
+
+
+###  http://example.com/wine#TastingNote
+wine:TastingNote rdf:type owl:Class .
+
+
+###  http://example.com/wine#WhiteWineProduction
+wine:WhiteWineProduction rdf:type owl:Class ;
+                         rdfs:subClassOf wine:WineProductionTechnique .
+
+
+###  http://example.com/wine#Wine
+wine:Wine rdf:type owl:Class ;
+          rdfs:comment "A beverage made from fermented grapes." .
+
+
+###  http://example.com/wine#WineAging
+wine:WineAging rdf:type owl:Class ;
+               rdfs:comment "The process of aging wine to develop its flavors." .
+
+
+###  http://example.com/wine#WineLabel
+wine:WineLabel rdf:type owl:Class ;
+               rdfs:comment "The label on a wine bottle containing information." .
+
+
+###  http://example.com/wine#WineProduction
+wine:WineProduction rdf:type owl:Class .
+
+
+###  http://example.com/wine#WineProductionTechnique
+wine:WineProductionTechnique rdf:type owl:Class .
+
+
+###  http://example.com/wine#WineRegion
+wine:WineRegion rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/wine#AgingConditionExample
+wine:AgingConditionExample rdf:type owl:NamedIndividual ,
+                                    wine:AgingConditions ;
+                           wine:optimalAgingConditions wine:AgingConditions_DarkCellar ,
+                                                       wine:RedWine .
+
+
+###  http://example.com/wine#AgingConditions_DarkCellar
+wine:AgingConditions_DarkCellar rdf:type owl:NamedIndividual .
+
+
+###  http://example.com/wine#BoldTastingNote
+wine:BoldTastingNote rdf:type owl:NamedIndividual ,
+                              wine:TastingNote ;
+                     wine:hasTastingNoteDescription "Bold and intense flavors, often with deep red fruit and smoky notes." ;
+                     rdfs:comment "Tasting notes describing a bold and intense wine." .
+
+
+###  http://example.com/wine#Bordeaux
+wine:Bordeaux rdf:type owl:NamedIndividual ,
+                       wine:Wine ,
+                       wine:WineRegion ;
+              wine:associatedWith wine:BordeauxWineRegion ;
+              rdfs:comment "A Bordeaux wine associated with the Bordeaux wine region." .
+
+
+###  http://example.com/wine#BordeauxWineRegion
+wine:BordeauxWineRegion rdf:type owl:NamedIndividual ,
+                                 wine:WineRegion .
+
+
+###  http://example.com/wine#Burgundy
+wine:Burgundy rdf:type owl:NamedIndividual ,
+                       wine:Wine ;
+              wine:associatedWith wine:BurgundyRegion ;
+              wine:hasTastingNotes wine:RichTastingNote ;
+              rdfs:comment "A Burgundy wine associated with the Burgundy wine region." .
+
+
+###  http://example.com/wine#BurgundyRegion
+wine:BurgundyRegion rdf:type owl:NamedIndividual ,
+                             wine:WineRegion ;
+                    rdfs:comment "The Burgundy wine region in France." .
+
+
+###  http://example.com/wine#CabernetSauvignon
+wine:CabernetSauvignon rdf:type owl:NamedIndividual ,
+                                wine:GrapeVariety ,
+                                wine:Wine ;
+                       wine:usedToProduce wine:CabernetSauvignonGrape ;
+                       rdfs:comment "A Cabernet Sauvignon wine made from Cabernet Sauvignon grapes." .
+
+
+###  http://example.com/wine#CabernetSauvignonGrape
+wine:CabernetSauvignonGrape rdf:type owl:NamedIndividual ,
+                                     wine:GrapeVariety ;
+                            rdfs:comment "The Cabernet Sauvignon grape variety." .
+
+
+###  http://example.com/wine#Champagne
+wine:Champagne rdf:type owl:NamedIndividual ,
+                        wine:Champagne ;
+               wine:associatedWith wine:ChampagneRegion ;
+               wine:hasHistoricalEvent wine:ChampagneHistoricalEvent ;
+               wine:hasTrends wine:ChampagneSustainabilityTrends .
+
+
+###  http://example.com/wine#ChampagneHistoricalEvent
+wine:ChampagneHistoricalEvent rdf:type owl:NamedIndividual ,
+                                       wine:HistoricalEvent ;
+                              wine:hasHistoricalEvent wine:Champagne ;
+                              wine:hasHistoricalEventDescription "The invention of the traditional method for making Champagne." ;
+                              rdfs:comment "The historical event of inventing the traditional method for making Champagne." .
+
+
+###  http://example.com/wine#ChampagneRegion
+wine:ChampagneRegion rdf:type owl:NamedIndividual ,
+                              wine:WineRegion ;
+                     rdfs:comment "The Champagne wine region in France." .
+
+
+###  http://example.com/wine#ChampagneSustainabilityTrends
+wine:ChampagneSustainabilityTrends rdf:type owl:NamedIndividual ,
+                                            wine:SustainabilityTrends ;
+                                   wine:hasTrendsDescription "Increased focus on organic and biodynamic practices in Champagne production." ;
+                                   rdfs:comment "Sustainability trends in Champagne production." .
+
+
+###  http://example.com/wine#Characteristics_CabSauvignon
+wine:Characteristics_CabSauvignon rdf:type owl:NamedIndividual ,
+                                           wine:Characteristics ;
+                                  wine:characteristicsOf wine:CabernetSauvignon ;
+                                  wine:aroma "Blackcurrant, bell pepper" .
+
+
+###  http://example.com/wine#Characteristics_RoseAroma
+wine:Characteristics_RoseAroma rdf:type owl:NamedIndividual ,
+                                        wine:Characteristics ;
+                               wine:aroma "Strawberry, raspberry" .
+
+
+###  http://example.com/wine#Chardonnay
+wine:Chardonnay rdf:type owl:NamedIndividual ,
+                         wine:Wine ;
+                wine:usedToProduce wine:ChardonnayGrape ;
+                wine:hasPriceValue "25"^^xsd:positiveInteger .
+
+
+###  http://example.com/wine#ChardonnayGrape
+wine:ChardonnayGrape rdf:type owl:NamedIndividual ,
+                              wine:GrapeVariety ;
+                     rdfs:comment "The Chardonnay grape variety." .
+
+
+###  http://example.com/wine#CollectibleFactorsExample
+wine:CollectibleFactorsExample rdf:type owl:NamedIndividual ,
+                                        wine:CollectibleValueFactors ;
+                               wine:contributesToValue wine:Chardonnay ,
+                                                       wine:CollectibleFactors_Rarity .
+
+
+###  http://example.com/wine#CollectibleFactors_Rarity
+wine:CollectibleFactors_Rarity rdf:type owl:NamedIndividual .
+
+
+###  http://example.com/wine#CollectibleValueFactors
+wine:CollectibleValueFactors rdf:type owl:NamedIndividual ;
+                             wine:valueContributionOf wine:CollectibleFactorsExample .
+
+
+###  http://example.com/wine#Country
+wine:Country rdf:type owl:NamedIndividual ;
+             wine:topProducerFor wine:TopProducer .
+
+
+###  http://example.com/wine#Country_France
+wine:Country_France rdf:type owl:NamedIndividual .
+
+
+###  http://example.com/wine#CulturalEvent
+wine:CulturalEvent rdf:type owl:NamedIndividual ;
+                   wine:roleInEvent wine:CulturalEventInstance .
+
+
+###  http://example.com/wine#CulturalEventInstance
+wine:CulturalEventInstance rdf:type owl:NamedIndividual ,
+                                    wine:CulturalEvent ;
+                           wine:playsRoleIn wine:Chardonnay ,
+                                            wine:CulturalEvent_Celebration .
+
+
+###  http://example.com/wine#CulturalEvent_Celebration
+wine:CulturalEvent_Celebration rdf:type owl:NamedIndividual .
+
+
+###  http://example.com/wine#Differences
+wine:Differences rdf:type owl:NamedIndividual ,
+                          wine:Differences .
+
+
+###  http://example.com/wine#FloralTastingNote
+wine:FloralTastingNote rdf:type owl:NamedIndividual ,
+                                wine:TastingNote .
+
+
+###  http://example.com/wine#FoodPairing
+wine:FoodPairing rdf:type owl:NamedIndividual ;
+                 wine:pairsWellWith wine:FoodPairingInstance .
+
+
+###  http://example.com/wine#FoodPairingInstance
+wine:FoodPairingInstance rdf:type owl:NamedIndividual ,
+                                  wine:FoodPairing ;
+                         wine:pairsWellWith wine:Chardonnay ,
+                                            wine:Seafood .
+
+
+###  http://example.com/wine#GrapeVariety
+wine:GrapeVariety rdf:type owl:NamedIndividual ;
+                  wine:producedFrom wine:CabernetSauvignon .
+
+
+###  http://example.com/wine#HealthBenefits
+wine:HealthBenefits rdf:type owl:NamedIndividual ;
+                    wine:healthBenefitsOf wine:HealthBenefitsInstance .
+
+
+###  http://example.com/wine#HealthBenefitsInstance
+wine:HealthBenefitsInstance rdf:type owl:NamedIndividual ,
+                                     wine:HealthBenefits ;
+                            wine:hasHealthBenefits "Moderate wine consumption may have cardiovascular benefits." .
+
+
+###  http://example.com/wine#HistoricalEvent
+wine:HistoricalEvent rdf:type owl:NamedIndividual ;
+                     wine:historicalEventOf wine:ChampagneHistoricalEvent .
+
+
+###  http://example.com/wine#LabelInformation
+wine:LabelInformation rdf:type owl:NamedIndividual ;
+                      wine:informationIncludedIn wine:LabelInformationExample .
+
+
+###  http://example.com/wine#LabelInformationExample
+wine:LabelInformationExample rdf:type owl:NamedIndividual ,
+                                      wine:LabelInformation ;
+                             wine:includesInformation "Vintage year, alcohol content, producer information." .
+
+
+###  http://example.com/wine#LegalRequirements
+wine:LegalRequirements rdf:type owl:NamedIndividual ;
+                       wine:legalRequirementsOf wine:OrganicRequirements .
+
+
+###  http://example.com/wine#Malbec
+wine:Malbec rdf:type owl:NamedIndividual ,
+                     wine:Wine ;
+            wine:hasTastingNotes wine:BoldTastingNote ;
+            wine:usedToProduce wine:MalbecGrape ;
+            rdfs:comment "A Malbec wine made from Malbec grapes." .
+
+
+###  http://example.com/wine#MalbecGrape
+wine:MalbecGrape rdf:type owl:NamedIndividual ,
+                          wine:GrapeVariety ;
+                 rdfs:comment "The Malbec grape variety." .
+
+
+###  http://example.com/wine#MediumTastingNote
+wine:MediumTastingNote rdf:type owl:NamedIndividual ,
+                                wine:TastingNote ;
+                       wine:hasTastingNoteDescription "Medium-bodied with balanced flavors and a smooth finish." ;
+                       rdfs:comment "Tasting notes describing a medium-bodied wine." .
+
+
+###  http://example.com/wine#Merlot
+wine:Merlot rdf:type owl:NamedIndividual ,
+                     wine:Wine ;
+            wine:usedToProduce wine:MerlotGrape ;
+            rdfs:comment "A Merlot wine made from Merlot grapes." .
+
+
+###  http://example.com/wine#MerlotGrape
+wine:MerlotGrape rdf:type owl:NamedIndividual ,
+                          wine:GrapeVariety ;
+                 rdfs:comment "The Merlot grape variety." .
+
+
+###  http://example.com/wine#OrganicRequirements
+wine:OrganicRequirements rdf:type owl:NamedIndividual ,
+                                  wine:LegalRequirements ;
+                         wine:hasLegalRequirements wine:Chardonnay ,
+                                                   wine:OrganicRequirements_EcoCertified .
+
+
+###  http://example.com/wine#OrganicRequirements_EcoCertified
+wine:OrganicRequirements_EcoCertified rdf:type owl:NamedIndividual .
+
+
+###  http://example.com/wine#PinotNoir
+wine:PinotNoir rdf:type owl:NamedIndividual ,
+                        wine:Wine ;
+               wine:usedToProduce wine:PinotNoirGrape ;
+               rdfs:comment "A Pinot Noir wine made from Pinot Noir grapes." .
+
+
+###  http://example.com/wine#PinotNoirGrape
+wine:PinotNoirGrape rdf:type owl:NamedIndividual ,
+                             wine:GrapeVariety ;
+                    rdfs:comment "The Pinot Noir grape variety." .
+
+
+###  http://example.com/wine#PortWine
+wine:PortWine rdf:type owl:NamedIndividual ,
+                       wine:Wine ;
+              wine:associatedWith wine:PortugalRegion ;
+              wine:hasTastingNotes wine:SweetTastingNote ;
+              rdfs:comment "A Port wine associated with the Portugal wine region." .
+
+
+###  http://example.com/wine#PortugalRegion
+wine:PortugalRegion rdf:type owl:NamedIndividual ,
+                             wine:WineRegion ;
+                    rdfs:comment "The Portugal wine region known for Port wines." .
+
+
+###  http://example.com/wine#RedWine
+wine:RedWine rdf:type owl:NamedIndividual ;
+             wine:optimalAgingConditionsOf wine:AgingConditionExample .
+
+
+###  http://example.com/wine#RedWineProduction
+wine:RedWineProduction rdf:type owl:NamedIndividual ,
+                                wine:WineProductionTechnique .
+
+
+###  http://example.com/wine#RichTastingNote
+wine:RichTastingNote rdf:type owl:NamedIndividual ,
+                              wine:TastingNote ;
+                     wine:hasTastingNoteDescription "Rich and velvety texture, with flavors of dark fruits and spices." ;
+                     rdfs:comment "Tasting notes describing a rich and velvety wine." .
+
+
+###  http://example.com/wine#RieslingGrape
+wine:RieslingGrape rdf:type owl:NamedIndividual ,
+                            wine:GrapeVariety ;
+                   rdfs:comment "The Riesling grape variety used in winemaking." .
+
+
+###  http://example.com/wine#RiojaRegion
+wine:RiojaRegion rdf:type owl:NamedIndividual ,
+                          wine:WineRegion ;
+                 rdfs:comment "The Rioja wine region in Spain." .
+
+
+###  http://example.com/wine#RiojaWine
+wine:RiojaWine rdf:type owl:NamedIndividual ,
+                        wine:Wine ;
+               wine:associatedWith wine:RiojaRegion ;
+               wine:hasTastingNotes wine:MediumTastingNote ;
+               rdfs:comment "A Rioja wine associated with the Rioja wine region." .
+
+
+###  http://example.com/wine#SancerreRegion
+wine:SancerreRegion rdf:type owl:NamedIndividual ,
+                             wine:WineRegion ;
+                    rdfs:comment "The Sancerre wine region known for producing quality wines." .
+
+
+###  http://example.com/wine#Seafood
+wine:Seafood rdf:type owl:NamedIndividual ,
+                      wine:SeafoodDish .
+
+
+###  http://example.com/wine#Shiraz
+wine:Shiraz rdf:type owl:NamedIndividual ,
+                     wine:Wine ;
+            wine:hasTastingNotes wine:SpicyTastingNote ;
+            wine:usedToProduce wine:ShirazGrape ;
+            rdfs:comment "A Shiraz wine made from Shiraz grapes." .
+
+
+###  http://example.com/wine#ShirazGrape
+wine:ShirazGrape rdf:type owl:NamedIndividual ,
+                          wine:GrapeVariety ;
+                 rdfs:comment "The Shiraz grape variety." .
+
+
+###  http://example.com/wine#SpicyTastingNote
+wine:SpicyTastingNote rdf:type owl:NamedIndividual ,
+                               wine:TastingNote ;
+                      wine:hasTastingNoteDescription "Spicy and peppery, with flavors of black and red pepper." ;
+                      rdfs:comment "Tasting notes describing a spicy and peppery wine." .
+
+
+###  http://example.com/wine#SustainabilityTrends
+wine:SustainabilityTrends rdf:type owl:NamedIndividual ;
+                          wine:trendsOf wine:SustainabilityTrendsInstance .
+
+
+###  http://example.com/wine#SustainabilityTrendsInstance
+wine:SustainabilityTrendsInstance rdf:type owl:NamedIndividual ,
+                                           wine:SustainabilityTrends ;
+                                  wine:hasTrends wine:RedWineProduction .
+
+
+###  http://example.com/wine#SweetTastingNote
+wine:SweetTastingNote rdf:type owl:NamedIndividual ,
+                               wine:TastingNote ;
+                      wine:hasTastingNoteDescription "Sweet and fruity, often with notes of dried fruits and nuts." ;
+                      rdfs:comment "Tasting notes describing a sweet and fruity wine." .
+
+
+###  http://example.com/wine#Syrah
+wine:Syrah rdf:type owl:NamedIndividual ,
+                    wine:Wine ;
+           wine:usedToProduce wine:SyrahGrape ;
+           wine:hasHealthBenefits "May have antioxidant properties." ;
+           rdfs:comment "A Syrah wine made from Syrah grapes." .
+
+
+###  http://example.com/wine#SyrahGrape
+wine:SyrahGrape rdf:type owl:NamedIndividual ,
+                         wine:GrapeVariety ;
+                rdfs:comment "The Syrah grape variety." .
+
+
+###  http://example.com/wine#TastingNote
+wine:TastingNote rdf:type owl:NamedIndividual ;
+                 wine:tastingNotesOf wine:FloralTastingNote .
+
+
+###  http://example.com/wine#TopProducer
+wine:TopProducer rdf:type owl:NamedIndividual ,
+                          wine:Country ;
+                 wine:topProducerByVolume wine:Country_France ,
+                                          wine:RedWineProduction .
+
+
+###  http://example.com/wine#WhiteWineProduction
+wine:WhiteWineProduction rdf:type owl:NamedIndividual ,
+                                  wine:WineProductionTechnique .
+
+
+###  http://example.com/wine#WineProductionTechnique
+wine:WineProductionTechnique rdf:type owl:NamedIndividual ;
+                             wine:differenceOf wine:Differences .
+
+
+###  http://example.com/wine#WineRegion
+wine:WineRegion rdf:type owl:NamedIndividual ;
+                wine:associationOf wine:Bordeaux .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+wine:BordeauxWineRegion rdfs:comment "The Bordeaux wine region in France." ,
+                                     "A wine region known for producing Bordeaux wines." .
+
+
+wine:Champagne rdfs:comment "A sparkling Champagne wine from the Champagne region." ,
+                            "A sparkling wine originating from the Champagne region." .
+
+
+wine:Chardonnay rdfs:comment "A grape variety used for making Chardonnay wines." ,
+                             "A Chardonnay wine made from Chardonnay grapes." .
+
+
+wine:CollectibleValueFactors rdfs:comment "Factors affecting the collectible value of wines." .
+
+
+wine:Country rdfs:comment "A country known for its wine production." .
+
+
+wine:CulturalEvent rdfs:comment "Events and celebrations involving wine in culture." .
+
+
+wine:FoodPairing rdfs:comment "The compatibility of wines with specific foods." .
+
+
+wine:GrapeVariety rdfs:comment "A type of grape used in winemaking." .
+
+
+wine:HealthBenefits rdfs:comment "Potential health benefits associated with wine consumption." .
+
+
+wine:HistoricalEvent rdfs:comment "An event with historical significance in the wine domain." .
+
+
+wine:LabelInformation rdfs:comment "Information included on a wine label." .
+
+
+wine:LegalRequirements rdfs:comment "Legal standards and requirements for wines." .
+
+
+wine:RedWine rdfs:comment "A type of wine made from red grape varieties." .
+
+
+wine:RedWineProduction rdfs:comment "A technique for producing red wines." .
+
+
+wine:SustainabilityTrends rdfs:comment "Trends related to sustainable wine production." .
+
+
+wine:TastingNote rdfs:comment "Descriptive notes describing the taste and aroma of a wine." .
+
+
+wine:WhiteWineProduction rdfs:comment "A technique for producing white wines." .
+
+
+wine:WineProductionTechnique rdfs:comment "A process used to produce wine." .
+
+
+wine:WineRegion rdfs:comment "A geographic area associated with wine production." .
+
+
+wine:hasHealthBenefits rdfs:comment "Indicates the health benefits of wines." .
+
+
+wine:includesInformation rdfs:comment "Includes specific information on a wine label." .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
