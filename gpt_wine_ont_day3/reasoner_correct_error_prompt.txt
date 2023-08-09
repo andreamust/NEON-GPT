@@ -1,0 +1,9 @@
+
+
+The ontology is inconsistent. The reasoner gives the following error:
+
+(?<=ERROR)(.*)(?=	at )
+
+Correct the ontology.
+Print the old triple to be replaced preceded by "### old triple ###".
+Then print the new correct triple preceded by "### new triple ###" and followed by "### fine ###".
