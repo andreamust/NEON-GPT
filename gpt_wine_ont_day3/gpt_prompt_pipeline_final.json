@@ -1,0 +1,31 @@
+{
+  "Prompt 1": "You are an experienced knowledge engineer, and you are modeling the wine domain. Following the NeOn methodology, specify:\n- the Purpose of the ontology\n- the Scope of the ontology\n- the Target Group of the ontology\n- the implementation language\n- the intended uses\n- the Functional Requirements\n- the Non-functional Requirements",
+
+  "Prompt 2": "Based on the generated Specifications of Ontology Requirements write a list of Competency Questions that the core module of the wine ontology should be able to answer to.\nMake it as complete as possible, but focus on core elements of the wine domain.",
+
+  "Prompt 3": "For each Competency Question extract entities and properties that have to be introduced in the ontology.\nDo it for all the competency questions, not just a snippet.\nProvide an output in a json like format, like this:\n\n{ \"cq1\" : \"What are the different types of wines (e.g., red, white, rose, sparkling) available in the ontology?\", \"Entity\" : [ \"Wine\", \"RedWine\", \"RoseWine\", \"SparklingWine\" ] , \"Property\" : [\"subClassOf\" ]}, { \"cq2\" : \"What grape varieties are used to produce a specific type of wine?\", \"Entity\": [\"GrapeVariety\", \"Wine\"], \"Property\": [\"usedToProduce\", \"subClassOf\"] } }",
+
+  "Prompt 4": "Considering entities and properties, generate a conceptual model expressing in form of triples the entities and properties and their relations.\nDo it for all the entities and properties, not just a snippet.",
+
+  "Prompt 5": "Considering the conceptual model you generated, generate a full ontology serialized in Turtle syntax.\nDo it for the whole conceptual model, not just a snippet.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.\nMake sure that:\n- the turle syntax is correct\n- all the entities and properties have the correct prefix\n- the prefix for the ontology is declared",
+
+  "Prompt 6": "For all object properties, if lacking, generate also the inverse property. Keep the ontology consistent. If meaningful declare restrictions for the domain and range.\nDo it for the whole ontology, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 7": "Considering the classes that you have in the ontology, introduce some Data Property when meaningful, such as:\n\nwine:hasPriceValue rdf:type owl:DatatypeProperty ; rdfs:range xsd:positiveInteger .\n\nModify the domain and range according to the type of value requested by the Data Property.\nDo it for the whole ontology, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 8a": "For all the object properties in the ontology specify, when meaningful and relevant, if they are symmetric.\nConsider all the properties, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 8b": "For all the object properties in the ontology specify, when meaningful and relevant, if they are transitive.\nConsider all the properties, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 8c": "For all the object properties in the ontology specify, when meaningful and relevant, if they are functional.\nConsider all the properties, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 8d": "For all the object properties in the ontology specify, when meaningful and relevant, if they are reflexive.\nConsider all the properties, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 9": "For all the classes and properties add a triple that describes in natural language its meaning, using the annotation property rdfs:comment.\nDo it for the whole ontology, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 10": "Populate the ontology with meaningful individuals, such as:\n\n:RieslingGrape rdf:type :GrapeVariety\n:SancerreRegion rdf:type :WineRegion\n:Bordeaux rdf:type :Wine\n:CabernetSauvignon rdf:type :Wine\n\nMake it as complete as possible, introducing e.g. all the types of wine, wine regions, awards, wine producers, etc.\nDo it for the whole ontology, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 11": "For each of the generated individuals add a triple that describes in natural language its meaning, using the annotation property rdfs:comment.\nDo it for all the individuals, not just a snippet.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line.",
+
+  "Prompt 12": "If not there, add triples about the ontology IRI, label, version, and description in natural language.\nPrint only the new triples.\nEnclose the triples between these two marker strings: \"### inizio ###\" as first line and \"### fine ###\" as last line."
+}
