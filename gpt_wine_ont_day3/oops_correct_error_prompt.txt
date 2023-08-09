@@ -1,0 +1,23 @@
+
+
+*** Correcting oops error prompt ***
+
+
+for <oops:Importance>Critical</oops:Importance>
+
+
+
+
+Testing the ontology with the OOPS tool it gives the following error:
+
+{<oops:Description> Description </oops:Description>}
+
+
+In particular it is related to these elements:
+
+{<oops:AffectedElement>http://example#affectedElement</oops:AffectedElement>}
+
+
+Print the old triple to be replaced preceded by "### old triple ###".
+Then print the new correct triple preceded by "### new triple ###" and followed by "### fine ###".
+
