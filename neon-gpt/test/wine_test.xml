@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:wine="http://example.com/wine#"
+>
+  <rdf:Description rdf:about="http://example.com/wine#producedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#usedToProduce"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#GrapeVariety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#historicalEventOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#HistoricalEvent"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RoseWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>A type of wine with a pink or rosé color.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SweetTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Sweet and fruity, often with notes of dried fruits and nuts.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a sweet and fruity wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RedWineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:comment>A technique for producing red wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Champagne">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Champagne"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#ChampagneRegion"/>
+    <wine:hasHistoricalEvent rdf:resource="http://example.com/wine#ChampagneHistoricalEvent"/>
+    <wine:hasTrends rdf:resource="http://example.com/wine#ChampagneSustainabilityTrends"/>
+    <rdfs:comment>A sparkling Champagne wine from the Champagne region.</rdfs:comment>
+    <rdfs:comment>A sparkling wine originating from the Champagne region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#associationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#optimalAgingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#optimalAgingConditionsOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#RedWine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#AgingConditions"/>
+    <rdfs:comment>Describes the optimal conditions for aging wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#usedToProduce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>Indicates the grape variety used to produce a wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#OrganicRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#LegalRequirements"/>
+    <wine:hasLegalRequirements rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:hasLegalRequirements rdf:resource="http://example.com/wine#OrganicRequirements_EcoCertified"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#FoodPairing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:equivalentClass rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b20"/>
+    <wine:pairsWellWith rdf:resource="http://example.com/wine#FoodPairingInstance"/>
+    <rdfs:comment>The compatibility of wines with specific foods.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#LabelInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:informationIncludedIn rdf:resource="http://example.com/wine#LabelInformationExample"/>
+    <rdfs:comment>Information included on a wine label.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RiojaRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Rioja wine region in Spain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#LabelInformationExample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#LabelInformation"/>
+    <wine:includesInformation>Vintage year, alcohol content, producer information.</wine:includesInformation>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SyrahGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Syrah grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#valueContributionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#CollectibleValueFactors"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b8">
+    <owl:intersectionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Bordeaux">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#BordeauxWineRegion"/>
+    <rdfs:comment>A Bordeaux wine associated with the Bordeaux wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#AgingConditionExample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#AgingConditions"/>
+    <wine:optimalAgingConditions rdf:resource="http://example.com/wine#AgingConditions_DarkCellar"/>
+    <wine:optimalAgingConditions rdf:resource="http://example.com/wine#RedWine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b15">
+    <rdf:first rdf:resource="http://example.com/wine#CulturalEvent"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Syrah">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#SyrahGrape"/>
+    <wine:hasHealthBenefits>May have antioxidant properties.</wine:hasHealthBenefits>
+    <rdfs:comment>A Syrah wine made from Syrah grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PortWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#PortugalRegion"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#SweetTastingNote"/>
+    <rdfs:comment>A Port wine associated with the Portugal wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#associatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#associationOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>Relates a wine with the wine region it's associated with.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:topProducerFor rdf:resource="http://example.com/wine#TopProducer"/>
+    <rdfs:comment>A country known for its wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Shiraz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#SpicyTastingNote"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#ShirazGrape"/>
+    <rdfs:comment>A Shiraz wine made from Shiraz grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Malbec">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#BoldTastingNote"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#MalbecGrape"/>
+    <rdfs:comment>A Malbec wine made from Malbec grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b22">
+    <rdf:first rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#topProducerFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Country"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#healthBenefitsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#HealthBenefits"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#FoodPairingInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#FoodPairing"/>
+    <wine:pairsWellWith rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:pairsWellWith rdf:resource="http://example.com/wine#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#tastingNotesOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#TastingNote"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#MalbecGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Malbec grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RiojaWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#RiojaRegion"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#MediumTastingNote"/>
+    <rdfs:comment>A Rioja wine associated with the Rioja wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b6">
+    <rdf:first rdf:resource="http://example.com/wine#LegalRequirements"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#GrapeVariety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:producedFrom rdf:resource="http://example.com/wine#CabernetSauvignon"/>
+    <rdfs:comment>A type of grape used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#topProducerByVolume">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#topProducerFor"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineProduction"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Country"/>
+    <rdfs:comment>Indicates the top wine producer by volume.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b20">
+    <owl:intersectionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b21"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTastingNotes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#tastingNotesOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#TastingNote"/>
+    <rdfs:comment>Associates wines with their tasting notes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Burgundy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#BurgundyRegion"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#RichTastingNote"/>
+    <rdfs:comment>A Burgundy wine associated with the Burgundy wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b3">
+    <rdf:first rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ShirazGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Shiraz grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#pairsWellWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b11"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>Describes wine and food pairing relationships.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#characteristicsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#hasCharacteristics"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Characteristics"/>
+    <rdfs:range rdf:resource="http://example.com/wine#GrapeVariety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#BoldTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Bold and intense flavors, often with deep red fruit and smoky notes.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a bold and intense wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#MerlotGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Merlot grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PortugalRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Portugal wine region known for Port wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#BordeauxWineRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Bordeaux wine region in France.</rdfs:comment>
+    <rdfs:comment>A wine region known for producing Bordeaux wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTrends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#trendsOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineProduction"/>
+    <rdfs:range rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <rdfs:comment>Associates wines with sustainability trends.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#differenceOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Differences"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b21">
+    <rdf:first rdf:resource="http://example.com/wine#SeafoodDish"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasPriceValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdfs:comment>Specifies the price value of a wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Chardonnay">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#ChardonnayGrape"/>
+    <wine:hasPriceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">25</wine:hasPriceValue>
+    <rdfs:comment>A grape variety used for making Chardonnay wines.</rdfs:comment>
+    <rdfs:comment>A Chardonnay wine made from Chardonnay grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CabernetSauvignon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#CabernetSauvignonGrape"/>
+    <rdfs:comment>A Cabernet Sauvignon wine made from Cabernet Sauvignon grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SocialEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Social occasions where wine is enjoyed.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#OrganicRequirements_EcoCertified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Differences">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Differences"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineProductionTechnique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:differenceOf rdf:resource="http://example.com/wine#Differences"/>
+    <rdfs:comment>A process used to produce wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:associationOf rdf:resource="http://example.com/wine#Bordeaux"/>
+    <rdfs:comment>A geographic area associated with wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#optimalAgingConditionsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#AgingConditions"/>
+    <rdfs:range rdf:resource="http://example.com/wine#RedWine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b18">
+    <rdf:first rdf:resource="http://example.com/wine#CulturalEvent"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#MediumTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Medium-bodied with balanced flavors and a smooth finish.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a medium-bodied wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#FloralTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChardonnayGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Chardonnay grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SustainabilityTrendsInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <wine:hasTrends rdf:resource="http://example.com/wine#RedWineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SparklingWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>A wine with carbon dioxide bubbles, such as Champagne.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CollectibleFactorsExample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#CollectibleValueFactors"/>
+    <wine:contributesToValue rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:contributesToValue rdf:resource="http://example.com/wine#CollectibleFactors_Rarity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasHealthBenefits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#healthBenefitsOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#HealthBenefits"/>
+    <rdfs:comment>Indicates the health benefits of wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasLegalRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b5"/>
+    <rdfs:comment>Relates wines with their legal requirements.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasCharacteristics">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Characteristics"/>
+    <rdfs:comment>Associates a grape variety with its characteristics.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#includesInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#informationIncludedIn"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineLabel"/>
+    <rdfs:range rdf:resource="http://example.com/wine#LabelInformation"/>
+    <rdfs:comment>Includes specific information on a wine label.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RedWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <wine:optimalAgingConditionsOf rdf:resource="http://example.com/wine#AgingConditionExample"/>
+    <rdfs:comment>A type of wine made from red grape varieties.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CulturalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:roleInEvent rdf:resource="http://example.com/wine#CulturalEventInstance"/>
+    <rdfs:comment>Events and celebrations involving wine in culture.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Merlot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#MerlotGrape"/>
+    <rdfs:comment>A Merlot wine made from Merlot grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChampagneHistoricalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#HistoricalEvent"/>
+    <wine:hasHistoricalEvent rdf:resource="http://example.com/wine#Champagne"/>
+    <wine:hasHistoricalEventDescription>The invention of the traditional method for making Champagne.</wine:hasHistoricalEventDescription>
+    <rdfs:comment>The historical event of inventing the traditional method for making Champagne.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Characteristics_RoseAroma">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Characteristics"/>
+    <wine:aroma>Strawberry, raspberry</wine:aroma>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b2">
+    <owl:intersectionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#HealthBenefits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:healthBenefitsOf rdf:resource="http://example.com/wine#HealthBenefitsInstance"/>
+    <rdfs:comment>Potential health benefits associated with wine consumption.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChampagneRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Champagne wine region in France.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#HistoricalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:historicalEventOf rdf:resource="http://example.com/wine#ChampagneHistoricalEvent"/>
+    <rdfs:comment>An event with historical significance in the wine domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b7">
+    <rdf:first rdf:resource="http://example.com/wine#OrganicLabeling"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#roleInEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b17"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#AgingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The conditions required for proper wine aging.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasDifference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b2"/>
+    <rdfs:comment>Indicates a difference between wine production techniques.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasHistoricalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#historicalEventOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#HistoricalEvent"/>
+    <rdfs:comment>Relates a wine with a historical event.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#legalRequirementsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b8"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PinotNoir">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#PinotNoirGrape"/>
+    <rdfs:comment>A Pinot Noir wine made from Pinot Noir grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SustainabilityTrends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:trendsOf rdf:resource="http://example.com/wine#SustainabilityTrendsInstance"/>
+    <rdfs:comment>Trends related to sustainable wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#LegalRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:legalRequirementsOf rdf:resource="http://example.com/wine#OrganicRequirements"/>
+    <rdfs:comment>Legal standards and requirements for wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#HealthBenefitsInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#HealthBenefits"/>
+    <wine:hasHealthBenefits>Moderate wine consumption may have cardiovascular benefits.</wine:hasHealthBenefits>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WhiteWineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:comment>A technique for producing white wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b11">
+    <owl:intersectionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b12"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RieslingGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Riesling grape variety used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#OrganicLabeling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Labeling of wines as organic products.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CollectibleValueFactors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:valueContributionOf rdf:resource="http://example.com/wine#CollectibleFactorsExample"/>
+    <rdfs:comment>Factors affecting the collectible value of wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChampagneSustainabilityTrends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <wine:hasTrendsDescription>Increased focus on organic and biodynamic practices in Champagne production.</wine:hasTrendsDescription>
+    <rdfs:comment>Sustainability trends in Champagne production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CulturalEventInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#CulturalEvent"/>
+    <wine:playsRoleIn rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:playsRoleIn rdf:resource="http://example.com/wine#CulturalEvent_Celebration"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b12">
+    <rdf:first rdf:resource="http://example.com/wine#FoodPairing"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#trendsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b5">
+    <owl:intersectionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CollectibleFactors_Rarity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The label on a wine bottle containing information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#aroma">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#TastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:tastingNotesOf rdf:resource="http://example.com/wine#FloralTastingNote"/>
+    <rdfs:comment>Descriptive notes describing the taste and aroma of a wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b16">
+    <rdf:first rdf:resource="http://example.com/wine#SocialEvent"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#TopProducer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Country"/>
+    <wine:topProducerByVolume rdf:resource="http://example.com/wine#Country_France"/>
+    <wine:topProducerByVolume rdf:resource="http://example.com/wine#RedWineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PinotNoirGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Pinot Noir grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#informationIncludedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#LabelInformation"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineLabel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Wine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A beverage made from fermented grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#AgingConditions_DarkCellar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SpicyTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Spicy and peppery, with flavors of black and red pepper.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a spicy and peppery wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#playsRoleIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#roleInEvent"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b14"/>
+    <rdfs:comment>Describes the role of wines in cultural and social events.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RichTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Rich and velvety texture, with flavors of dark fruits and spices.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a rich and velvety wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineAging">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The process of aging wine to develop its flavors.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Characteristics_CabSauvignon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Characteristics"/>
+    <wine:characteristicsOf rdf:resource="http://example.com/wine#CabernetSauvignon"/>
+    <wine:aroma>Blackcurrant, bell pepper</wine:aroma>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#contributesToValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#valueContributionOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#CollectibleValueFactors"/>
+    <rdfs:comment>Factors contributing to the collectible value of wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTastingNoteDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#BurgundyRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Burgundy wine region in France.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b10">
+    <rdf:first rdf:resource="http://example.com/wine#OrganicLabeling"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b13">
+    <rdf:first rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b9">
+    <rdf:first rdf:resource="http://example.com/wine#LegalRequirements"/>
+    <rdf:rest rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTrendsDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SeafoodDish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A dish containing seafood.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SancerreRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Sancerre wine region known for producing quality wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Country_France">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b4">
+    <rdf:first rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CabernetSauvignonGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Cabernet Sauvignon grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasHistoricalEventDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Characteristics">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Seafood">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#SeafoodDish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CulturalEvent_Celebration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7359a3dd1f37416daa2c60441033ee60b19">
+    <rdf:first rdf:resource="http://example.com/wine#SocialEvent"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>
