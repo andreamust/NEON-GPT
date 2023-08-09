@@ -5,10 +5,32 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#HighPrice">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RedWineProductionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
+    <rdfs:comment>Represents the production process for red wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#LightBody">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <hasPriceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasPriceValue>
-    <rdfs:comment>Represents a wine with a high price value of 100.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#TextureAttribute"/>
+    <rdfs:comment>Represents a texture attribute of wines: light body.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#CabernetSauvignon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
+    <rdfs:comment>Represents a Cabernet Sauvignon wine.</rdfs:comment>
+    <rdfs:comment>Represents the Cabernet Sauvignon grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#chosenForOccasion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#occasionChoice"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Occasion"/>
+    <rdfs:comment>Relates wines to occasions they are chosen for.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#TextureAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents sensory attributes related to texture.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasHealthBenefit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -17,24 +39,54 @@
     <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#HealthBenefit"/>
     <rdfs:comment>Relates a wine to its potential health benefits.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#contributesToQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#qualityContributionOf"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:comment>Relates factors to their contribution to wine quality.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#GranReserva">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
+    <rdfs:comment>Represents the 'Gran Reserva' term on wine labels.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#subClassOf">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasMeaningInContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WinemakingContext"/>
+    <rdfs:comment>Relates a term to its meaning within a context.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#affectsTexture">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#textureAffectedBy"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#AgingProcess"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#TextureAttribute"/>
+    <rdfs:comment>Relates a process to its impact on texture attributes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Pasta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Dish"/>
+    <rdfs:comment>Represents a pasta dish that pairs well with wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RoseWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:comment>Represents a specific type of wine: rosé wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Terroir">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents the concept of terroir in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#BordeauxPairsWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <pairsWellWith rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#BeefDish"/>
+    <rdfs:comment>Represents a wine pairing example: Bordeaux pairs well with beef dishes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasCharacteristics">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor"/>
+    <rdfs:comment>Relates a grape variety to its characteristics.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#characterizedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasCharacteristics"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#differenceIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasDifference"/>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RedWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:comment>Represents a specific type of wine: red wine.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#indicates">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -44,67 +96,217 @@
     <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
     <rdfs:comment>Relates a concept to an indicator term.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#healthBenefitOf">
+  <rdf:Description rdf:about="http://example.org/wine-ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>An ontology describing concepts related to the world of wines.</rdfs:comment>
+    <rdfs:label>Wine Ontology</rdfs:label>
+    <owl:versionInfo>1.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#affectsTaste">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#tasteAffectedBy"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#AgingProcess"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#TasteAttribute"/>
+    <rdfs:comment>Relates a process to its impact on taste attributes.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasCharacteristics">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor"/>
-    <rdfs:comment>Relates a grape variety to its characteristics.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#AgingProcess">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents the process of aging wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents a process involved in wine production.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#MerlotGrape">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Celebration">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
-    <rdfs:comment>Represents the Merlot grape variety used in winemaking.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Occasion"/>
+    <rdfs:comment>Represents an occasion: celebration.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasDifference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:comment>Relates two concepts, indicating a difference between them.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Wine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents a general concept of wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#pairedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#pairsWellWith"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#HealthBenefit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents potential health benefits of wine consumption.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Food">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents a type of food.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#LowPrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <hasPriceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasPriceValue>
+    <rdfs:comment>Represents a wine with a low price value of 20.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#VanillaFlavorNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote"/>
+    <rdfs:comment>Represents a flavor note attribute of wines: vanilla note.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RieslingGrape">
+    <rdfs:comment>Represents the Riesling grape variety used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#pairsWellWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Dish"/>
+    <rdfs:comment>Relates wines and food dishes that pair well together.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Reserva">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
+    <rdfs:comment>Represents the 'Reserva' term on wine labels.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#textureAffectedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents a grape variety used in winemaking.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#tasteAffectedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WhiteWine">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:comment>Represents a specific type of wine: white wine.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#HighPrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <hasPriceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasPriceValue>
+    <rdfs:comment>Represents a wine with a high price value of 100.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#NapaValley">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#ChocolateDessert">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Dish"/>
+    <rdfs:comment>Represents a chocolate dessert dish.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasFlavorNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote"/>
+    <rdfs:comment>Relates a wine to specific flavor notes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineRegion"/>
-    <rdfs:comment>Represents the Napa Valley wine region.</rdfs:comment>
+    <rdfs:comment>Represents terms found on wine labels.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#BurgundyRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineRegion"/>
+    <rdfs:comment>Represents the Burgundy wine region.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#ClimateTerroir">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Terroir"/>
     <rdfs:comment>Represents a terroir aspect related to climate.</rdfs:comment>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasPriceValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdfs:comment>Relates a wine to its price value.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#FruityNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote"/>
+    <rdfs:comment>Represents a flavor note attribute of wines: fruity note.</rdfs:comment>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Riserva">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
     <rdfs:comment>Represents the 'Riserva' term on wine labels.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#affectsTexture">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#textureAffectedBy"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#AgingProcess"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#TextureAttribute"/>
-    <rdfs:comment>Relates a process to its impact on texture attributes.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents factors contributing to wine quality.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RoseWine">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#NapaValley">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineRegion"/>
+    <rdfs:comment>Represents the Napa Valley wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WineRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents a wine-producing region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents specific flavor notes associated with wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#AgingProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents the process of aging wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#healthBenefitOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#contributesToQuality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#qualityContributionOf"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
+    <rdfs:comment>Relates factors to their contribution to wine quality.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#VineyardLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor"/>
+    <rdfs:comment>Represents a quality factor related to vineyard location.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WinemakingContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents the context of winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#SancerreRegion">
+    <rdfs:comment>Represents the Sancerre wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WhiteWine">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:comment>Represents a specific type of wine: rosé wine.</rdfs:comment>
+    <rdfs:comment>Represents a specific type of wine: white wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RoseWineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
+    <rdfs:comment>Represents the production process for rosé wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#ChardonnayGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
+    <rdfs:comment>Represents the Chardonnay grape variety used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents a grape variety used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#differenceIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasDifference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#CardiovascularBenefit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#HealthBenefit"/>
+    <rdfs:comment>Represents a potential cardiovascular health benefit of wine consumption.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#SparklingWineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
+    <rdfs:comment>Represents the production process for sparkling wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#subClassOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Bordeaux">
+    <rdfs:comment>Represents a Bordeaux wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WhiteWineProductionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
+    <rdfs:comment>Represents the production process for white wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#contextMeaningOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasMeaningInContext"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasColor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -114,237 +316,17 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment>Relates a wine to its color attribute.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents specific flavor notes associated with wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Terroir">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents the concept of terroir in winemaking.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasPriceValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-    <rdfs:comment>Relates a wine to its price value.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#contextMeaningOf">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#qualityContributionOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasMeaningInContext"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Wine">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents a general concept of wine.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#CabernetSauvignon">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
-    <rdfs:comment>Represents a Cabernet Sauvignon wine.</rdfs:comment>
-    <rdfs:comment>Represents the Cabernet Sauvignon grape variety.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#affectsTaste">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#tasteAffectedBy"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#AgingProcess"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#TasteAttribute"/>
-    <rdfs:comment>Relates a process to its impact on taste attributes.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#CardiovascularBenefit">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#HealthBenefit"/>
-    <rdfs:comment>Represents a potential cardiovascular health benefit of wine consumption.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RedWine">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:comment>Represents a specific type of wine: red wine.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#pairsWellWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Dish"/>
-    <rdfs:comment>Relates wines and food dishes that pair well together.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#colorOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasColor"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/wine-ontology">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <rdfs:comment>An ontology describing concepts related to the world of wines.</rdfs:comment>
-    <rdfs:label>Wine Ontology</rdfs:label>
-    <owl:versionInfo>1.0</owl:versionInfo>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#LightBody">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#TextureAttribute"/>
-    <rdfs:comment>Represents a texture attribute of wines: light body.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#VineyardLocation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor"/>
-    <rdfs:comment>Represents a quality factor related to vineyard location.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#BurgundyRegion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineRegion"/>
-    <rdfs:comment>Represents the Burgundy wine region.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#HealthBenefit">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents potential health benefits of wine consumption.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#TextureAttribute">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents sensory attributes related to texture.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Celebration">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Occasion"/>
-    <rdfs:comment>Represents an occasion: celebration.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RieslingGrape">
-    <rdfs:comment>Represents the Riesling grape variety used in winemaking.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasFlavorNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote"/>
-    <rdfs:comment>Relates a wine to specific flavor notes.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#QualityFactor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents factors contributing to wine quality.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasDifference">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:comment>Relates two concepts, indicating a difference between them.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#SparklingWineProduction">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
-    <rdfs:comment>Represents the production process for sparkling wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WineRegion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents a wine-producing region.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents terms found on wine labels.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#tasteAffectedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Pasta">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Dish"/>
-    <rdfs:comment>Represents a pasta dish that pairs well with wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#chosenForOccasion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#occasionChoice"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Wine"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Occasion"/>
-    <rdfs:comment>Relates wines to occasions they are chosen for.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#ChardonnayGrape">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
-    <rdfs:comment>Represents the Chardonnay grape variety used in winemaking.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#flavorNoteOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasFlavorNote"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#SancerreRegion">
-    <rdfs:comment>Represents the Sancerre wine region.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#BordeauxPairsWith">
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#MerlotGrape">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <pairsWellWith rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#BeefDish"/>
-    <rdfs:comment>Represents a wine pairing example: Bordeaux pairs well with beef dishes.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Occasion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents an occasion or event.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Food">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents a type of food.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#TasteAttribute">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents sensory attributes related to taste.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#LowPrice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <hasPriceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasPriceValue>
-    <rdfs:comment>Represents a wine with a low price value of 20.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RoseWineProduction">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
-    <rdfs:comment>Represents the production process for rosé wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#RedWineProductionProcess">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
-    <rdfs:comment>Represents the production process for red wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WhiteWineProductionProcess">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess"/>
-    <rdfs:comment>Represents the production process for white wines.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Bordeaux">
-    <rdfs:comment>Represents a Bordeaux wine.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WinemakingContext">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Represents the context of winemaking.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#qualityContributionOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Reserva">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
-    <rdfs:comment>Represents the 'Reserva' term on wine labels.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#ChocolateDessert">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#Dish"/>
-    <rdfs:comment>Represents a chocolate dessert dish.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#indicatedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#indicates"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#FruityNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote"/>
-    <rdfs:comment>Represents a flavor note attribute of wines: fruity note.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#VanillaFlavorNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#FlavorNote"/>
-    <rdfs:comment>Represents a flavor note attribute of wines: vanilla note.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#hasMeaningInContext">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WinemakingContext"/>
-    <rdfs:comment>Relates a term to its meaning within a context.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#GrapeVariety"/>
+    <rdfs:comment>Represents the Merlot grape variety used in winemaking.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#occasionChoice">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -353,14 +335,32 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment>Represents a specific dish.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#GranReserva">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#WineLabelTerm"/>
-    <rdfs:comment>Represents the 'Gran Reserva' term on wine labels.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#pairedWith">
+  <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subClassOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#pairsWellWith"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#colorOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasColor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#WineProductionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents a process involved in wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#indicatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#indicates"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#characterizedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#hasCharacteristics"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#TasteAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents sensory attributes related to taste.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#Occasion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Represents an occasion or event.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#BeefDish">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
