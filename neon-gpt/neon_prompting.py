@@ -1,6 +1,6 @@
 """
 NEON-based knowledge engineering workflow emulated using CharGPT APIs and
-Large Language Models (LLMs) such as GPT-2, GPT-3, and GPT-J.
+Large Language Models (LLMs) such as GPT-3 or Davinci.
 """
 from pathlib import Path
 from utils import load_prompts
@@ -13,7 +13,7 @@ openai.api_key = credentials.OPENAI_API_KEY
 class NEONPrompting:
     """
     NEON-based knowledge engineering workflow emulated using CharGPT APIs and
-    Large Language Models (LLMs) such as GPT-2, GPT-3, and GPT-J.
+    Large Language Models (LLMs) such as GPT-3.
     """
 
     def __init__(self, prompts_file: str | Path, **parameters):
@@ -28,7 +28,9 @@ class NEONPrompting:
             prompts_file = Path(prompts_file)
         self.prompts_file_path = prompts_file
 
-        self.prompts = load_prompts(prompts_file)
+        self.prompts = list(load_prompts(prompts_file).values())
+
+        self.conversation = []
 
     def prompt_chatgpt(self, prompt_index: int) -> str:
         """
@@ -36,6 +38,11 @@ class NEONPrompting:
         :return: The prompt text.
         :rtype: str
         """
+        # add the user message to the conversation
+        self.conversation.append({"content": self.prompts[prompt_index],
+                                  "role": "user"})
+
+        # get the parametrisation for the ChatGPT API
         engine = self.parameters.get("engine", "gpt-3.5-turbo-0613")
         temperature = self.parameters.get("temperature", 0.9)
         max_tokens = self.parameters.get("max_tokens", 1000)
@@ -44,9 +51,10 @@ class NEONPrompting:
         presence_penalty = self.parameters.get("presence_penalty", 0.0)
         stop = self.parameters.get("stop", ["\n"])
 
+        # call the ChatGPT API
         response = openai.ChatCompletion.create(
             model=engine,
-            messages=prompt,
+            messages=self.conversation,
             temperature=temperature,
             max_tokens=max_tokens,
             top_p=top_p,
@@ -54,6 +62,10 @@ class NEONPrompting:
             presence_penalty=presence_penalty,
             stop=stop,
         )
+
+        # add the assistant message to the conversation
+        self.conversation.append({"content": response.choices[0].text,
+                                  "role": "assistant"})
 
         return response.choices[0].message
 
@@ -74,5 +86,8 @@ if __name__ == "__main__":
         {"content": "My name is NeOn. What's your name?", "role": "assistant"},
         {"content": "My name is John. What is your name?", "role": "user"},
     ]
-    response = prompt_chatgpt(prompt_list, engine="gpt-3.5-turbo-0613")
-    print(response)
+
+    neon = NEONPrompting(Path("../gpt_wine_ont_day3/FINAL_gpt_prompt_pipeline.json"))
+    response = neon.prompt_chatgpt(0)
+    print(neon.conversation)
+    # print(response)
