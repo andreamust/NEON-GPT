@@ -1,0 +1,2512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:mappings="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:wine="http://example.com/wine#"
+>
+  <rdf:Description rdf:nodeID="N0a40c7d50ce14154a68a89e91a456978">
+    <rdf:first rdf:resource="http://example.com/wine#SocialEvent"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChampagneSustainabilityTrends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <wine:hasTrendsDescription>Increased focus on organic and biodynamic practices in Champagne production.</wine:hasTrendsDescription>
+    <rdfs:comment>Sustainability trends in Champagne production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Lobster">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#GrapeVariety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:producedFrom rdf:resource="http://example.com/wine#CabernetSauvignon"/>
+    <rdfs:comment>A type of grape used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#tastingNotesOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#TastingNote"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N50a3a922518a4bc594bb5d6fa830db2f">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nd2c338db7d304335a212736f79b0022f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Grape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N73f22476bb554691b7d73d6b13f3fcfc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N0f88b6793c384e1dab3da1fa532d9600"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3eaf01b33fe94b9892909611a1195819">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Ne18006608c1e46a880ed587121b42140"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineAging">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The process of aging wine to develop its flavors.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#OrganicRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#LegalRequirements"/>
+    <wine:hasLegalRequirements rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:hasLegalRequirements rdf:resource="http://example.com/wine#OrganicRequirements_EcoCertified"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Juice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PotableLiquid"/>
+    <rdfs:subClassOf rdf:nodeID="Nb817cc6182c149e59c39191e76ff96b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Bordeaux">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#BordeauxWineRegion"/>
+    <rdfs:comment>A Bordeaux wine associated with the Bordeaux wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4d99a2cd186741ecab2fd4fcdd154339">
+    <rdf:first rdf:resource="http://example.com/wine#OrganicLabeling"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8add47ee1fbe4e8599fd4b3761548fb6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nbfc636d899f144f48ba3918c0fe2b623"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#usedToProduce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>Indicates the grape variety used to produce a wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf6d3167cd1f343d399586b52b031f807">
+    <rdf:first rdf:nodeID="N1d0560db6f8045b2916033603ca0e57f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N26b96aef6a954ca3876a0fbd532dc63e">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Strong"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd5311c0814a14fc58ec7828de80ead7d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nf1af279f38624790add02fe70a9c21d0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RiojaRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Rioja wine region in Spain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5223b9728dc4b2fa2993a1551634527">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ne076e374d02747df9962de0de6fda9e3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonConsumableThing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Ncbcbdd01105f43eb9f56e8a21e9bb47a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#course">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meal"/>
+    <rdfs:range rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f8249873b6f463a8f656bf747fdf013">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasCharacteristics">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Characteristics"/>
+    <rdfs:comment>Associates a grape variety with its characteristics.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CollectibleFactorsExample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#CollectibleValueFactors"/>
+    <wine:contributesToValue rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:contributesToValue rdf:resource="http://example.com/wine#CollectibleFactors_Rarity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N501ef6e0c81743b7832e38ac0f9b1aa8">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+    <rdf:rest rdf:nodeID="Ne15503b75c414f63b561090d07644f39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Shellfish"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c4944db71c047e6a1b541938488868b">
+    <rdf:first rdf:nodeID="N8a254f2c9d2b4ae3949b93423e74d89e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RichTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Rich and velvety texture, with flavors of dark fruits and spices.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a rich and velvety wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RedWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <wine:optimalAgingConditionsOf rdf:resource="http://example.com/wine#AgingConditionExample"/>
+    <rdfs:comment>A type of wine made from red grape varieties.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd925a3b9008d49e094cb0bd1b0dd9131">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7cbf16ca78694dfca7b1ff7a29948ba4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nb48aea7d518f4ad2acaca0b709e32a2a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpicyRedMeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RedMeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na6fb5e31d9fd488fa8342e70614546fd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb48aea7d518f4ad2acaca0b709e32a2a">
+    <rdf:first rdf:resource="http://example.com/wine#CulturalEvent"/>
+    <rdf:rest rdf:nodeID="Ndc77d340b1034c23aefafe379555f0ef"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n8dd03076cbbf45298b1094a5a5961d44b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedSource rdf:resource="http://example.com/wine#Wine"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    <owl:annotatedTarget rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine"/>
+    <mappings:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine</mappings:entity1>
+    <mappings:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://example.com/wine#Wine</mappings:entity2>
+    <mappings:measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.505</mappings:measure>
+    <mappings:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</mappings:relation>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N983170d991a642bab049863ff2b50340">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N2546d32b075344c8a7ca7f0a7f2a27c7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5b60f9919b8040c0a4e2a2128aa382ac">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncfcd97c381d94c10ba3e794fcc4713c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#course"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFoodCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N0bbe0734f5684cbbbd1bf448f5a043db"/>
+    <rdfs:subClassOf rdf:nodeID="N1a1abe56961b42c99bf99aa3d5670f12"/>
+    <rdfs:subClassOf rdf:nodeID="Nd817a27c068844f38554a9a0d390987d"/>
+    <rdfs:subClassOf rdf:nodeID="Na70c9fe662b14600b7a92ded4745db45"/>
+    <rdfs:subClassOf rdf:nodeID="Nc3d1537d21e44b5fbb04a3e05962d11f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#pairsWellWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Ne95918d2d6d840069ae3960540b4cb4a"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>Describes wine and food pairing relationships.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTastingNotes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#tastingNotesOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#TastingNote"/>
+    <rdfs:comment>Associates wines with their tasting notes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Characteristics_RoseAroma">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Characteristics"/>
+    <wine:aroma>Strawberry, raspberry</wine:aroma>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n8dd03076cbbf45298b1094a5a5961d44b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedSource rdf:resource="http://example.com/wine#Wine"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    <owl:annotatedTarget rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine"/>
+    <mappings:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine</mappings:entity1>
+    <mappings:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://example.com/wine#Wine</mappings:entity2>
+    <mappings:measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.7030000000000001</mappings:measure>
+    <mappings:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</mappings:relation>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfc38c0d91efe49f393099055b6987681">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nf860f0d6130444c88909abc65cf409b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChampagneRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Champagne wine region in France.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing"/>
+    <rdfs:subClassOf rdf:nodeID="N6b2eef2e8c364d10a9493bee4166a58f"/>
+    <rdfs:subClassOf rdf:nodeID="Ne3855fb50dc247fc8bea7ff474b95d67"/>
+    <rdfs:subClassOf rdf:nodeID="Na6fb5e31d9fd488fa8342e70614546fd"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PotableLiquid"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dessert">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fowl"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fruit"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meat"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OysterShellfish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Shellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CulturalEventInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#CulturalEvent"/>
+    <wine:playsRoleIn rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:playsRoleIn rdf:resource="http://example.com/wine#CulturalEvent_Celebration"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3a3dfbd45b4d43f29ba1ed216e8444c8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N0efab3f5ac7c4f24a131e8435096bb44"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Steak">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#BoldTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Bold and intense flavors, often with deep red fruit and smoky notes.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a bold and intense wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasLegalRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:nodeID="Na4431c42216e4478a86680f0f6445628"/>
+    <rdfs:comment>Relates wines with their legal requirements.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SustainabilityTrends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:trendsOf rdf:resource="http://example.com/wine#SustainabilityTrendsInstance"/>
+    <rdfs:comment>Trends related to sustainable wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#topProducerByVolume">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#topProducerFor"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineProduction"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Country"/>
+    <rdfs:comment>Indicates the top wine producer by volume.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#producedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#usedToProduce"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#GrapeVariety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#HealthBenefits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:healthBenefitsOf rdf:resource="http://example.com/wine#HealthBenefitsInstance"/>
+    <rdfs:comment>Potential health benefits associated with wine consumption.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1004ff6cdce04c18ac2f18dfacb75568">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nf3e7883c708c41ff8b2c82e301551e35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CabernetSauvignon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#CabernetSauvignonGrape"/>
+    <rdfs:comment>A Cabernet Sauvignon wine made from Cabernet Sauvignon grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N792b004b285c4bdea13c9ae9210ee081">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nd269bdc803664c7198b8664b78af519d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8843a31caec14276a66b1c4a1000b354">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nb3fa4d2ceafb406e90f6594d62277260"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndbbb3398414045ba8d011a883d138c40">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nd84f05ecc7154a11985d248b50043af3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#CheeseNutsDessert">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dessert"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1e14510ee1a480a960dc2dd8bd5fe19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd269bdc803664c7198b8664b78af519d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N346735137f064beaada74becc39d79af">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EatingGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Grape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#LegalRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:legalRequirementsOf rdf:resource="http://example.com/wine#OrganicRequirements"/>
+    <rdfs:comment>Legal standards and requirements for wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N02ff0f55824a4382bc1e8d9ea39a7941">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N0532f4dfc8c3414ead39425365ffb32f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#madeFromFruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4431c42216e4478a86680f0f6445628">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N596e4ac7491149a39efc9cfc66da95db"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#healthBenefitsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#HealthBenefits"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Champagne">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Champagne"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#ChampagneRegion"/>
+    <wine:hasHistoricalEvent rdf:resource="http://example.com/wine#ChampagneHistoricalEvent"/>
+    <wine:hasTrends rdf:resource="http://example.com/wine#ChampagneSustainabilityTrends"/>
+    <rdfs:comment>A sparkling Champagne wine from the Champagne region.</rdfs:comment>
+    <rdfs:comment>A sparkling wine originating from the Champagne region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5fe75370f471485eac19484c75726fe0">
+    <rdf:first rdf:resource="http://example.com/wine#SeafoodDish"/>
+    <rdf:rest rdf:nodeID="N8c7d241446f94dae861233b6a51729e9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Chardonnay">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#ChardonnayGrape"/>
+    <wine:hasPriceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">25</wine:hasPriceValue>
+    <rdfs:comment>A grape variety used for making Chardonnay wines.</rdfs:comment>
+    <rdfs:comment>A Chardonnay wine made from Chardonnay grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Dry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd5183c4c3aa947f4ab057615b222dc89">
+    <rdf:first rdf:nodeID="N15b3cf53c0b7486ea9b239aafd04a0d0"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpicyRedMeatCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N14e6a88d08174065b5c45debbce6dcaf"/>
+    <rdfs:subClassOf rdf:nodeID="N2d7f7ff22e684616b8cf3f68d7146248"/>
+    <rdfs:subClassOf rdf:nodeID="Nd5311c0814a14fc58ec7828de80ead7d"/>
+    <rdfs:subClassOf rdf:nodeID="Nb67d753b5c2b410aa7f13eca3e0341dc"/>
+    <rdfs:subClassOf rdf:nodeID="Nce6ac713a5e54a4f9ec8f2014fa6b8c7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Clams">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d0560db6f8045b2916033603ca0e57f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#MediumTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Medium-bodied with balanced flavors and a smooth finish.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a medium-bodied wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RiojaWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#RiojaRegion"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#MediumTastingNote"/>
+    <rdfs:comment>A Rioja wine associated with the Rioja wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4917eee5bd0a4f2a8edc73d305859da6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N1791d9eb714347cdb9d4239c28635e99"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ShirazGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Shiraz grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N086ca6939068492f93a773aff1172182">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nce4f367c7eb14b2aa9c2abe419807510"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruitCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N3b12e0ee8af2483aad7d9121b04dbf48"/>
+    <rdfs:subClassOf rdf:nodeID="Nae5c0e51ce2f4b2591612d8319acf0b3"/>
+    <rdfs:subClassOf rdf:nodeID="N98e0588ef3a74957851ee9b7ef327273"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9acdabac4e7d4a11bc86a47295784d57">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nc260bcb3130d488f92e0b67c39e6d25c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Shellfish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3855fb50dc247fc8bea7ff474b95d67">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nadae82cde82442729fc9397eaa0a92e0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Full">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Full"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithRedSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithWhiteSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9ee2c5bb3784349a6447395bc8eccde">
+    <rdf:first rdf:resource="http://example.com/wine#FoodPairing"/>
+    <rdf:rest rdf:nodeID="N4e0ccdcf4be44b729ea97ac9464c8332"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb67d753b5c2b410aa7f13eca3e0341dc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N67a0e4956ad043ecb6b443082853265e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nceb2416cf85942b084e863b3d8900b24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne076e374d02747df9962de0de6fda9e3">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Ne01a70242c4b4bc19eddaf498f0cc490"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b60b73b5d7047a58269823a55897688">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pork">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd8f8a14d0f4f421395ddc4f73a2b1cc5">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nf19be0e029b9407ea44f4b6c429b0820"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0efab3f5ac7c4f24a131e8435096bb44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:allValuesFrom rdf:nodeID="N828228745b8744b8ba86f5c78293b5db"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N232af3559a1a4352ad31ec6a54bc2e9c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasDifference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Nb74b9c066fbc4bbabf573498427c4d1e"/>
+    <rdfs:comment>Indicates a difference between wine production techniques.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N65983b8630df40b1a7113bf35b5ddb2e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N67a0e4956ad043ecb6b443082853265e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7e3e75472f3b438e918f751dc9baad25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45d7b16572064f96af3fcf95e603316a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nb1e14510ee1a480a960dc2dd8bd5fe19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#historicalEventOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#HistoricalEvent"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonRedMeatCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N1004ff6cdce04c18ac2f18dfacb75568"/>
+    <rdfs:subClassOf rdf:nodeID="Nb3f925db96b64afd8e442f1c6de50231"/>
+    <rdfs:subClassOf rdf:nodeID="N45d7b16572064f96af3fcf95e603316a"/>
+    <rdfs:subClassOf rdf:nodeID="N54317fb1dfb5403294f33680fc347fc3"/>
+    <rdfs:subClassOf rdf:nodeID="Na5bbb731256942b78b32e071ce6d6411"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N496f471468904d32bcc9f48df57058c5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N0d2310a4cd9f4eca9984697d336afc5e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meal"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PotableLiquid"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SyrahGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Syrah grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne18006608c1e46a880ed587121b42140">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb5261fe041a54a6b8ae17c936ffbe530">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#course"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Shiraz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#SpicyTastingNote"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#ShirazGrape"/>
+    <rdfs:comment>A Shiraz wine made from Shiraz grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing"/>
+    <rdfs:subClassOf rdf:nodeID="Ncfcd97c381d94c10ba3e794fcc4713c9"/>
+    <rdfs:subClassOf rdf:nodeID="Nb5261fe041a54a6b8ae17c936ffbe530"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PotableLiquid"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3923791bbbf94987a4142b2c08f4d435">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N03f6aadc6f244529a6e4064727a92b4c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#contributesToValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#valueContributionOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#CollectibleValueFactors"/>
+    <rdfs:comment>Factors contributing to the collectible value of wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#characteristicsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#hasCharacteristics"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Characteristics"/>
+    <rdfs:range rdf:resource="http://example.com/wine#GrapeVariety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#trendsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#valueContributionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#CollectibleValueFactors"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd881027381e942c78e416661ee472fb9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N317fca4b81464e7eb1401b984b9065fe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd817a27c068844f38554a9a0d390987d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N8f8249873b6f463a8f656bf747fdf013"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9bf5b6320d3a4137b45c0a003c013245">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nddbaca0e42de4720a464b24401d14ed1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineProductionTechnique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:differenceOf rdf:resource="http://example.com/wine#Differences"/>
+    <rdfs:comment>A process used to produce wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#CheeseNutsDessertCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nef499af3175d4ce8815503416e350230"/>
+    <rdfs:subClassOf rdf:nodeID="Nd074f009077f48e3a25fd60971b845fb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#associatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#associationOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>Relates a wine with the wine region it's associated with.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8a254f2c9d2b4ae3949b93423e74d89e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithLightCreamSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RieslingGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Riesling grape variety used in winemaking.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naed1b293ed6f4eabb2d79ef0ff50d68f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N587126a2817a4cc2a5b283beabb198fd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na21de5412e3b473cb92755915345984d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N887802d71af34071b2e64552adf9aa74"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#optimalAgingConditionsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#AgingConditions"/>
+    <rdfs:range rdf:resource="http://example.com/wine#RedWine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5458bb9f3496494ab1eebdcb8694c088">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N5ae9d10686aa46819fb437d88fa2bd39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTastingNoteDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfb19182cf8624a0e81b4ab24eda2a483">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N804413ddf0ee4a79a591baaac1bdbe8c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nef499af3175d4ce8815503416e350230">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nebfb6b8cc64c442fb6a9f7a7b3d16177"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N10bbb40ae2d0400fb1e464b296fe43c1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N36b0418b49b346f9bef8edcd00ec3959"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N382617c4ad0b481998ebaad50f0e32c3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N8f2f476d14984cb5ada3054b3483d685"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd64685f351e24eefa97086bd542e0f22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N8c2912b0551d4a70a2b2da001a71e1d7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb204436c360d48b59739530236a9c72d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonBlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTrends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#trendsOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineProduction"/>
+    <rdfs:range rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <rdfs:comment>Associates wines with sustainability trends.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n8dd03076cbbf45298b1094a5a5961d44b4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedSource rdf:resource="http://example.com/wine#Wine"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    <owl:annotatedTarget rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine"/>
+    <mappings:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine</mappings:entity1>
+    <mappings:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://example.com/wine#Wine</mappings:entity2>
+    <mappings:measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.505</mappings:measure>
+    <mappings:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</mappings:relation>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae5c0e51ce2f4b2591612d8319acf0b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nd925a3b9008d49e094cb0bd1b0dd9131"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc59e233df996472d9afdfec2e0a7ae4f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N4b60b73b5d7047a58269823a55897688"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b0ba3c3a55f469598292b020edd170c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N346735137f064beaada74becc39d79af"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PinotNoir">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#PinotNoirGrape"/>
+    <rdfs:comment>A Pinot Noir wine made from Pinot Noir grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N54317fb1dfb5403294f33680fc347fc3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nd64b5966f9a44c5eba8419d6136ac3d4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithHeavyCreamCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N6104d4ace4764c9d8ad2ae735463362e"/>
+    <rdfs:subClassOf rdf:nodeID="N382617c4ad0b481998ebaad50f0e32c3"/>
+    <rdfs:subClassOf rdf:nodeID="N02454127b54843cdb679604a83a61aab"/>
+    <rdfs:subClassOf rdf:nodeID="N053edd711ed145518f8bb97b208f65f7"/>
+    <rdfs:subClassOf rdf:nodeID="N0e0000b3ba8c4fa089bb673461cd2d65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#informationIncludedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#LabelInformation"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineLabel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Seafood">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#SeafoodDish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#DarkMeatFowlCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nca896960c39e4e58bdc762624d534b89"/>
+    <rdfs:subClassOf rdf:nodeID="Nfce7058057274bf0b14a335f9cb8e3ff"/>
+    <rdfs:subClassOf rdf:nodeID="Nd64685f351e24eefa97086bd542e0f22"/>
+    <rdfs:subClassOf rdf:nodeID="N9cf2b797999546a5af0477733127f414"/>
+    <rdfs:subClassOf rdf:nodeID="N39b268789d004f96a6f2c03f08985e8f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd64b5966f9a44c5eba8419d6136ac3d4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Strong"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40476c9153b7420ca4c652d49084fd72">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Light"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne95918d2d6d840069ae3960540b4cb4a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nc9ee2c5bb3784349a6447395bc8eccde"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Merlot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#MerlotGrape"/>
+    <rdfs:comment>A Merlot wine made from Merlot grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce774fe055804cd593d7e99af948e5a3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N99ec70aaefcc4d3ea8715fe444c4f0be"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf86331c2ec194b7381e74e1517909b54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N1e36fd7cad1c4954b3f53f19354f54b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfe15a0b65ea24c32ad45213615cb484f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#FoodPairing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:equivalentClass rdf:nodeID="N04f050c3acde4500b00728f4aba26685"/>
+    <wine:pairsWellWith rdf:resource="http://example.com/wine#FoodPairingInstance"/>
+    <rdfs:comment>The compatibility of wines with specific foods.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BeefCurry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60ce5d57ef2d468785de5be1e54b3a9c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N8c831791b52c4a26bd6859d798e5cfa4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSpicyRedMeatCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nb55d9a22f10d447796869c8aef668420"/>
+    <rdfs:subClassOf rdf:nodeID="N3a3dfbd45b4d43f29ba1ed216e8444c8"/>
+    <rdfs:subClassOf rdf:nodeID="Nf27c895680f049c0bdd42090d623c899"/>
+    <rdfs:subClassOf rdf:nodeID="N10bbb40ae2d0400fb1e464b296fe43c1"/>
+    <rdfs:subClassOf rdf:nodeID="Ndbb653733580431e85ba2234b0314c52"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#FishCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Ne76295e25a804126ba38ea2c907deda2"/>
+    <rdfs:subClassOf rdf:nodeID="N792b004b285c4bdea13c9ae9210ee081"/>
+    <rdfs:subClassOf rdf:nodeID="Nc34216b8f7fc47a3871d0c01a6d8fdaa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SancerreRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Sancerre wine region known for producing quality wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Halibut">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0e0000b3ba8c4fa089bb673461cd2d65">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N9a200751b30040f89c0949c2d75a3046"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncd081fe4f92244bdbdf0d2b21202a5be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N9acdabac4e7d4a11bc86a47295784d57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc1e8c71f2d746439904b4b1436e78ef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc260bcb3130d488f92e0b67c39e6d25c">
+    <rdf:first rdf:nodeID="Nf31d64f1590c4794a9144e677dd29525"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N21bba038063b4d61b36ae48e0fd682e7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#topProducerFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Country"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N151c0378d50940478b940e1c1cd2b7d4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSweetFruitCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N5458bb9f3496494ab1eebdcb8694c088"/>
+    <rdfs:subClassOf rdf:nodeID="Naed1b293ed6f4eabb2d79ef0ff50d68f"/>
+    <rdfs:subClassOf rdf:nodeID="Nae71da3158634039872fca11686e659b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithNonSpicyRedSauceCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Ncd081fe4f92244bdbdf0d2b21202a5be"/>
+    <rdfs:subClassOf rdf:nodeID="Ne6667b551c2442cf97a1a88b48740928"/>
+    <rdfs:subClassOf rdf:nodeID="N9386a9c143f145e9b20d4f10be74f6b8"/>
+    <rdfs:subClassOf rdf:nodeID="N3eaf01b33fe94b9892909611a1195819"/>
+    <rdfs:subClassOf rdf:nodeID="N983170d991a642bab049863ff2b50340"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N887802d71af34071b2e64552adf9aa74">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N1ddc7a7836c544eaa3ac10f673ff9acd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98e0588ef3a74957851ee9b7ef327273">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nb6151c7524de4fc190cb30af69e0508c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fowl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fruit"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meat"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfe71dc7e976a420db26db26710074a10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N0fba5d02ff824362b1153aed6abade8f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8dceb07885a742e0aa8f8927ac455ca0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N85a62bc777954b72b1c6dd73cdd757b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc160341f536f48519b80c011696942d4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Delicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N00ae540dd4f2428a8aec6555231d6452">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc0e8f4b5c3ac431495b78e12226c7b1b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Moderate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Burgundy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#BurgundyRegion"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#RichTastingNote"/>
+    <rdfs:comment>A Burgundy wine associated with the Burgundy wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3894fd8e46c843f7aaaf381c189e9b32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N885251b4356d4cb5bfa2f38892ddcb37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbdf6af84c79742d5bd9cdf586c7c38f6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nda479701fc8b46c49ea2fcb55d2fe454">
+    <rdf:first rdf:nodeID="Nea53ed5b003d4b228d1787a91c5c23d2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39b268789d004f96a6f2c03f08985e8f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N40cb7afe6bd64ec2945ea5753ee7510a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b3c684bd2514bacb7d86839dccc8692">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55f458ec14044830a123c81a4b5e507c">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Na41dd9980ca342e59761fc24d1b4716e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdfs:range rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithSpicyRedSauceCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Na21de5412e3b473cb92755915345984d"/>
+    <rdfs:subClassOf rdf:nodeID="N8add47ee1fbe4e8599fd4b3761548fb6"/>
+    <rdfs:subClassOf rdf:nodeID="N003eb2739f8e476b99c2be6a835e0861"/>
+    <rdfs:subClassOf rdf:nodeID="Nfb19182cf8624a0e81b4ab24eda2a483"/>
+    <rdfs:subClassOf rdf:nodeID="N074c9c32915f4868b8e5d811ad679e35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Flounder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n8dd03076cbbf45298b1094a5a5961d44b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+    <owl:annotatedSource rdf:resource="http://example.com/wine#Wine"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    <owl:annotatedTarget rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine"/>
+    <mappings:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine</mappings:entity1>
+    <mappings:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://example.com/wine#Wine</mappings:entity2>
+    <mappings:measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.7030000000000001</mappings:measure>
+    <mappings:relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</mappings:relation>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#optimalAgingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#optimalAgingConditionsOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#RedWine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#AgingConditions"/>
+    <rdfs:comment>Describes the optimal conditions for aging wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Duck">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#DarkMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nebfb6b8cc64c442fb6a9f7a7b3d16177">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nd2c2662a22564513ae5e940b0be5bf7a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Shellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CulturalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:roleInEvent rdf:resource="http://example.com/wine#CulturalEventInstance"/>
+    <rdfs:comment>Events and celebrations involving wine in culture.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#AgingConditionExample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#AgingConditions"/>
+    <wine:optimalAgingConditions rdf:resource="http://example.com/wine#AgingConditions_DarkCellar"/>
+    <wine:optimalAgingConditions rdf:resource="http://example.com/wine#RedWine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#includesInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#informationIncludedIn"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineLabel"/>
+    <rdfs:range rdf:resource="http://example.com/wine#LabelInformation"/>
+    <rdfs:comment>Includes specific information on a wine label.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N15b3cf53c0b7486ea9b239aafd04a0d0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#LightMeatFowlCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nc9c5944b997242a1b98f58e5b52163d1"/>
+    <rdfs:subClassOf rdf:nodeID="Nc16f7ea982704e9b9452ce5dc9461999"/>
+    <rdfs:subClassOf rdf:nodeID="Nc59e233df996472d9afdfec2e0a7ae4f"/>
+    <rdfs:subClassOf rdf:nodeID="N73f22476bb554691b7d73d6b13f3fcfc"/>
+    <rdfs:subClassOf rdf:nodeID="Ned93309da7df4f3ca6049f9b98fdd5bf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N17b6c7e58eec436ea8fea8a7d23eadd3">
+    <rdf:first rdf:nodeID="Na05e9744f7e340cca35a2c8f8a73b3a5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N08d20fdd39a64887819c7f96765ab55b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Delicate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Delicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Peaches">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#LightMeatFowl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OffDry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#OffDry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RedWineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:comment>A technique for producing red wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Malbec">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#BoldTastingNote"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#MalbecGrape"/>
+    <rdfs:comment>A Malbec wine made from Malbec grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfce7058057274bf0b14a335f9cb8e3ff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nba82070ee8c54c9a9fde687db219254f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N141665c230d6490a98bb6d2a72f53947">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SparklingWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>A wine with carbon dioxide bubbles, such as Champagne.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce4f367c7eb14b2aa9c2abe419807510">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Sweet"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nba82070ee8c54c9a9fde687db219254f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Light"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SeafoodCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N8dceb07885a742e0aa8f8927ac455ca0"/>
+    <rdfs:subClassOf rdf:nodeID="Nd881027381e942c78e416661ee472fb9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonBlandFishCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N75454cbe5f5d46a78a0289ac6bd2a082"/>
+    <rdfs:subClassOf rdf:nodeID="N2588ad63a94c420f845b2f207d49969f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Strong">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Strong"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfcfe298101ef496988afad0e8611053d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N036296ce9cca44df8c2263db09f21450"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf19be0e029b9407ea44f4b6c429b0820">
+    <rdf:first rdf:nodeID="N151c0378d50940478b940e1c1cd2b7d4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb604d78a465f413099a34e7e5b7d7900">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N768d6d701c0d46ec8cde6df1fea9efb2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Veal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithLightCreamCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N496f471468904d32bcc9f48df57058c5"/>
+    <rdfs:subClassOf rdf:nodeID="Nb1752a2d0b894e7098c5a6f3e1d36b18"/>
+    <rdfs:subClassOf rdf:nodeID="Nc42de1a9d02046909a6bf856415fdf9b"/>
+    <rdfs:subClassOf rdf:nodeID="N6fba828004e74c1ea3b1d2ab092cc6b7"/>
+    <rdfs:subClassOf rdf:nodeID="N2b0ba3c3a55f469598292b020edd170c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#roleInEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:nodeID="N00ae540dd4f2428a8aec6555231d6452"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c831791b52c4a26bd6859d798e5cfa4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Strong"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CollectibleValueFactors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:valueContributionOf rdf:resource="http://example.com/wine#CollectibleFactorsExample"/>
+    <rdfs:comment>Factors affecting the collectible value of wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce6ac713a5e54a4f9ec8f2014fa6b8c7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N4f36cd62ce9940f69f02a71891da8e9b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:associationOf rdf:resource="http://example.com/wine#Bordeaux"/>
+    <rdfs:comment>A geographic area associated with wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4e0ccdcf4be44b729ea97ac9464c8332">
+    <rdf:first rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChampagneHistoricalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#HistoricalEvent"/>
+    <wine:hasHistoricalEvent rdf:resource="http://example.com/wine#Champagne"/>
+    <wine:hasHistoricalEventDescription>The invention of the traditional method for making Champagne.</wine:hasHistoricalEventDescription>
+    <rdfs:comment>The historical event of inventing the traditional method for making Champagne.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#playsRoleIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#roleInEvent"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:nodeID="N7cbf16ca78694dfca7b1ff7a29948ba4"/>
+    <rdfs:comment>Describes the role of wines in cultural and social events.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OysterShellfishCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N4a50a4187c2c4544b0b21311d1130b93"/>
+    <rdfs:subClassOf rdf:nodeID="N086ca6939068492f93a773aff1172182"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SpicyTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Spicy and peppery, with flavors of black and red pepper.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a spicy and peppery wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ShellfishCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nc5223b9728dc4b2fa2993a1551634527"/>
+    <rdfs:subClassOf rdf:nodeID="N3894fd8e46c843f7aaaf381c189e9b32"/>
+    <rdfs:subClassOf rdf:nodeID="Nfc38c0d91efe49f393099055b6987681"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2588ad63a94c420f845b2f207d49969f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N1d88b5ebe48b4c298d7888626eb143e3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0fba5d02ff824362b1153aed6abade8f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N02263b5de2414f619d3899f3f2108bea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75a2b8674fab4ea0ac853ca5185af60f">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Na17ec653b0384a82bcd5766f164a7714"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ThompsonSeedless">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EatingGrape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na41dd9980ca342e59761fc24d1b4716e">
+    <rdf:first rdf:nodeID="Nb204436c360d48b59739530236a9c72d"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd074f009077f48e3a25fd60971b845fb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nc678b1f659ce4e82bb2bc6f04bae0935"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na70c9fe662b14600b7a92ded4745db45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nfd3be9e545aa43ec8ca7a67469de830e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb798b61df18547d3b3987a973d4d4444">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nddbaca0e42de4720a464b24401d14ed1">
+    <rdf:first rdf:nodeID="N5b60f9919b8040c0a4e2a2128aa382ac"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb817cc6182c149e59c39191e76ff96b0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#madeFromFruit"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#TastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:tastingNotesOf rdf:resource="http://example.com/wine#FloralTastingNote"/>
+    <rdfs:comment>Descriptive notes describing the taste and aroma of a wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#LabelInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:informationIncludedIn rdf:resource="http://example.com/wine#LabelInformationExample"/>
+    <rdfs:comment>Information included on a wine label.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb2f7a8c19409448d9ae97fb97c034265">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#LightMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9cf2b797999546a5af0477733127f414">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N541f7c41760e4b6ca357e090f56e4830"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#FloralTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9027aa48498148da88b76d118a8551ab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithHeavyCreamSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60a548f55deb4faf8f6a65b56e3c2845">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nceb2416cf85942b084e863b3d8900b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd0fd9f7631fb47baa1837ce471a004de">
+    <rdf:first rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:rest rdf:nodeID="N6ea31b3fc27d425d8b4f3fbe2ffc2091"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#DarkMeatFowl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fowl"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#LightMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc16f7ea982704e9b9452ce5dc9461999">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N7e3e75472f3b438e918f751dc9baad25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2dd06292a382458a91fa4e2be17e202f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N300e0e56b9a44c1fb1ad35f95a782d73"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#BordeauxWineRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Bordeaux wine region in France.</rdfs:comment>
+    <rdfs:comment>A wine region known for producing Bordeaux wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N36b0418b49b346f9bef8edcd00ec3959">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N223331043066495fa42ee9577431a511">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nea53ed5b003d4b228d1787a91c5c23d2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PortWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:associatedWith rdf:resource="http://example.com/wine#PortugalRegion"/>
+    <wine:hasTastingNotes rdf:resource="http://example.com/wine#SweetTastingNote"/>
+    <rdfs:comment>A Port wine associated with the Portugal wine region.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f36cd62ce9940f69f02a71891da8e9b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6104d4ace4764c9d8ad2ae735463362e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nca51acdf79e64ca3832b3a9b5396aab9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Chicken">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#LightMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SeafoodDish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A dish containing seafood.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CabernetSauvignonGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Cabernet Sauvignon grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Scrod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RedMeatCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N85450a3fbdea48a1930b4ad17319100b"/>
+    <rdfs:subClassOf rdf:nodeID="Nfe71dc7e976a420db26db26710074a10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Crab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N804413ddf0ee4a79a591baaac1bdbe8c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Strong"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne76295e25a804126ba38ea2c907deda2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ndbbb3398414045ba8d011a883d138c40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#differenceOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Differences"/>
+    <rdfs:range rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Wine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A beverage made from fermented grapes.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Sweet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Sweet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PortugalRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Portugal wine region known for Port wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b12e0ee8af2483aad7d9121b04dbf48">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N183cda61b7ab44078d1658d17b135621"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#ChardonnayGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Chardonnay grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#FettucineAlfRedo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithHeavyCreamSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N38f37848ba4b47c3a19f3bb86c3a1063">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N003eb2739f8e476b99c2be6a835e0861">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N8727ed3c3910412684da2e1ae5fba9d9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb3fa4d2ceafb406e90f6594d62277260">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nd5183c4c3aa947f4ab057615b222dc89"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithSpicyRedSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithRedSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N85450a3fbdea48a1930b4ad17319100b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N9bf5b6320d3a4137b45c0a003c013245"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N7dfd5c5339cf4d8bb060027af0359f5a"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meat"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbfc636d899f144f48ba3918c0fe2b623">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Full"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd3be9e545aa43ec8ca7a67469de830e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8ac34649390d4927bc1f4c5fdd2b21fc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N816f05850708448e9694c854980d0170"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9be7ee3ca34942d78f6e8977596a2656">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#FoodPairingInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#FoodPairing"/>
+    <wine:pairsWellWith rdf:resource="http://example.com/wine#Chardonnay"/>
+    <wine:pairsWellWith rdf:resource="http://example.com/wine#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd84f05ecc7154a11985d248b50043af3">
+    <rdf:first rdf:nodeID="N55bc70a0531c4c48a332aad96737a47c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N57d4c9d02a634370af0d0a28701dd26b">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N795c1bbac1d647deabf6e48626d27934"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CulturalEvent_Celebration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ea31b3fc27d425d8b4f3fbe2ffc2091">
+    <rdf:first rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Goose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#DarkMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The label on a wine bottle containing information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonRedMeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Meat"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd2c2662a22564513ae5e940b0be5bf7a">
+    <rdf:first rdf:nodeID="N6ced859e86324011a5369a299e594497"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf294f7ecf14a491e99c8c26940833e1a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2d75e45e7bb453ebd78adc26d7d7ee7">
+    <rdf:first rdf:nodeID="N9027aa48498148da88b76d118a8551ab"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpaghettiWithTomatoSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithNonSpicyRedSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d7f7ff22e684616b8cf3f68d7146248">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N87e45e92b5314784b85d54138014a316"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#HealthBenefitsInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#HealthBenefits"/>
+    <wine:hasHealthBenefits>Moderate wine consumption may have cardiovascular benefits.</wine:hasHealthBenefits>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1752a2d0b894e7098c5a6f3e1d36b18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N40476c9153b7420ca4c652d49084fd72"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf27c895680f049c0bdd42090d623c899">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N117fe375467c4f48b93339f4eef79aaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14e6a88d08174065b5c45debbce6dcaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N50a3a922518a4bc594bb5d6fa830db2f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N00fec0d6aca248fd94b67a639f5296d2">
+    <rdf:first rdf:resource="http://example.com/wine#LegalRequirements"/>
+    <rdf:rest rdf:nodeID="N4d99a2cd186741ecab2fd4fcdd154339"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#associationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03f6aadc6f244529a6e4064727a92b4c">
+    <rdf:first rdf:nodeID="N4b3c684bd2514bacb7d86839dccc8692"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91b6f47b585048a981c22dfce8f35981">
+    <rdf:first rdf:nodeID="N38f37848ba4b47c3a19f3bb86c3a1063"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BlandFish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fish"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonBlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf65e1a4968534b65af744f760b503b81">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSweetFruit"/>
+    <rdf:rest rdf:nodeID="Nb798b61df18547d3b3987a973d4d4444"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1ddc7a7836c544eaa3ac10f673ff9acd">
+    <rdf:first rdf:nodeID="N3345668276864e7bb46ef75fc4050987"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb3f925db96b64afd8e442f1c6de50231">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nbdf6af84c79742d5bd9cdf586c7c38f6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfishCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N8ac34649390d4927bc1f4c5fdd2b21fc"/>
+    <rdfs:subClassOf rdf:nodeID="Nf86331c2ec194b7381e74e1517909b54"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#BurgundyRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineRegion"/>
+    <rdfs:comment>The Burgundy wine region in France.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N117fe375467c4f48b93339f4eef79aaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N99ec70aaefcc4d3ea8715fe444c4f0be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MixedFruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N053edd711ed145518f8bb97b208f65f7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N0bc0e8a0ada04e79b745b03b715ff979"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne01a70242c4b4bc19eddaf498f0cc490">
+    <rdf:first rdf:nodeID="N9dfaec297a274a38b9fee6fe8bfa262b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na17ec653b0384a82bcd5766f164a7714">
+    <rdf:first rdf:nodeID="Nadae82cde82442729fc9397eaa0a92e0"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N317fca4b81464e7eb1401b984b9065fe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2546d32b075344c8a7ca7f0a7f2a27c7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1791d9eb714347cdb9d4239c28635e99">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc3d1537d21e44b5fbb04a3e05962d11f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N21bba038063b4d61b36ae48e0fd682e7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Sweet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Light">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Light"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#legalRequirementsOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:nodeID="Nc48515f5ad9046c5af1761a7ce7a5b13"/>
+    <rdfs:range rdf:resource="http://example.com/wine#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#HistoricalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:historicalEventOf rdf:resource="http://example.com/wine#ChampagneHistoricalEvent"/>
+    <rdfs:comment>An event with historical significance in the wine domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6b2eef2e8c364d10a9493bee4166a58f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0756196e1f74fc09f47a3fc1a3201af">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N501ef6e0c81743b7832e38ac0f9b1aa8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N828228745b8744b8ba86f5c78293b5db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N17c224f4f7c847e9800ca42cd7eaa1a9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ced859e86324011a5369a299e594497">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#CheeseNutsDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a200751b30040f89c0949c2d75a3046">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SweetTastingNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#TastingNote"/>
+    <wine:hasTastingNoteDescription>Sweet and fruity, often with notes of dried fruits and nuts.</wine:hasTastingNoteDescription>
+    <rdfs:comment>Tasting notes describing a sweet and fruity wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9386a9c143f145e9b20d4f10be74f6b8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nf294f7ecf14a491e99c8c26940833e1a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N17c224f4f7c847e9800ca42cd7eaa1a9">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+    <rdf:rest rdf:nodeID="N26b96aef6a954ca3876a0fbd532dc63e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N795c1bbac1d647deabf6e48626d27934">
+    <rdf:first rdf:nodeID="Nb2f7a8c19409448d9ae97fb97c034265"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasHistoricalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#historicalEventOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#HistoricalEvent"/>
+    <rdfs:comment>Relates a wine with a historical event.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SocialEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Social occasions where wine is enjoyed.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na05e9744f7e340cca35a2c8f8a73b3a5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#TopProducer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Country"/>
+    <wine:topProducerByVolume rdf:resource="http://example.com/wine#Country_France"/>
+    <wine:topProducerByVolume rdf:resource="http://example.com/wine#RedWineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithWhiteSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pasta"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae71da3158634039872fca11686e659b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nffbdbe7e247d46bda14219db67b2feda"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N074c9c32915f4868b8e5d811ad679e35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N08d20fdd39a64887819c7f96765ab55b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5ae9d10686aa46819fb437d88fa2bd39">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nda479701fc8b46c49ea2fcb55d2fe454"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0bbe0734f5684cbbbd1bf448f5a043db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N3923791bbbf94987a4142b2c08f4d435"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf860f0d6130444c88909abc65cf409b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Full"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndc77d340b1034c23aefafe379555f0ef">
+    <rdf:first rdf:resource="http://example.com/wine#SocialEvent"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#GarlickyRoast">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3345668276864e7bb46ef75fc4050987">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithSpicyRedSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0532f4dfc8c3414ead39425365ffb32f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Full"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N84d1581c91f84a4190f8ba48665c773e">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N8bad7c5a529e40639b3ac97640548f38"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wine:topProducerFor rdf:resource="http://example.com/wine#TopProducer"/>
+    <rdfs:comment>A country known for its wine production.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#OrganicLabeling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Labeling of wines as organic products.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf31d64f1590c4794a9144e677dd29525">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithNonSpicyRedSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5632c86ee0fc47569d99a207cbc5603a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Characteristics_CabSauvignon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Characteristics"/>
+    <wine:characteristicsOf rdf:resource="http://example.com/wine#CabernetSauvignon"/>
+    <wine:aroma>Blackcurrant, bell pepper</wine:aroma>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb74b9c066fbc4bbabf573498427c4d1e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nd0fd9f7631fb47baa1837ce471a004de"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithNonSpicyRedSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithRedSauce"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithSpicyRedSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne6667b551c2442cf97a1a88b48740928">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N5632c86ee0fc47569d99a207cbc5603a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfbc46c9640ce4dfdaf8e49b87232c753">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N4431b85f274b430ebfaac70919330bca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75454cbe5f5d46a78a0289ac6bd2a082">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N55f458ec14044830a123c81a4b5e507c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf1af279f38624790add02fe70a9c21d0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N94f28b3fb119490488bb10a435eb3a21">
+    <rdf:first rdf:resource="http://example.com/wine#OrganicLabeling"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5bbb731256942b78b32e071ce6d6411">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nfe15a0b65ea24c32ad45213615cb484f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#DessertCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N5a0e154639f14bc698210b098cb28d1c"/>
+    <rdfs:subClassOf rdf:nodeID="N02ff0f55824a4382bc1e8d9ea39a7941"/>
+    <rdfs:subClassOf rdf:nodeID="N60ce5d57ef2d468785de5be1e54b3a9c"/>
+    <rdfs:subClassOf rdf:nodeID="N2dd06292a382458a91fa4e2be17e202f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncbcbdd01105f43eb9f56e8a21e9bb47a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N94edad30d1234101a46380c30fb9f80f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N75a2b8674fab4ea0ac853ca5185af60f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#entity1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N300e0e56b9a44c1fb1ad35f95a782d73">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Sweet"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55bc70a0531c4c48a332aad96737a47c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8727ed3c3910412684da2e1ae5fba9d9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc678b1f659ce4e82bb2bc6f04bae0935">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Syrah">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Wine"/>
+    <wine:usedToProduce rdf:resource="http://example.com/wine#SyrahGrape"/>
+    <wine:hasHealthBenefits>May have antioxidant properties.</wine:hasHealthBenefits>
+    <rdfs:comment>A Syrah wine made from Syrah grapes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc48515f5ad9046c5af1761a7ce7a5b13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N00fec0d6aca248fd94b67a639f5296d2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd2c338db7d304335a212736f79b0022f">
+    <rdf:first rdf:nodeID="N232af3559a1a4352ad31ec6a54bc2e9c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N036296ce9cca44df8c2263db09f21450">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Delicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf3e7883c708c41ff8b2c82e301551e35">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N569967568b504c339d5fe289e1abd3d3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N541f7c41760e4b6ca357e090f56e4830">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Delicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Red">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nffbdbe7e247d46bda14219db67b2feda">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OffDry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N02454127b54843cdb679604a83a61aab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nfa3ac2e599f74efa85616fc815df1c00"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>
+      Derived from the DAML Wine ontology at 
+      http://ontolingua.stanford.edu/doc/chimaera/ontologies/wines.daml
+      Substantially modified.
+    </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetDessertCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N8843a31caec14276a66b1c4a1000b354"/>
+    <rdfs:subClassOf rdf:nodeID="N4917eee5bd0a4f2a8edc73d305859da6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Nuts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#CheeseNutsDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSpicyRedMeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RedMeat"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c7d241446f94dae861233b6a51729e9">
+    <rdf:first rdf:resource="http://example.com/wine#Wine"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc34216b8f7fc47a3871d0c01a6d8fdaa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N223331043066495fa42ee9577431a511"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WhiteWineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#WineProductionTechnique"/>
+    <rdfs:comment>A technique for producing white wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9dfaec297a274a38b9fee6fe8bfa262b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Shellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N569967568b504c339d5fe289e1abd3d3">
+    <rdf:first rdf:nodeID="Nbc1e8c71f2d746439904b4b1436e78ef"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4431b85f274b430ebfaac70919330bca">
+    <rdf:first rdf:nodeID="Nb29d2108bc7e4f73a601d1d8d3b0c8b1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PotableLiquid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1a1abe56961b42c99bf99aa3d5670f12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N768d6d701c0d46ec8cde6df1fea9efb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#FruitCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nd1b0d58057774440aff85d0b627af35f"/>
+    <rdfs:subClassOf rdf:nodeID="N60a548f55deb4faf8f6a65b56e3c2845"/>
+    <rdfs:subClassOf rdf:nodeID="Nce774fe055804cd593d7e99af948e5a3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7dfd5c5339cf4d8bb060027af0359f5a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nf65e1a4968534b65af744f760b503b81"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6abe463358324c818579960fa197bcaa">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N17b6c7e58eec436ea8fea8a7d23eadd3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb6151c7524de4fc190cb30af69e0508c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Sweet"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N04f050c3acde4500b00728f4aba26685">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N5fe75370f471485eac19484c75726fe0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d2310a4cd9f4eca9984697d336afc5e">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N3c4944db71c047e6a1b541938488868b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N861586d77c9e4ae8bd5a13ce61d32714">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N96b0de36e2f84369a6915bf4b9b2a8f1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9c5944b997242a1b98f58e5b52163d1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N57d4c9d02a634370af0d0a28701dd26b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#PinotNoirGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Pinot Noir grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc42de1a9d02046909a6bf856415fdf9b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N9be7ee3ca34942d78f6e8977596a2656"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasTrendsDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40fe89faeebe4b51b5b09539fd2c0666">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Seafood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Differences">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#Differences"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Rose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Rose"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb29d2108bc7e4f73a601d1d8d3b0c8b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasFood"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#DarkMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Bananas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#CollectibleFactors_Rarity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a0e154639f14bc698210b098cb28d1c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N84d1581c91f84a4190f8ba48665c773e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0e8f4b5c3ac431495b78e12226c7b1b">
+    <rdf:first rdf:resource="http://example.com/wine#CulturalEvent"/>
+    <rdf:rest rdf:nodeID="N0a40c7d50ce14154a68a89e91a456978"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#AgingConditions_DarkCellar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Cake">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Cheese">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#CheeseNutsDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Country_France">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0bc0e8a0ada04e79b745b03b715ff979">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1e36fd7cad1c4954b3f53f19354f54b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Turkey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#LightMeatFowl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N816f05850708448e9694c854980d0170">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Nf6d3167cd1f343d399586b52b031f807"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Swordfish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonBlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40cb7afe6bd64ec2945ea5753ee7510a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f2f476d14984cb5ada3054b3483d685">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Dry"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nca896960c39e4e58bdc762624d534b89">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nfbc46c9640ce4dfdaf8e49b87232c753"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasPriceValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdfs:comment>Specifies the price value of a wine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Delicate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Tuna">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonBlandFish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nca51acdf79e64ca3832b3a9b5396aab9">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Na2d75e45e7bb453ebd78adc26d7d7ee7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Rose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N885251b4356d4cb5bfa2f38892ddcb37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:allValuesFrom rdf:nodeID="Nc0756196e1f74fc09f47a3fc1a3201af"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a50a4187c2c4544b0b21311d1130b93">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N861586d77c9e4ae8bd5a13ce61d32714"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#MerlotGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Merlot grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSweetFruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithHeavyCreamSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithWhiteSauce"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithLightCreamSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb55d9a22f10d447796869c8aef668420">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N6abe463358324c818579960fa197bcaa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#SustainabilityTrendsInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#SustainabilityTrends"/>
+    <wine:hasTrends rdf:resource="http://example.com/wine#RedWineProduction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pizza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OtherTomatoBasedFood"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d88b5ebe48b4c298d7888626eb143e3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#LabelInformationExample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#LabelInformation"/>
+    <wine:includesInformation>Vintage year, alcohol content, producer information.</wine:includesInformation>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N87e45e92b5314784b85d54138014a316">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasBody"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Full"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N274e2878be4846f2988246454f410443">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Pie">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetDessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#RoseWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:comment>A type of wine with a pink or rosé color.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne15503b75c414f63b561090d07644f39">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Strong"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#Characteristics">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c2912b0551d4a70a2b2da001a71e1d7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Red"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#White">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#AgingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The conditions required for proper wine aging.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#entity2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#ConsumableThing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3fce585554b46649339d1ec6bbe94df">
+    <rdf:first rdf:nodeID="N40fe89faeebe4b51b5b09539fd2c0666"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasHistoricalEventDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#MalbecGrape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.com/wine#GrapeVariety"/>
+    <rdfs:comment>The Malbec grape variety.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#RoastBeef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonSpicyRedMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#OffDry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Light">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#BlandFishCourse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N94edad30d1234101a46380c30fb9f80f"/>
+    <rdfs:subClassOf rdf:nodeID="Nfcfe298101ef496988afad0e8611053d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fba828004e74c1ea3b1d2ab092cc6b7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nc160341f536f48519b80c011696942d4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Medium">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdfs:range rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PotableLiquid"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Oysters">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#OysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#hasHealthBenefits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://example.com/wine#healthBenefitsOf"/>
+    <rdfs:domain rdf:resource="http://example.com/wine#Wine"/>
+    <rdfs:range rdf:resource="http://example.com/wine#HealthBenefits"/>
+    <rdfs:comment>Indicates the health benefits of wines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Mussels">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonOysterShellfish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetDessert">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Dessert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#aroma">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd1b0d58057774440aff85d0b627af35f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nd8f8a14d0f4f421395ddc4f73a2b1cc5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa3ac2e599f74efa85616fc815df1c00">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasColor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#White"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#OrganicRequirements_EcoCertified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N96b0de36e2f84369a6915bf4b9b2a8f1">
+    <rdf:first rdf:nodeID="N65983b8630df40b1a7113bf35b5ddb2e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Medium">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Medium"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N85a62bc777954b72b1c6dd73cdd757b6">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="Ne3fce585554b46649339d1ec6bbe94df"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#SweetFruit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#EdibleThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0f88b6793c384e1dab3da1fa532d9600">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Moderate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Strong">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#NonBlandFish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Fish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#FraDiavolo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithSpicyRedSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Wine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ned93309da7df4f3ca6049f9b98fdd5bf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="N02263b5de2414f619d3899f3f2108bea"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N183cda61b7ab44078d1658d17b135621">
+    <rdf:first rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#MealCourse"/>
+    <rdf:rest rdf:nodeID="N91b6f47b585048a981c22dfce8f35981"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N587126a2817a4cc2a5b283beabb198fd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor"/>
+    <owl:hasValue rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#Delicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithLightCreamSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithWhiteSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithWhiteClamSauce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#PastaWithLightCreamSauce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasFlavor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndbb653733580431e85ba2234b0314c52">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#hasDrink"/>
+    <owl:allValuesFrom rdf:nodeID="Nb604d78a465f413099a34e7e5b7d7900"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#measure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#hasSugar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8bad7c5a529e40639b3ac97640548f38">
+    <rdf:first rdf:nodeID="N141665c230d6490a98bb6d2a72f53947"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N596e4ac7491149a39efc9cfc66da95db">
+    <rdf:first rdf:resource="http://example.com/wine#LegalRequirements"/>
+    <rdf:rest rdf:nodeID="N94f28b3fb119490488bb10a435eb3a21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/wine#WineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#Full">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+</rdf:RDF>
