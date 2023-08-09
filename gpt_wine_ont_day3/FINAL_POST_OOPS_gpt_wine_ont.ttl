@@ -1,0 +1,773 @@
+@prefix : <http://example.com/wine-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wine: <http://example.com/wine-ontology#> .
+@base <http://example.com/wine-ontology#> .
+
+<http://example.com/wine-ontology#> rdf:type owl:Ontology ;
+                                     rdfs:comment "An ontology that models various aspects of the wine domain, including grape varieties, wine regions, production methods, and more." ;
+                                     rdfs:label "Wine Ontology" ;
+                                     owl:versionInfo "1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#functional
+owl:functional rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#reflexive
+owl:reflexive rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#symmetric
+owl:symmetric rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#transitive
+owl:transitive rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.com/wine-ontology#affectsCharacteristics
+wine:affectsCharacteristics rdf:type owl:ObjectProperty ;
+                            rdfs:domain wine:Altitude ;
+                            rdfs:range wine:WineCharacteristics .
+
+
+###  http://example.com/wine-ontology#hasAcidityValue
+wine:hasAcidityValue rdf:type owl:ObjectProperty ;
+                     rdfs:domain wine:WhiteWine .
+
+
+###  http://example.com/wine-ontology#hasAgingPotentialValue
+wine:hasAgingPotentialValue rdf:type owl:ObjectProperty ;
+                            rdfs:domain wine:RedWine .
+
+
+###  http://example.com/wine-ontology#hasAltitudeEffect
+wine:hasAltitudeEffect rdf:type owl:ObjectProperty ;
+                       rdfs:domain wine:Vineyard ;
+                       rdfs:range wine:AltitudeEffect ;
+                       owl:propertyDisjointWith wine:hasCharacteristic ,
+                                                wine:recommendedForPairing ;
+                       rdfs:label "has altitude effect" .
+
+
+###  http://example.com/wine-ontology#hasAppellation
+wine:hasAppellation rdf:type owl:ObjectProperty ;
+                    rdfs:domain wine:WineRegion ;
+                    rdfs:range wine:WineAppellation ;
+                    owl:propertyDisjointWith wine:hasCharacteristic ,
+                                             wine:recommendedForPairing ;
+                    rdfs:comment "Associates a wine with a particular wine appellation, indicating its geographical origin." ;
+                    rdfs:label "has Appellation" ,
+                               "has appellation" .
+
+
+###  http://example.com/wine-ontology#hasAward
+wine:hasAward rdf:type owl:ObjectProperty ;
+              rdfs:domain wine:Wine ;
+              rdfs:range wine:WineAward ;
+              owl:propertyDisjointWith wine:hasCharacteristic ,
+                                       wine:recommendedForPairing .
+
+
+###  http://example.com/wine-ontology#hasCharacteristic
+wine:hasCharacteristic rdf:type owl:ObjectProperty ;
+                       rdfs:domain wine:BordeauxWine ;
+                       rdfs:range wine:WineCharacteristic ;
+                       owl:propertyDisjointWith wine:hasFlavorProfile ,
+                                                wine:hasImpactOnFlavor ,
+                                                wine:hasImpactOnTexture ,
+                                                wine:hasLabelingRequirement ,
+                                                wine:hasProcess ,
+                                                wine:hasSensoryAttribute ,
+                                                wine:hasStep ,
+                                                wine:recommendedForPairing .
+
+
+###  http://example.com/wine-ontology#hasClimateInfluence
+wine:hasClimateInfluence rdf:type owl:ObjectProperty ;
+                         rdfs:domain wine:WineRegion ;
+                         rdfs:range wine:Climate ;
+                         rdfs:label "has climate influence" .
+
+
+###  http://example.com/wine-ontology#hasDifference
+wine:hasDifference rdf:type owl:ObjectProperty ;
+                   rdfs:domain wine:MerlotWine ;
+                   rdfs:range wine:CabernetSauvignonWine ;
+                   owl:propertyDisjointWith wine:recommendedForPairing ;
+                   rdfs:label "has difference" ;
+                   owl:symmetric "true"^^xsd:boolean .
+
+
+###  http://example.com/wine-ontology#hasFlavorProfile
+wine:hasFlavorProfile rdf:type owl:ObjectProperty ;
+                      rdfs:domain wine:WineRegion ;
+                      rdfs:range wine:FlavorProfile ;
+                      owl:propertyDisjointWith wine:recommendedForPairing ;
+                      rdfs:comment "Describes the unique set of flavors and aromas present in a specific wine." ;
+                      rdfs:label "has Flavor Profile" ,
+                                 "has flavor profile" .
+
+
+###  http://example.com/wine-ontology#hasImpactOnFlavor
+wine:hasImpactOnFlavor rdf:type owl:ObjectProperty ;
+                       rdfs:domain wine:OakBarrel ;
+                       rdfs:range wine:Flavor ;
+                       owl:propertyDisjointWith wine:recommendedForPairing .
+
+
+###  http://example.com/wine-ontology#hasImpactOnTexture
+wine:hasImpactOnTexture rdf:type owl:ObjectProperty ;
+                        rdfs:domain wine:OakBarrel ;
+                        rdfs:range wine:Texture ;
+                        owl:propertyDisjointWith wine:recommendedForPairing .
+
+
+###  http://example.com/wine-ontology#hasLabelingRequirement
+wine:hasLabelingRequirement rdf:type owl:ObjectProperty ;
+                            rdfs:domain wine:Wine ;
+                            rdfs:range wine:LabelingRequirement ;
+                            owl:propertyDisjointWith wine:recommendedForPairing .
+
+
+###  http://example.com/wine-ontology#hasParentRegion
+wine:hasParentRegion rdf:type owl:ObjectProperty ;
+                     owl:transitive "true"^^xsd:boolean .
+
+
+###  http://example.com/wine-ontology#hasProcess
+wine:hasProcess rdf:type owl:ObjectProperty ;
+                rdfs:domain wine:Wine ;
+                rdfs:range wine:WineProductionProcess ;
+                owl:propertyDisjointWith wine:recommendedForPairing ;
+                rdfs:label "has process" .
+
+
+###  http://example.com/wine-ontology#hasSensoryAttribute
+wine:hasSensoryAttribute rdf:type owl:ObjectProperty ;
+                         rdfs:domain wine:RedWine ;
+                         rdfs:range wine:SensoryAttribute ;
+                         owl:propertyDisjointWith wine:recommendedForPairing ;
+                         rdfs:label "has sensory attribute" .
+
+
+###  http://example.com/wine-ontology#hasStep
+wine:hasStep rdf:type owl:ObjectProperty ;
+             rdfs:domain wine:WineProductionProcess ;
+             rdfs:range wine:WineProductionProcessStep ;
+             owl:propertyDisjointWith wine:recommendedForPairing ;
+             rdfs:comment "Relates a specific step or stage in the process of producing wine to the overall wine production process." ;
+             rdfs:label "has Step" ,
+                        "has step" ;
+             owl:reflexive "true"^^xsd:boolean .
+
+
+###  http://example.com/wine-ontology#hasYearValue
+wine:hasYearValue rdf:type owl:ObjectProperty ;
+                  rdfs:domain wine:WineAward .
+
+
+###  http://example.com/wine-ontology#isStepOf
+wine:isStepOf rdf:type owl:ObjectProperty ;
+              rdfs:domain wine:WineProductionProcessStep ;
+              rdfs:range wine:WineProductionProcessStep .
+
+
+###  http://example.com/wine-ontology#producesHighQuality
+wine:producesHighQuality rdf:type owl:ObjectProperty ;
+                         rdfs:domain wine:WineRegion ;
+                         rdfs:range wine:Wine ;
+                         rdfs:comment "Indicates that a wine or grape variety is known for its exceptional quality and characteristics." ;
+                         rdfs:label "produces High Quality" ,
+                                    "produces high quality" ;
+                         owl:transitive "true"^^xsd:boolean .
+
+
+###  http://example.com/wine-ontology#recommendedForCellaring
+wine:recommendedForCellaring rdf:type owl:ObjectProperty ;
+                             rdfs:domain wine:Wine .
+
+
+###  http://example.com/wine-ontology#recommendedForPairing
+wine:recommendedForPairing rdf:type owl:ObjectProperty ;
+                           rdfs:domain wine:Wine ;
+                           rdfs:range wine:SeafoodDish ;
+                           rdfs:comment "Suggests a type of food or dish that complements and enhances the flavors of a specific wine." ;
+                           rdfs:label "recommended for Pairing" ,
+                                      "recommended for pairing" ;
+                           owl:functional "true"^^xsd:boolean .
+
+
+###  http://example.com/wine-ontology#usedToProduce
+wine:usedToProduce rdf:type owl:ObjectProperty ;
+                   rdfs:domain wine:RedWine ;
+                   rdfs:range wine:GrapeVariety ;
+                   rdfs:comment "Indicates the grape varieties used to produce a specific type of wine." ;
+                   rdfs:label "used to Produce" ,
+                              "used to produce" .
+
+
+###  http://example.com/wine-ontology#usesMethod
+wine:usesMethod rdf:type owl:ObjectProperty ;
+                rdfs:domain wine:WineProductionProcess ;
+                rdfs:range wine:ProductionMethod ;
+                rdfs:label "uses method" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.com/wine-ontology#hasAcidity
+wine:hasAcidity rdf:type owl:DatatypeProperty ;
+                owl:equivalentProperty wine:hasAcidityValue ;
+                rdfs:domain wine:WhiteWine ;
+                rdfs:range xsd:float ;
+                rdfs:label "has acidity" .
+
+
+###  http://example.com/wine-ontology#hasAcidityValue
+wine:hasAcidityValue rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:float .
+
+
+###  http://example.com/wine-ontology#hasAgingPotential
+wine:hasAgingPotential rdf:type owl:DatatypeProperty ;
+                       owl:equivalentProperty wine:hasAgingPotentialValue ;
+                       rdfs:domain wine:RedWine ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "has aging potential" .
+
+
+###  http://example.com/wine-ontology#hasAgingPotentialValue
+wine:hasAgingPotentialValue rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:positiveInteger .
+
+
+###  http://example.com/wine-ontology#hasAltitudeEffectValue
+wine:hasAltitudeEffectValue rdf:type owl:DatatypeProperty ;
+                            rdfs:domain wine:Altitude ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Describes the influence of high altitude grape growing on the characteristics of a wine." ;
+                            rdfs:label "has Altitude Effect Value" .
+
+
+###  http://example.com/wine-ontology#hasHistory
+wine:hasHistory rdf:type owl:DatatypeProperty ;
+                rdfs:domain wine:ChampagneWine ;
+                rdfs:range xsd:string ;
+                rdfs:label "has history" .
+
+
+###  http://example.com/wine-ontology#hasLabelingRequirementValue
+wine:hasLabelingRequirementValue rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain wine:LabelingRequirement ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "Specifies a specific requirement that must be met for a wine label to comply with regulations." ;
+                                 rdfs:label "has Labeling Requirement Value" .
+
+
+###  http://example.com/wine-ontology#hasPriceValue
+wine:hasPriceValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain wine:Wine ;
+                   rdfs:range xsd:positiveInteger .
+
+
+###  http://example.com/wine-ontology#hasYear
+wine:hasYear rdf:type owl:DatatypeProperty ;
+             owl:equivalentProperty wine:hasYearValue ;
+             rdfs:domain wine:WineAward ;
+             rdfs:range xsd:gYear ;
+             rdfs:label "has year" .
+
+
+###  http://example.com/wine-ontology#hasYearValue
+wine:hasYearValue rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:gYear .
+
+
+###  http://example.com/wine-ontology#isStepOfValue
+wine:isStepOfValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain wine:WineProductionProcessStep ;
+                   rdfs:range xsd:string .
+
+
+###  http://example.com/wine-ontology#recommendedForCellaring
+wine:recommendedForCellaring rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.com/wine-ontology#AgingProcess
+wine:AgingProcess rdf:type owl:Class ;
+                  rdfs:subClassOf wine:WineProductionProcess ;
+                  rdfs:label "Aging Process" .
+
+
+###  http://example.com/wine-ontology#Altitude
+wine:Altitude rdf:type owl:Class ;
+              rdfs:comment "The height above sea level at which grapevines are grown, influencing wine characteristics." ;
+              rdfs:label "Altitude" .
+
+
+###  http://example.com/wine-ontology#AltitudeEffect
+wine:AltitudeEffect rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#BordeauxRegion
+wine:BordeauxRegion rdf:type owl:Class ;
+                    rdfs:subClassOf wine:WineRegion .
+
+
+###  http://example.com/wine-ontology#BordeauxWine
+wine:BordeauxWine rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#BurgundyRegion
+wine:BurgundyRegion rdf:type owl:Class ;
+                    rdfs:subClassOf wine:WineRegion .
+
+
+###  http://example.com/wine-ontology#CabernetSauvignonWine
+wine:CabernetSauvignonWine rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#ChampagneWine
+wine:ChampagneWine rdf:type owl:Class ;
+                   rdfs:comment "A sparkling wine produced in the Champagne region of France, known for its effervescence and celebratory nature." ;
+                   rdfs:label "Champagne Wine" .
+
+
+###  http://example.com/wine-ontology#ChardonnayWine
+wine:ChardonnayWine rdf:type owl:Class ;
+                    rdfs:subClassOf wine:WineRegion ;
+                    rdfs:label "Chardonnay Wine" .
+
+
+###  http://example.com/wine-ontology#Climate
+wine:Climate rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#FermentationProcess
+wine:FermentationProcess rdf:type owl:Class ;
+                         rdfs:subClassOf wine:WineProductionProcess ;
+                         rdfs:label "Fermentation Process" .
+
+
+###  http://example.com/wine-ontology#Flavor
+wine:Flavor rdf:type owl:Class ;
+            rdfs:label "Flavor" .
+
+
+###  http://example.com/wine-ontology#FlavorProfile
+wine:FlavorProfile rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#GrapeVariety
+wine:GrapeVariety rdf:type owl:Class ;
+                  rdfs:comment "A specific type of grape used in winemaking." ;
+                  rdfs:label "Grape Variety" .
+
+
+###  http://example.com/wine-ontology#LabelingRequirement
+wine:LabelingRequirement rdf:type owl:Class ;
+                         rdfs:comment "Regulations and information required on wine labels, often related to production methods, content, or origin." ;
+                         rdfs:label "Labeling Requirement" .
+
+
+###  http://example.com/wine-ontology#MerlotWine
+wine:MerlotWine rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#NewWorldRegion
+wine:NewWorldRegion rdf:type owl:Class ;
+                    rdfs:subClassOf wine:WineRegion ;
+                    rdfs:label "New World Region" .
+
+
+###  http://example.com/wine-ontology#OakBarrel
+wine:OakBarrel rdf:type owl:Class ;
+               rdfs:comment "A container, often made of oak, used for aging and maturing wine, imparting flavor and texture." ;
+               rdfs:label "Oak Barrel" .
+
+
+###  http://example.com/wine-ontology#OldWorldRegion
+wine:OldWorldRegion rdf:type owl:Class ;
+                    rdfs:subClassOf wine:WineRegion ;
+                    rdfs:label "Old World Region" .
+
+
+###  http://example.com/wine-ontology#ProductionMethod
+wine:ProductionMethod rdf:type owl:Class ;
+                      rdfs:comment "A specific technique or process used to produce wine, influencing its characteristics and qualities." ;
+                      rdfs:label "Production Method" .
+
+
+###  http://example.com/wine-ontology#RedWine
+wine:RedWine rdf:type owl:Class ;
+             rdfs:subClassOf wine:Wine ;
+             rdfs:comment "A type of wine made from red or black grapes, with a red color due to the presence of grape skins during fermentation." ;
+             rdfs:label "Red Wine" .
+
+
+###  http://example.com/wine-ontology#RoseWine
+wine:RoseWine rdf:type owl:Class ;
+              rdfs:subClassOf wine:Wine ;
+              rdfs:label "Rosé Wine" .
+
+
+###  http://example.com/wine-ontology#SeafoodDish
+wine:SeafoodDish rdf:type owl:Class ;
+                 rdfs:label "Seafood Dish" .
+
+
+###  http://example.com/wine-ontology#SensoryAttribute
+wine:SensoryAttribute rdf:type owl:Class ;
+                      rdfs:comment "A quality or characteristic of a wine that can be perceived through the senses, such as taste, aroma, and texture." ;
+                      rdfs:label "Sensory Attribute" .
+
+
+###  http://example.com/wine-ontology#SparklingWine
+wine:SparklingWine rdf:type owl:Class ;
+                   rdfs:subClassOf wine:Wine ;
+                   rdfs:label "Sparkling Wine" .
+
+
+###  http://example.com/wine-ontology#Texture
+wine:Texture rdf:type owl:Class ;
+             rdfs:label "Texture" .
+
+
+###  http://example.com/wine-ontology#Vineyard
+wine:Vineyard rdf:type owl:Class ;
+              rdfs:label "Vineyard" .
+
+
+###  http://example.com/wine-ontology#WhiteWine
+wine:WhiteWine rdf:type owl:Class ;
+               rdfs:subClassOf wine:Wine ;
+               rdfs:comment "A type of wine made from green or yellow grapes, with a pale yellow or straw color." ;
+               rdfs:label "White Wine" .
+
+
+###  http://example.com/wine-ontology#Wine
+wine:Wine rdf:type owl:Class ;
+          rdfs:comment "A type of alcoholic beverage made from fermented grapes." ;
+          rdfs:label "Wine" .
+
+
+###  http://example.com/wine-ontology#WineAppellation
+wine:WineAppellation rdf:type owl:Class ;
+                     rdfs:comment "A legally defined and protected geographical indication used to identify where the grapes for a wine were grown." ;
+                     rdfs:label "Wine Appellation" .
+
+
+###  http://example.com/wine-ontology#WineAward
+wine:WineAward rdf:type owl:Class ;
+               rdfs:comment "Recognition or prize given to a wine for its exceptional quality, taste, or other attributes." ;
+               rdfs:label "Wine Award" .
+
+
+###  http://example.com/wine-ontology#WineCellar
+wine:WineCellar rdf:type owl:Class ;
+                rdfs:comment "A storage facility for wine, often providing the ideal conditions for aging and preserving wine." ;
+                rdfs:label "Wine Cellar" .
+
+
+###  http://example.com/wine-ontology#WineCellaring
+wine:WineCellaring rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#WineCharacteristic
+wine:WineCharacteristic rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#WineCharacteristics
+wine:WineCharacteristics rdf:type owl:Class .
+
+
+###  http://example.com/wine-ontology#WineProductionProcess
+wine:WineProductionProcess rdf:type owl:Class ;
+                           rdfs:label "Wine Production Process" .
+
+
+###  http://example.com/wine-ontology#WineProductionProcessStep
+wine:WineProductionProcessStep rdf:type owl:Class ;
+                               rdfs:comment "A specific step or stage in the process of producing wine, from grape harvesting to bottling." ;
+                               rdfs:label "Wine Production Process Step" .
+
+
+###  http://example.com/wine-ontology#WineRegion
+wine:WineRegion rdf:type owl:Class ;
+                rdfs:comment "A specific geographic area where grapes are grown and wine is produced." ;
+                rdfs:label "Wine Region" .
+
+
+###  http://example.com/wine-ontology#WineStyle
+wine:WineStyle rdf:type owl:Class ;
+               rdfs:comment "A classification that describes the overall characteristics and qualities of a wine." ;
+               rdfs:label "Wine Style" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/wine-ontology#Boldness
+wine:Boldness rdf:type owl:NamedIndividual ,
+                       wine:SensoryAttribute ;
+              rdfs:label "Boldness" .
+
+
+###  http://example.com/wine-ontology#Bordeaux
+wine:Bordeaux rdf:type owl:NamedIndividual ,
+                       wine:Wine ;
+              rdfs:comment "A prestigious red wine from the Bordeaux region in France, often a blend of Cabernet Sauvignon, Merlot, and other grapes." ;
+              rdfs:label "Bordeaux" .
+
+
+###  http://example.com/wine-ontology#BordeauxAppellation
+wine:BordeauxAppellation rdf:type owl:NamedIndividual ,
+                                  wine:WineAppellation ;
+                         wine:hasAppellation wine:BordeauxRegion ;
+                         rdfs:label "Bordeaux Appellation" .
+
+
+###  http://example.com/wine-ontology#BordeauxRed
+wine:BordeauxRed rdf:type owl:NamedIndividual ,
+                          wine:RedWine ;
+                 wine:usedToProduce wine:CabernetSauvignon ,
+                                    wine:Merlot ;
+                 wine:hasCharacteristic "Rich and Complex" ;
+                 rdfs:label "Bordeaux Red Wine" .
+
+
+###  http://example.com/wine-ontology#BordeauxRegion
+wine:BordeauxRegion rdf:type owl:NamedIndividual .
+
+
+###  http://example.com/wine-ontology#BurgundyRed
+wine:BurgundyRed rdf:type owl:NamedIndividual ,
+                          wine:RedWine ;
+                 wine:producesHighQuality wine:BurgundyRegion ;
+                 wine:hasAgingPotential 10 ;
+                 wine:hasAgingPotentialValue 10 ;
+                 rdfs:label "Burgundy Red Wine" .
+
+
+###  http://example.com/wine-ontology#BurgundyRegion
+wine:BurgundyRegion rdf:type owl:NamedIndividual ,
+                             wine:WineRegion .
+
+
+###  http://example.com/wine-ontology#CabernetSauvignon
+wine:CabernetSauvignon rdf:type owl:NamedIndividual ,
+                                wine:GrapeVariety ;
+                       rdfs:comment "A widely grown red grape variety, producing wines with rich tannins and complex flavors." ;
+                       rdfs:label "Cabernet Sauvignon" .
+
+
+###  http://example.com/wine-ontology#CabernetSauvignonWine
+wine:CabernetSauvignonWine rdf:type owl:NamedIndividual ,
+                                    wine:RedWine ;
+                           wine:usedToProduce wine:CabernetSauvignon .
+
+
+###  http://example.com/wine-ontology#Champagne
+wine:Champagne rdf:type owl:NamedIndividual ,
+                        wine:ChampagneWine ;
+               wine:hasHistory "Dating back to the 17th century" ;
+               rdfs:label "Champagne" .
+
+
+###  http://example.com/wine-ontology#Chardonnay
+wine:Chardonnay rdf:type owl:NamedIndividual ,
+                         wine:GrapeVariety ;
+                rdfs:comment "A versatile white grape variety used to produce a wide range of white wines." ;
+                rdfs:label "Chardonnay" .
+
+
+###  http://example.com/wine-ontology#ChardonnayWhite
+wine:ChardonnayWhite rdf:type owl:NamedIndividual ,
+                              wine:WhiteWine ;
+                     wine:hasAcidity 3.5 ;
+                     wine:hasAcidityValue 3.5 ;
+                     rdfs:label "Chardonnay White Wine" .
+
+
+###  http://example.com/wine-ontology#FrenchOakBarrel
+wine:FrenchOakBarrel rdf:type owl:NamedIndividual ,
+                              wine:OakBarrel ;
+                     wine:hasImpactOnFlavor "Vanilla and spice notes" ;
+                     wine:hasImpactOnTexture "Smooth and creamy texture" ;
+                     rdfs:label "French Oak Barrel" .
+
+
+###  http://example.com/wine-ontology#HighAltitude
+wine:HighAltitude rdf:type owl:NamedIndividual ,
+                           wine:Altitude ;
+                  wine:hasAltitudeEffectValue "Crisp acidity and elegant flavors" ;
+                  wine:affectsCharacteristics "Crisp acidity and elegant flavors" ;
+                  rdfs:label "High Altitude" .
+
+
+###  http://example.com/wine-ontology#Merlot
+wine:Merlot rdf:type owl:NamedIndividual ,
+                     wine:GrapeVariety ;
+            rdfs:comment "A popular red grape variety known for its softness and ripe fruit flavors." ;
+            rdfs:label "Merlot" .
+
+
+###  http://example.com/wine-ontology#NewWorldStyle
+wine:NewWorldStyle rdf:type owl:NamedIndividual ,
+                            wine:WineStyle ;
+                   rdfs:label "New World Style" .
+
+
+###  http://example.com/wine-ontology#OldWorldStyle
+wine:OldWorldStyle rdf:type owl:NamedIndividual ,
+                            wine:WineStyle ;
+                   rdfs:label "Old World Style" .
+
+
+###  http://example.com/wine-ontology#OrganicRequirement
+wine:OrganicRequirement rdf:type owl:NamedIndividual ,
+                                 wine:LabelingRequirement ;
+                        wine:hasLabelingRequirementValue "At least 95% organic grapes" ;
+                        wine:hasLabelingRequirement "At least 95% organic grapes" ;
+                        rdfs:label "Organic Labeling Requirement" .
+
+
+###  http://example.com/wine-ontology#PinotNoir
+wine:PinotNoir rdf:type owl:NamedIndividual ,
+                        wine:GrapeVariety ;
+               rdfs:label "Pinot Noir" .
+
+
+###  http://example.com/wine-ontology#PinotNoirBurgundy
+wine:PinotNoirBurgundy rdf:type owl:NamedIndividual ,
+                                wine:RedWine ;
+                       wine:producesHighQuality wine:BurgundyRegion ;
+                       wine:usedToProduce wine:PinotNoir ;
+                       rdfs:label "Pinot Noir Burgundy" .
+
+
+###  http://example.com/wine-ontology#RedWineAward
+wine:RedWineAward rdf:type owl:NamedIndividual ,
+                           wine:WineAward ;
+                  wine:hasYear "2023"^^xsd:gYear ;
+                  wine:hasYearValue "2023"^^xsd:gYear ;
+                  wine:hasAward "Best Red Wine of the Year" ;
+                  rdfs:label "Red Wine Award" .
+
+
+###  http://example.com/wine-ontology#RieslingGrape
+wine:RieslingGrape rdf:type owl:NamedIndividual ,
+                            wine:GrapeVariety ;
+                   rdfs:comment "A white grape variety known for its aromatic qualities and ability to produce a wide range of styles." ;
+                   rdfs:label "Riesling Grape" .
+
+
+###  http://example.com/wine-ontology#SancerreRegion
+wine:SancerreRegion rdf:type owl:NamedIndividual ,
+                             wine:WineRegion ;
+                    rdfs:comment "A wine region in the Loire Valley of France, known for its Sauvignon Blanc wines." ;
+                    rdfs:label "Sancerre Region" .
+
+
+###  http://example.com/wine-ontology#TraditionalMethod
+wine:TraditionalMethod rdf:type owl:NamedIndividual ,
+                                wine:ProductionMethod ;
+                       rdfs:label "Traditional Method" .
+
+
+###  http://example.com/wine-ontology#WineCellaring
+wine:WineCellaring rdf:type owl:NamedIndividual ,
+                            wine:Wine ;
+                   wine:recommendedForCellaring "true"^^xsd:boolean .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+wine:BordeauxRegion rdfs:label "Bordeaux Region" .
+
+
+wine:BurgundyRegion rdfs:label "Burgundy Region" .
+
+
+wine:CabernetSauvignonWine rdfs:comment "A red wine made primarily from Cabernet Sauvignon grapes, known for its bold flavors and aging potential." ;
+                           rdfs:label "Cabernet Sauvignon Wine" .
+
+
+wine:WineCellaring rdfs:label "Wine Cellaring" ,
+                              "Wine for Cellaring" ;
+                   rdfs:comment "The practice of aging wine in optimal conditions to enhance its flavors and aromas." .
+
+
+wine:affectsCharacteristics rdfs:label "affects characteristics" .
+
+
+wine:hasAcidityValue rdfs:comment "Specifies the acidity level of a white wine, which contributes to its freshness and balance." ;
+                     rdfs:label "has Acidity Value" .
+
+
+wine:hasAgingPotentialValue rdfs:comment "Indicates the estimated time a wine can be aged to develop more complex flavors and characteristics." ;
+                            rdfs:label "has Aging Potential Value" .
+
+
+wine:hasAward rdfs:label "has Award" ,
+                         "has award" ;
+              rdfs:comment "Associates a wine with a specific award or recognition it has received for its exceptional attributes." .
+
+
+wine:hasCharacteristic rdfs:label "has Characteristic" ,
+                                  "has characteristic" ;
+                       owl:functional "true"^^xsd:boolean ;
+                       rdfs:comment "Describes a unique attribute or quality associated with a specific wine." .
+
+
+wine:hasImpactOnFlavor rdfs:label "has impact on flavor" ,
+                                  "has Impact on Flavor" ;
+                       rdfs:comment "Indicates how a particular factor or element affects the flavor profile of a wine." .
+
+
+wine:hasImpactOnTexture rdfs:comment "Indicates how a specific factor or element influences the texture and mouthfeel of a wine." ;
+                        rdfs:label "has impact on texture" ,
+                                   "has Impact on Texture" .
+
+
+wine:hasLabelingRequirement rdfs:label "has labeling requirement" .
+
+
+wine:hasYearValue rdfs:comment "Specifies the year a wine was produced, which can greatly influence its quality and taste." ;
+                  rdfs:label "has Year Value" .
+
+
+wine:recommendedForCellaring rdfs:label "recommended for cellaring" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
