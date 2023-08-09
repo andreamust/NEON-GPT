@@ -1,0 +1,254 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+## Prompt 12 output
+# Ontology metadata
+<http://example.org/wine-ontology> rdf:type owl:Ontology ;
+    rdfs:label "Wine Ontology" ;
+    owl:versionInfo "1.0" ;
+    rdfs:comment "An ontology describing concepts related to the world of wines." .
+
+
+## Prompt 5 output
+# Classes
+:Wine rdf:type owl:Class .
+:RedWine rdf:type owl:Class ;
+        rdfs:subClassOf :Wine .
+:WhiteWine rdf:type owl:Class ;
+        rdfs:subClassOf :Wine .
+:RoseWine rdf:type owl:Class ;
+        rdfs:subClassOf :Wine .
+
+:GrapeVariety rdf:type owl:Class .
+:CabernetSauvignon rdf:type owl:Class ;
+        rdfs:subClassOf :GrapeVariety .
+
+:WineRegion rdf:type owl:Class .
+:NapaValley rdf:type owl:Class ;
+        rdfs:subClassOf :WineRegion .
+
+:WineProductionProcess rdf:type owl:Class .
+:RedWineProductionProcess rdf:type owl:Class ;
+        rdfs:subClassOf :WineProductionProcess .
+:WhiteWineProductionProcess rdf:type owl:Class ;
+        rdfs:subClassOf :WineProductionProcess .
+
+:AgingProcess rdf:type owl:Class .
+:TasteAttribute rdf:type owl:Class .
+:TextureAttribute rdf:type owl:Class .
+
+:FlavorNote rdf:type owl:Class .
+
+:Food rdf:type owl:Class .
+:Dish rdf:type owl:Class .
+
+:QualityFactor rdf:type owl:Class .
+
+:WineLabelTerm rdf:type owl:Class .
+:Reserva rdf:type owl:Class ;
+        rdfs:subClassOf :WineLabelTerm .
+:Riserva rdf:type owl:Class ;
+        rdfs:subClassOf :WineLabelTerm .
+
+:Occasion rdf:type owl:Class .
+
+:Terroir rdf:type owl:Class .
+:WinemakingContext rdf:type owl:Class .
+
+:HealthBenefit rdf:type owl:Class .
+
+# Properties
+rdf:subClassOf rdf:type owl:ObjectProperty .
+
+:hasColor rdf:type owl:ObjectProperty .
+
+:hasCharacteristics rdf:type owl:ObjectProperty .
+
+:hasDifference rdf:type owl:ObjectProperty .
+
+:affectsTaste rdf:type owl:ObjectProperty .
+:affectsTexture rdf:type owl:ObjectProperty .
+
+:hasFlavorNote rdf:type owl:ObjectProperty .
+
+:pairsWellWith rdf:type owl:ObjectProperty .
+
+:contributesToQuality rdf:type owl:ObjectProperty .
+
+:indicates rdf:type owl:ObjectProperty .
+
+:chosenForOccasion rdf:type owl:ObjectProperty .
+
+:hasMeaningInContext rdf:type owl:ObjectProperty .
+
+:hasHealthBenefit rdf:type owl:ObjectProperty .
+
+## Prompt 6 output
+# Inverse properties
+:hasColor owl:inverseOf :colorOf .
+:hasCharacteristics owl:inverseOf :characterizedBy .
+:hasDifference owl:inverseOf :differenceIn .
+:affectsTaste owl:inverseOf :tasteAffectedBy .
+:affectsTexture owl:inverseOf :textureAffectedBy .
+:hasFlavorNote owl:inverseOf :flavorNoteOf .
+:pairsWellWith owl:inverseOf :pairedWith .
+:contributesToQuality owl:inverseOf :qualityContributionOf .
+:indicates owl:inverseOf :indicatedBy .
+:chosenForOccasion owl:inverseOf :occasionChoice .
+:hasMeaningInContext owl:inverseOf :contextMeaningOf .
+:hasHealthBenefit owl:inverseOf :healthBenefitOf .
+
+
+## Prompt 7 output
+# Data Properties
+:hasPriceValue rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:positiveInteger .
+
+
+## Prompt 8a output
+# Symmetric properties
+:indicates rdf:type owl:SymmetricProperty .
+:pairsWellWith rdf:type owl:SymmetricProperty .
+
+
+## Prompt 8b output
+# Transitive properties
+:subClassOf rdf:type owl:TransitiveProperty .
+:indicates rdf:type owl:TransitiveProperty .
+:hasCharacteristics rdf:type owl:TransitiveProperty .
+
+## Prompt 8c output
+# Functional properties
+:hasColor rdf:type owl:FunctionalProperty .
+:hasCharacteristics rdf:type owl:FunctionalProperty .
+:hasDifference rdf:type owl:FunctionalProperty .
+:hasFlavorNote rdf:type owl:FunctionalProperty .
+:hasPriceValue rdf:type owl:FunctionalProperty .
+:indicates rdf:type owl:FunctionalProperty .
+
+
+## Prompt 8d output
+# Reflexive properties
+
+
+## Prompt 9 output
+# Annotations for classes
+:Wine rdfs:comment "Represents a general concept of wine." .
+:RedWine rdfs:comment "Represents a specific type of wine: red wine." .
+:WhiteWine rdfs:comment "Represents a specific type of wine: white wine." .
+:RoseWine rdfs:comment "Represents a specific type of wine: rosé wine." .
+:GrapeVariety rdfs:comment "Represents a grape variety used in winemaking." .
+:CabernetSauvignon rdfs:comment "Represents the Cabernet Sauvignon grape variety." .
+:WineRegion rdfs:comment "Represents a wine-producing region." .
+:NapaValley rdfs:comment "Represents the Napa Valley wine region." .
+:WineProductionProcess rdfs:comment "Represents a process involved in wine production." .
+:RedWineProductionProcess rdfs:comment "Represents the production process for red wines." .
+:WhiteWineProductionProcess rdfs:comment "Represents the production process for white wines." .
+:AgingProcess rdfs:comment "Represents the process of aging wines." .
+:TasteAttribute rdfs:comment "Represents sensory attributes related to taste." .
+:TextureAttribute rdfs:comment "Represents sensory attributes related to texture." .
+:FlavorNote rdfs:comment "Represents specific flavor notes associated with wines." .
+:Food rdfs:comment "Represents a type of food." .
+:Dish rdfs:comment "Represents a specific dish." .
+:QualityFactor rdfs:comment "Represents factors contributing to wine quality." .
+:WineLabelTerm rdfs:comment "Represents terms found on wine labels." .
+:Reserva rdfs:comment "Represents the 'Reserva' term on wine labels." .
+:Riserva rdfs:comment "Represents the 'Riserva' term on wine labels." .
+:Occasion rdfs:comment "Represents an occasion or event." .
+:Terroir rdfs:comment "Represents the concept of terroir in winemaking." .
+:WinemakingContext rdfs:comment "Represents the context of winemaking." .
+:HealthBenefit rdfs:comment "Represents potential health benefits of wine consumption." .
+
+# Annotations for properties
+:hasColor rdfs:comment "Relates a wine to its color attribute." .
+:hasCharacteristics rdfs:comment "Relates a grape variety to its characteristics." .
+:hasDifference rdfs:comment "Relates two concepts, indicating a difference between them." .
+:affectsTaste rdfs:comment "Relates a process to its impact on taste attributes." .
+:affectsTexture rdfs:comment "Relates a process to its impact on texture attributes." .
+:hasFlavorNote rdfs:comment "Relates a wine to specific flavor notes." .
+:pairsWellWith rdfs:comment "Relates wines and food dishes that pair well together." .
+:contributesToQuality rdfs:comment "Relates factors to their contribution to wine quality." .
+:indicates rdfs:comment "Relates a concept to an indicator term." .
+:chosenForOccasion rdfs:comment "Relates wines to occasions they are chosen for." .
+:hasMeaningInContext rdfs:comment "Relates a term to its meaning within a context." .
+:hasHealthBenefit rdfs:comment "Relates a wine to its potential health benefits." .
+:hasPriceValue rdfs:comment "Relates a wine to its price value." .
+
+
+## Prompt 10 output
+# Additional example individuals
+
+# Wine regions
+:BurgundyRegion rdf:type :WineRegion .
+
+# Grape varieties
+:ChardonnayGrape rdf:type :GrapeVariety .
+:MerlotGrape rdf:type :GrapeVariety .
+
+# Wine production processes
+:SparklingWineProduction rdf:type :WineProductionProcess .
+:RoseWineProduction rdf:type :WineProductionProcess .
+
+# Wine attributes
+:LightBody rdf:type :TextureAttribute .
+:FruityNote rdf:type :FlavorNote .
+
+# Food dishes
+:Pasta rdf:type :Dish .
+:ChocolateDessert rdf:type :Dish .
+
+# Wine label terms
+:GranReserva rdf:type :WineLabelTerm .
+
+# Occasions
+:Celebration rdf:type :Occasion .
+
+# Terroir aspects
+:ClimateTerroir rdf:type :Terroir .
+
+# Health benefits
+:CardiovascularBenefit rdf:type :HealthBenefit .
+
+# Flavor notes
+:VanillaFlavorNote rdf:type :FlavorNote .
+
+# Quality factors
+:VineyardLocation rdf:type :QualityFactor .
+
+# Pairing examples
+:BordeauxPairsWith rdf:type owl:NamedIndividual ;
+    :pairsWellWith :BeefDish .
+
+# Price values
+:HighPrice rdf:type owl:NamedIndividual ;
+    :hasPriceValue 100 .
+
+:LowPrice rdf:type owl:NamedIndividual ;
+    :hasPriceValue 20 .
+
+## Prompt 11 output
+# Annotations for individuals
+:RieslingGrape rdfs:comment "Represents the Riesling grape variety used in winemaking." .
+:SancerreRegion rdfs:comment "Represents the Sancerre wine region." .
+:Bordeaux rdfs:comment "Represents a Bordeaux wine." .
+:CabernetSauvignon rdfs:comment "Represents a Cabernet Sauvignon wine." .
+:BurgundyRegion rdfs:comment "Represents the Burgundy wine region." .
+:ChardonnayGrape rdfs:comment "Represents the Chardonnay grape variety used in winemaking." .
+:MerlotGrape rdfs:comment "Represents the Merlot grape variety used in winemaking." .
+:SparklingWineProduction rdfs:comment "Represents the production process for sparkling wines." .
+:RoseWineProduction rdfs:comment "Represents the production process for rosé wines." .
+:LightBody rdfs:comment "Represents a texture attribute of wines: light body." .
+:FruityNote rdfs:comment "Represents a flavor note attribute of wines: fruity note." .
+:Pasta rdfs:comment "Represents a pasta dish that pairs well with wines." .
+:ChocolateDessert rdfs:comment "Represents a chocolate dessert dish." .
+:GranReserva rdfs:comment "Represents the 'Gran Reserva' term on wine labels." .
+:Celebration rdfs:comment "Represents an occasion: celebration." .
+:ClimateTerroir rdfs:comment "Represents a terroir aspect related to climate." .
+:CardiovascularBenefit rdfs:comment "Represents a potential cardiovascular health benefit of wine consumption." .
+:VanillaFlavorNote rdfs:comment "Represents a flavor note attribute of wines: vanilla note." .
+:VineyardLocation rdfs:comment "Represents a quality factor related to vineyard location." .
+:BordeauxPairsWith rdfs:comment "Represents a wine pairing example: Bordeaux pairs well with beef dishes." .
+:HighPrice rdfs:comment "Represents a wine with a high price value of 100." .
+:LowPrice rdfs:comment "Represents a wine with a low price value of 20." .
