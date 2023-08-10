@@ -6,8 +6,12 @@ from pathlib import Path
 from utils import load_prompts
 import credentials
 import openai
+import logging
 
 openai.api_key = credentials.OPENAI_API_KEY
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class NEONPrompting:
@@ -38,14 +42,16 @@ class NEONPrompting:
         :return: The prompt text.
         :rtype: str
         """
+        print(f"Prompting ChatGPT with prompt {prompt_index}.")
         # add the user message to the conversation
-        self.conversation.append({"content": self.prompts[prompt_index],
-                                  "role": "user"})
+        self.conversation.append(
+            {"content": self.prompts[prompt_index], "role": "user"}
+        )
 
         # get the parametrisation for the ChatGPT API
-        engine = self.parameters.get("engine", "gpt-3.5-turbo-0613")
+        engine = self.parameters.get("engine", "gpt-3.5-turbo-16k")
         temperature = self.parameters.get("temperature", 0.9)
-        max_tokens = self.parameters.get("max_tokens", 1000)
+        max_tokens = self.parameters.get("max_tokens", 2000)
         top_p = self.parameters.get("top_p", 1)
         frequency_penalty = self.parameters.get("frequency_penalty", 0.0)
         presence_penalty = self.parameters.get("presence_penalty", 0.0)
@@ -60,14 +66,15 @@ class NEONPrompting:
             top_p=top_p,
             frequency_penalty=frequency_penalty,
             presence_penalty=presence_penalty,
-            stop=stop,
+            # stop=stop,
         )
 
         # add the assistant message to the conversation
-        self.conversation.append({"content": response.choices[0].text,
-                                  "role": "assistant"})
+        self.conversation.append(
+            {"content": response.choices[0].message["content"], "role": "assistant"}
+        )
 
-        return response.choices[0].message
+        return response.choices[0].message["content"]
 
 
 if __name__ == "__main__":
@@ -90,4 +97,3 @@ if __name__ == "__main__":
     neon = NEONPrompting(Path("../gpt_wine_ont_day3/FINAL_gpt_prompt_pipeline.json"))
     response = neon.prompt_chatgpt(0)
     print(neon.conversation)
-    # print(response)
