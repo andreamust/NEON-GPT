@@ -1,14 +1,14 @@
 <div align="center">
-  <img src="./images/neon-gpt-logo.png" width="220" alt="NeOn-GPT logo"/>
+  <img src="./neon-gpt-logo.png" width="220" alt="NeOn-GPT logo"/>
 </div>
 
 # NeOn-GPT: Ontology Modeling using NeOn Methodology with GPT-driven Workflow
 
-NeOn-GPT is a cutting-edge project that combines the power of NeOn methodology with the advanced capabilities of the GPT language model to revolutionize the way ontology modeling is approached. This project aims to streamline the ontology development process by leveraging best practices from the NeOn methodology and employing GPT's natural language generation capabilities to iteratively construct a comprehensive ontology. 
+NeOn-GPT is a cutting-edge project that combines the power of the NeOn methodology with the advanced capabilities of the GPT language model to revolutionize how ontology modeling is approached. This project aims to streamline the ontology development process by leveraging best practices from the NeOn methodology and employing GPT's natural language generation capabilities to iteratively construct a comprehensive ontology. 
 
 **NeOn Methodology Integration:** NeOn-GPT stands at the crossroads of two powerful technologies: ontology modeling methodologies and artificial intelligence. The NeOn methodology, known for its structured and iterative approach, provides the foundation for the project's workflow. It guides the ontology development process through distinct phases, including requirements analysis, conceptualization, formalization, implementation, and maintenance. By incorporating the NeOn methodology, this project ensures that the resulting ontology is not only logically robust but also aligned with domain requirements.
 
-**GPT-Driven Workflow:** What sets NeOn-GPT apart is its intelligent workflow powered by GPT. At each step of ontology development, GPT assists in generating relevant and coherent content that refines the ontology's structure and content. The GPT-driven workflow begins with user inputs or high-level descriptions of the domain and, through a series of interactions, incrementally refines concepts, relationships, and axioms. This not only accelerates the development process but also enables domain experts and developers to collaborate effectively, even if they lack deep ontology modeling expertise.
+**GPT-Driven Workflow:** What sets NeOn-GPT apart is its intelligent workflow powered by GPT. At each step of ontology development, GPT assists in generating relevant and coherent content that refines the ontology's structure and content. The GPT-driven workflow begins with user inputs or high-level descriptions of the domain and, through a series of interactions, incrementally refines concepts, relationships, and axioms. This not only accelerates the development process but also enables domain experts and developers to collaborate effectively, even if they lack deep expertise in ontology modeling.
 
 Furthermore, NeOn-GPT seamlessly integrates external tools and technologies to enhance the ontology's quality and rigor.
 
