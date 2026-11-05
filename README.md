@@ -41,6 +41,8 @@ If you find this work useful, please cite our paper:
   organization={Springer}
 }
 
+```
+
 If you use the extended pipeline, please cite:
 
 ```
