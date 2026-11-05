@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./neon-gpt-logo.png" width="220" alt="NeOn-GPT logo"/>
+  <img src="./NeOn-GPT Knowledge Graph Logo.png" width="220" alt="NeOn-GPT logo"/>
 </div>
 
 # NeOn-GPT: Ontology Modeling using NeOn Methodology with GPT-driven Workflow
