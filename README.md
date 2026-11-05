@@ -40,7 +40,6 @@ If you find this work useful, please cite our paper:
   year={2024},
   organization={Springer}
 }
-
 ```
 
 If you use the extended pipeline, please cite:
