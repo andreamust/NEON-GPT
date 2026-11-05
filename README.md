@@ -24,6 +24,9 @@ Code in this repo is licensed under the MIT License.
 
 ## 📋 [Read our paper](https://www.researchgate.net/profile/Nadeen-Fathallah/publication/382866036_NeOn-GPT_A_Large_Language_Model-Powered_Pipeline_for_Ontology_Learning/links/66b0078351aa0775f269c8cf/NeOn-GPT-A-Large-Language-Model-Powered-Pipeline-for-Ontology-Learning.pdf)
 
+Follow-up journal paper: [Extended NeOn-GPT (Semantic Web, 2026)](https://doi.org/10.1177/22104968261453138)
+
+
 ## 📄 Citation
 
 If you find this work useful, please cite our paper:
@@ -37,3 +40,19 @@ If you find this work useful, please cite our paper:
   year={2024},
   organization={Springer}
 }
+
+If you use the extended pipeline, please cite:
+
+```
+@article{fathallah2026extended,
+  title={Extended NeOn-GPT: Advancing LLM-Powered Ontology Learning Through Ontology Reuse and Automated Verification},
+  author={Fathallah, Nadeen and Das, Arunav and De Giorgis, Stefano and Poltronieri, Andrea and Haase, Peter and Kovriguina, Liubov and Mero{\~n}o-Pe{\~n}uela, Albert and Simperl, Elena and Staab, Steffen and Algergawy, Alsayed},
+  journal={Semantic Web},
+  volume={17},
+  number={4},
+  pages={1--47},
+  year={2026},
+  doi={10.1177/22104968261453138},
+  publisher={SAGE Publications, Sage UK: London, England}
+}
+```
