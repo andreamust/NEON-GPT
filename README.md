@@ -20,7 +20,7 @@ Whether you are an ontology expert looking to enhance your development process o
 
 Code in this repo is licensed under the MIT License.
 
-## 📋 [Read our paper](https://journals.sagepub.com/doi/pdf/10.1177/22104968261453138)
+## 📋 [Read our paper](https://www.researchgate.net/profile/Nadeen-Fathallah/publication/382866036_NeOn-GPT_A_Large_Language_Model-Powered_Pipeline_for_Ontology_Learning/links/66b0078351aa0775f269c8cf/NeOn-GPT-A-Large-Language-Model-Powered-Pipeline-for-Ontology-Learning.pdf)
 
 ## 📄 Citation
 
