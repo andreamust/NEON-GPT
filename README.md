@@ -4,6 +4,8 @@
 
 # NeOn-GPT: Ontology Modeling using NeOn Methodology with GPT-driven Workflow
 
+> **Follow-up:** an extended version of NeOn-GPT, with an ontology reuse step and automated verification and repair, is published in the *Semantic Web* journal (2026): [Extended NeOn-GPT: Advancing LLM-Powered Ontology Learning Through Ontology Reuse and Automated Verification](https://doi.org/10.1177/22104968261453138). Code and results: [NadeenAhmad/neon-gpt-extended](https://github.com/NadeenAhmad/neon-gpt-extended).
+
 NeOn-GPT is a cutting-edge project that combines the NeOn methodology with the advanced capabilities of the GPT language model to revolutionize the way ontology modeling is approached. This project aims to streamline the ontology development process by leveraging best practices from the NeOn methodology and employing GPT's natural language generation capabilities to iteratively construct a comprehensive ontology. 
 
 **NeOn Methodology Integration:** NeOn-GPT stands at the crossroads of two powerful technologies: ontology modeling methodologies and artificial intelligence. The NeOn methodology, known for its structured and iterative approach, provides the foundation for the project's workflow. It guides the ontology development process through distinct phases, including requirements analysis, conceptualization, formalization, implementation, and maintenance. By incorporating the NeOn methodology, this project ensures that the resulting ontology is not only logically robust but also aligned with domain requirements.
